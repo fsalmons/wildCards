@@ -44,12 +44,19 @@ function makeStadiumIcon(isNearby) {
   })
 }
 
-// Walking sprite user position icon
+// Blue dot user position icon (Apple Maps style)
 const spriteIcon = L.divIcon({
-  html: `<div class="walking-sprite">🚶</div>`,
+  html: `
+    <div style="
+      width:18px;height:18px;
+      background:#007AFF;
+      border:3px solid white;
+      border-radius:50%;
+      box-shadow:0 0 0 3px rgba(0,122,255,0.25), 0 2px 6px rgba(0,0,0,0.3);
+    "></div>`,
   className: '',
-  iconSize: [32, 32],
-  iconAnchor: [16, 32],
+  iconSize: [18, 18],
+  iconAnchor: [9, 9],
 })
 
 const DEFAULT_CENTER = { lat: 41.8781, lng: -87.6298 }
