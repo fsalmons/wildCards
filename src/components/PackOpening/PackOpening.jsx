@@ -175,7 +175,6 @@ export function PackOpening({ stadium, onClose }) {
       const rows = cards.map((card) => ({
         user_id: userId,
         player_id: card.id,
-        team_id: teamId,
         collected_at: new Date().toISOString(),
       }))
 
