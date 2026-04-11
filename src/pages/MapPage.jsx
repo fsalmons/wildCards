@@ -100,7 +100,7 @@ export function MapPage() {
     async function fetchStadiums() {
       const { data, error } = await supabase
         .from('stadiums')
-        .select('*, team:teams(name, primary_color)')
+        .select('*, team:teams!fk_stadiums_team_id(name, primary_color)')
       if (error) { console.error('Failed to load stadiums:', error.message); setStadiums([]) }
       else setStadiums(data ?? [])
       setLoadingStadiums(false)
