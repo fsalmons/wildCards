@@ -16,10 +16,11 @@ export default async function handler(req, res) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        client_id: process.env.VITE_STRAVA_CLIENT_ID,
-        client_secret: process.env.VITE_STRAVA_CLIENT_SECRET,
+        client_id: process.env.STRAVA_CLIENT_ID,
+        client_secret: process.env.STRAVA_CLIENT_SECRET,
         code,
         grant_type: 'authorization_code',
+        redirect_uri: process.env.VITE_STRAVA_REDIRECT_URI,
       }),
     })
 
