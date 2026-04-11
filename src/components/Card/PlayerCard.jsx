@@ -77,34 +77,6 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full', rati
     marginTop: '2px',
   }
 
-  const ageBlockStyle = {
-    position: 'absolute',
-    top: '8px',
-    right: '10px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    lineHeight: 1,
-  }
-
-  const ageNumberStyle = {
-    fontSize: ratingFontSize,
-    fontWeight: '800',
-    fontFamily: 'Arial, sans-serif',
-    color: 'rgba(255,255,255,0.95)',
-    lineHeight: 1,
-    textShadow: '0 1px 2px rgba(0,0,0,0.3)',
-  }
-
-  const ageLabelStyle = {
-    fontSize: isFull ? '9px' : '7px',
-    fontWeight: '700',
-    fontFamily: 'Arial, sans-serif',
-    color: 'rgba(255,255,255,0.8)',
-    letterSpacing: '0.5px',
-    marginTop: '2px',
-  }
-
   const playerNameStyle = {
     fontSize: '20px',
     fontWeight: '700',
@@ -230,14 +202,6 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full', rati
             <span style={ovrLabelStyle}>OVR</span>
           </div>
 
-          {/* Age — top right */}
-          <div style={ageBlockStyle}>
-            <span style={ageNumberStyle}>
-              {isCollected && displayAge ? displayAge : '—'}
-            </span>
-            <span style={ageLabelStyle}>AGE</span>
-          </div>
-
           <p style={playerNameStyle}>{displayName}</p>
           <p style={teamNameStyle}>{player.team || ''}</p>
         </div>
@@ -267,6 +231,7 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full', rati
               display: isCollected && player.faceImage ? 'none' : 'block',
             }}
           />
+
         </div>
 
         {/* Stats row */}
@@ -274,6 +239,10 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full', rati
           <div style={statBlockStyle}>
             <span style={statLabelStyle}>Position</span>
             <span style={statValueStyle}>{displayPosition}</span>
+          </div>
+          <div style={{ ...statBlockStyle, alignItems: 'flex-end' }}>
+            <span style={statLabelStyle}>Age</span>
+            <span style={statValueStyle}>{isCollected && displayAge ? displayAge : '?'}</span>
           </div>
         </div>
 
