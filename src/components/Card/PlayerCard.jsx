@@ -5,7 +5,13 @@ const FULL_HEIGHT = 400
 const SMALL_WIDTH = 100
 const SMALL_HEIGHT = 140
 
-export function PlayerCard({ player, teamColor, isCollected, size = 'full' }) {
+function getRatingColor(rating, teamColor) {
+  if (rating >= 90) return '#FFD700'
+  if (rating >= 75) return '#C0C0C0'
+  return teamColor || '#FFFFFF'
+}
+
+export function PlayerCard({ player, teamColor, isCollected, size = 'full', rating = null, isActiveCard = false }) {
   const isFull = size === 'full'
   const scale = isFull ? 1 : SMALL_WIDTH / FULL_WIDTH
 
@@ -32,9 +38,34 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full' }) {
 
   const headerStyle = {
     padding: '12px 14px 8px',
-    textAlign: 'center',
     backgroundColor: isCollected ? teamColor : '#CCCCCC',
     color: '#FFFFFF',
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  }
+
+  const ratingColor = rating !== null ? getRatingColor(rating, '#FFFFFF') : '#FFFFFF'
+  const ratingFontSize = isFull ? '28px' : '20px'
+
+  const ratingBlockStyle = {
+    position: 'absolute',
+    top: '10px',
+    left: '12px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    lineHeight: 1,
+  }
+
+  const ratingNumberStyle = {
+    fontSize: ratingFontSize,
+    fontWeight: '800',
+    fontFamily: 'Arial, sans-serif',
+    color: ratingColor,
+    lineHeight: 1,
+    textShadow: '0 1px 2px rgba(0,0,0,0.3)',
   }
 
   const playerNameStyle = {
@@ -44,6 +75,7 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full' }) {
     lineHeight: 1.1,
     fontFamily: 'Arial, sans-serif',
     margin: 0,
+    textAlign: 'center',
   }
 
   const teamNameStyle = {
@@ -52,6 +84,7 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full' }) {
     marginTop: '2px',
     fontFamily: 'Arial, sans-serif',
     letterSpacing: '0.3px',
+    textAlign: 'center',
   }
 
   const imageAreaStyle = {
@@ -152,6 +185,13 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full' }) {
       <div style={cardStyle}>
         {/* Header */}
         <div style={headerStyle}>
+          {rating !== null && (
+            <div style={ratingBlockStyle}>
+              <span style={ratingNumberStyle}>
+                {rating}{isActiveCard ? ' ⚡' : ''}
+              </span>
+            </div>
+          )}
           <p style={playerNameStyle}>{displayName}</p>
           <p style={teamNameStyle}>{player.team || ''}</p>
         </div>

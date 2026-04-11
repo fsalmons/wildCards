@@ -19,6 +19,7 @@ function mapPlayer(p) {
     height: p.height ?? '',
     weight: p.weight ?? '',
     cardNumber: p.card_number,
+    rating: Math.floor(Math.random() * 99) + 1,
   }
 }
 
@@ -99,6 +100,34 @@ function ErrorOverlay({ message, onClose }) {
   )
 }
 
+async function resolveCard(card, userId) {
+  const newRating = card.rating
+
+  const { data: existing } = await supabase
+    .from('user_cards')
+    .select('id, rating')
+    .eq('user_id', userId)
+    .eq('player_id', card.id)
+    .maybeSingle()
+
+  if (!existing) {
+    await supabase.from('user_cards').insert({
+      user_id: userId,
+      player_id: card.id,
+      rating: newRating,
+      collected_at: new Date().toISOString(),
+    })
+    return { isDupe: false, rating: newRating }
+  }
+
+  if (newRating > existing.rating) {
+    await supabase.from('user_cards').update({ rating: newRating }).eq('id', existing.id)
+    return { isDupe: true, won: true, oldRating: existing.rating, newRating }
+  }
+
+  return { isDupe: true, won: false, keptRating: existing.rating, newRating }
+}
+
 export function PackOpening({ stadium, onClose }) {
   const [phase, setPhase] = useState('loading') // 'loading' | 'envelope' | 'swipe' | 'saving' | 'error'
   const [teamColor, setTeamColor] = useState('#2B6CB0')
@@ -141,7 +170,7 @@ export function PackOpening({ stadium, onClose }) {
           throw new Error('No players found for this team yet.')
         }
 
-        // 3. Shuffle + take 5, map to camelCase
+        // 3. Shuffle + take 5, map to camelCase (rating assigned in mapPlayer)
         const picked = shuffle(players)
           .slice(0, 5)
           .map((p) => mapPlayer({ ...p, team_name: team.name }))
@@ -172,14 +201,8 @@ export function PackOpening({ stadium, onClose }) {
       const userId = JSON.parse(localStorage.getItem('scc_user'))?.id
       if (!userId) throw new Error('Not logged in.')
 
-      const rows = cards.map((card) => ({
-        user_id: userId,
-        player_id: card.id,
-        collected_at: new Date().toISOString(),
-      }))
-
-      const { error } = await supabase.from('user_cards').insert(rows)
-      if (error) throw error
+      // Resolve each card (handles duplicates + rating upgrades)
+      await Promise.all(cards.map((card) => resolveCard(card, userId)))
 
       onClose()
     } catch (err) {
@@ -187,7 +210,7 @@ export function PackOpening({ stadium, onClose }) {
       setErrorMsg(err.message || 'Failed to save your cards. Please try again.')
       setPhase('error')
     }
-  }, [cards, teamId, onClose])
+  }, [cards, onClose])
 
   if (phase === 'loading') {
     return <Spinner color={teamColor} />

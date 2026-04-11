@@ -4,6 +4,7 @@ import { MapPage } from './pages/MapPage'
 import { CollectionPage } from './pages/CollectionPage'
 import { FriendsPage } from './pages/FriendsPage'
 import { TradePage } from './pages/TradePage'
+import { ProfilePage } from './pages/ProfilePage'
 import { BottomNav } from './components/Nav/BottomNav'
 import './styles/retro.css'
 
@@ -31,6 +32,7 @@ export function App() {
           <Route path="/map" element={<MapPage />} />
           <Route path="/collection" element={<CollectionPage />} />
           <Route path="/friends" element={<FriendsPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Route>
       </Routes>
     </BrowserRouter>

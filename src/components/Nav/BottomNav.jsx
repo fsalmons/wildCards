@@ -4,6 +4,7 @@ const TABS = [
   { emoji: '📚', label: 'Cards',   route: '/collection' },
   { emoji: '🗺️', label: 'Map',     route: '/map' },
   { emoji: '👥', label: 'Friends', route: '/friends' },
+  { emoji: '👤', label: 'Profile', route: '/profile' },
 ]
 
 const ACTIVE_COLOR   = '#8B4513'

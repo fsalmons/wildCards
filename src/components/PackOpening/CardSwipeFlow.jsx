@@ -209,6 +209,7 @@ export function CardSwipeFlow({ cards, teamColor, onComplete }) {
           teamColor={teamColor}
           isCollected
           size="full"
+          rating={card.rating ?? null}
         />
       </div>
 
