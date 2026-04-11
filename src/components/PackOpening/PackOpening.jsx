@@ -70,7 +70,7 @@ function ErrorOverlay({ message, onClose }) {
     >
       <p
         style={{
-          fontFamily: "'Fredoka One', cursive",
+          fontFamily: 'Arial, sans-serif',
           fontSize: '18px',
           color: '#FFFFFF',
           textAlign: 'center',
@@ -87,7 +87,7 @@ function ErrorOverlay({ message, onClose }) {
           color: '#FFFFFF',
           border: 'none',
           borderRadius: '10px',
-          fontFamily: "'Fredoka One', cursive",
+          fontFamily: 'Arial, sans-serif',
           fontSize: '16px',
           cursor: 'pointer',
           boxShadow: '3px 3px 0 rgba(0,0,0,0.2)',

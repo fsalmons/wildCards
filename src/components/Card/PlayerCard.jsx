@@ -25,7 +25,7 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full' }) {
     display: 'flex',
     flexDirection: 'column',
     overflow: 'hidden',
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     transformOrigin: 'top left',
     transform: isFull ? 'none' : `scale(${scale})`,
   }
@@ -42,7 +42,7 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full' }) {
     fontWeight: '700',
     letterSpacing: '0.5px',
     lineHeight: 1.1,
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     margin: 0,
   }
 
@@ -50,7 +50,7 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full' }) {
     fontSize: '12px',
     opacity: 0.85,
     marginTop: '2px',
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     letterSpacing: '0.3px',
   }
 
@@ -97,13 +97,13 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full' }) {
     color: '#888888',
     textTransform: 'uppercase',
     letterSpacing: '0.5px',
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
   }
 
   const statValueStyle = {
     fontSize: '13px',
     color: isCollected ? '#333333' : '#AAAAAA',
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontWeight: '600',
   }
 
@@ -126,14 +126,14 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full' }) {
 
   const bottomTeamStyle = {
     fontSize: '11px',
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     letterSpacing: '0.5px',
     opacity: 0.9,
   }
 
   const cardNumberStyle = {
     fontSize: '11px',
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     opacity: 0.85,
   }
 

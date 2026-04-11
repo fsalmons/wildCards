@@ -218,7 +218,7 @@ export function MapPage() {
             icon={stadiumIcon}
           >
             <Popup>
-              <div style={{ fontFamily: 'Fredoka One, sans-serif', minWidth: 160 }}>
+              <div style={{ fontFamily: 'Arial, sans-serif', minWidth: 160 }}>
                 <div
                   style={{
                     fontWeight: 700,
@@ -276,7 +276,7 @@ export function MapPage() {
             border: '2px solid #8B4513',
             borderRadius: 10,
             padding: '8px 18px',
-            fontFamily: 'Fredoka One, sans-serif',
+            fontFamily: 'Arial, sans-serif',
             fontSize: 14,
             color: '#8B4513',
             zIndex: 1000,
@@ -300,7 +300,7 @@ export function MapPage() {
             border: '2px solid #d97706',
             borderRadius: 10,
             padding: '10px 16px',
-            fontFamily: 'Fredoka One, sans-serif',
+            fontFamily: 'Arial, sans-serif',
             fontSize: 14,
             color: '#92400e',
             zIndex: 1000,
@@ -331,7 +331,7 @@ export function MapPage() {
               padding: '12px 28px',
               borderRadius: 12,
               fontSize: 18,
-              fontFamily: 'Fredoka One, sans-serif',
+              fontFamily: 'Arial, sans-serif',
               cursor: 'pointer',
               display: 'block',
             }}
@@ -377,7 +377,7 @@ export function MapPage() {
             borderRadius: 10,
             padding: '10px 14px',
             zIndex: 2001,
-            fontFamily: 'Fredoka One, sans-serif',
+            fontFamily: 'Arial, sans-serif',
             fontSize: 13,
             color: '#8B4513',
             boxShadow: '2px 2px 8px rgba(0,0,0,0.2)',
@@ -401,7 +401,7 @@ export function MapPage() {
                 padding: '4px 6px',
                 borderRadius: 6,
                 border: '1px solid #8B4513',
-                fontFamily: 'Fredoka One, sans-serif',
+                fontFamily: 'Arial, sans-serif',
                 fontSize: 13,
                 color: '#8B4513',
                 background: '#FFF8EE',
@@ -429,7 +429,7 @@ export function MapPage() {
               fontSize: 12,
               textDecoration: 'underline',
               padding: 0,
-              fontFamily: 'Fredoka One, sans-serif',
+              fontFamily: 'Arial, sans-serif',
             }}
           >
             close

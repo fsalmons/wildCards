@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 
 const styles = `
-  @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
   .login-root {
     min-height: 100dvh;

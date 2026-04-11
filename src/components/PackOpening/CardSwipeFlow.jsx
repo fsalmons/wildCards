@@ -90,7 +90,7 @@ export function CardSwipeFlow({ cards, teamColor, onComplete }) {
   const hintStyle = {
     position: 'absolute',
     bottom: '28px',
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '14px',
     color: '#999',
     letterSpacing: '0.5px',
@@ -110,7 +110,7 @@ export function CardSwipeFlow({ cards, teamColor, onComplete }) {
         </div>
         <h2
           style={{
-            fontFamily: "'Fredoka One', cursive",
+            fontFamily: 'Arial, sans-serif',
             fontSize: '26px',
             color: '#333',
             textAlign: 'center',
@@ -122,7 +122,7 @@ export function CardSwipeFlow({ cards, teamColor, onComplete }) {
         </h2>
         <p
           style={{
-            fontFamily: "'Fredoka One', cursive",
+            fontFamily: 'Arial, sans-serif',
             fontSize: '15px',
             color: '#777',
             margin: 0,
@@ -139,7 +139,7 @@ export function CardSwipeFlow({ cards, teamColor, onComplete }) {
             color: '#FFFFFF',
             border: 'none',
             borderRadius: '12px',
-            fontFamily: "'Fredoka One', cursive",
+            fontFamily: 'Arial, sans-serif',
             fontSize: '18px',
             letterSpacing: '0.5px',
             cursor: 'pointer',

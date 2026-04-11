@@ -57,7 +57,7 @@ export function BottomNav() {
             <span
               style={{
                 fontSize: 10,
-                fontFamily: "'Fredoka One', cursive",
+                fontFamily: 'Arial, sans-serif',
                 letterSpacing: '0.02em',
                 lineHeight: 1,
               }}

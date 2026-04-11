@@ -252,7 +252,7 @@ const styles = {
     backgroundColor: '#FAF3E0',
     display: 'flex',
     flexDirection: 'column',
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     maxWidth: '390px',
     margin: '0 auto',
     overflowX: 'hidden',
@@ -268,7 +268,7 @@ const styles = {
     zIndex: 10,
   },
   pageTitle: {
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '28px',
     color: '#8B4513',
     margin: '0 0 12px 0',
@@ -283,7 +283,7 @@ const styles = {
     width: 'fit-content',
   },
   toggleBtn: {
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '14px',
     padding: '6px 20px',
     background: 'transparent',
@@ -317,13 +317,13 @@ const styles = {
     borderBottom: '1px solid #E8D5B0',
   },
   sportTitle: {
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '18px',
     color: '#8B4513',
     letterSpacing: '0.5px',
   },
   sportProgress: {
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '13px',
     color: '#8B4513',
     opacity: 0.7,
@@ -334,7 +334,7 @@ const styles = {
     borderBottom: '1px solid #E8D5B0',
   },
   expandAllBtn: {
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '13px',
     color: '#8B4513',
     background: 'none',
@@ -362,7 +362,7 @@ const styles = {
     textAlign: 'left',
   },
   teamName: {
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '16px',
     color: '#333333',
     letterSpacing: '0.3px',
@@ -373,7 +373,7 @@ const styles = {
     gap: '10px',
   },
   progressBadge: {
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '14px',
     color: '#8B4513',
     backgroundColor: '#F5ECD7',
@@ -411,20 +411,20 @@ const styles = {
     gap: '16px',
   },
   loadingText: {
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '18px',
     color: '#8B4513',
     opacity: 0.7,
   },
   errorText: {
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '16px',
     color: '#CC3333',
     textAlign: 'center',
     lineHeight: 1.4,
   },
   retryBtn: {
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '15px',
     color: '#FAF3E0',
     backgroundColor: '#8B4513',
@@ -434,7 +434,7 @@ const styles = {
     cursor: 'pointer',
   },
   emptyText: {
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '18px',
     color: '#8B4513',
     textAlign: 'center',

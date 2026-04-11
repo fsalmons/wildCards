@@ -378,7 +378,7 @@ const styles = {
     backgroundColor: '#FAF3E0',
     display: 'flex',
     flexDirection: 'column',
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
   },
   content: {
     flex: 1,
@@ -395,7 +395,7 @@ const styles = {
     justifyContent: 'center',
   },
   loadingText: {
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '18px',
     color: '#8B4513',
   },
@@ -411,7 +411,7 @@ const styles = {
     border: '2px solid #8B4513',
     borderRadius: '10px',
     color: '#8B4513',
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '15px',
     padding: '8px 14px',
     minHeight: '44px',
@@ -420,7 +420,7 @@ const styles = {
     flexShrink: 0,
   },
   heading: {
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '22px',
     color: '#3B1A08',
     margin: 0,
@@ -433,7 +433,7 @@ const styles = {
     padding: '10px 14px',
     fontSize: '14px',
     marginBottom: '16px',
-    fontFamily: 'system-ui, sans-serif',
+    fontFamily: 'Arial, sans-serif',
   },
   successBanner: {
     backgroundColor: '#D4EDDA',
@@ -442,7 +442,7 @@ const styles = {
     padding: '10px 14px',
     fontSize: '16px',
     marginBottom: '16px',
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     textAlign: 'center',
   },
   pendingNotice: {
@@ -452,7 +452,7 @@ const styles = {
     padding: '10px 14px',
     fontSize: '14px',
     marginBottom: '16px',
-    fontFamily: 'system-ui, sans-serif',
+    fontFamily: 'Arial, sans-serif',
     textAlign: 'center',
   },
   slotsRow: {
@@ -470,7 +470,7 @@ const styles = {
     minWidth: 0,
   },
   slotLabel: {
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '14px',
     color: '#5A2D0C',
     marginBottom: '8px',
@@ -492,13 +492,13 @@ const styles = {
   plusSign: {
     fontSize: '28px',
     color: '#C8A97A',
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     lineHeight: 1,
   },
   slotHint: {
     fontSize: '11px',
     color: '#A07850',
-    fontFamily: 'system-ui, sans-serif',
+    fontFamily: 'Arial, sans-serif',
     textAlign: 'center',
   },
   cardClickable: {
@@ -528,7 +528,7 @@ const styles = {
     borderRadius: '14px',
     padding: '12px 28px',
     minHeight: '48px',
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '17px',
     cursor: 'pointer',
     flex: 1,
@@ -541,7 +541,7 @@ const styles = {
     borderRadius: '14px',
     padding: '12px 28px',
     minHeight: '48px',
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '17px',
     cursor: 'pointer',
   },
@@ -573,7 +573,7 @@ const styles = {
     flexShrink: 0,
   },
   modalTitle: {
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '20px',
     color: '#3B1A08',
     margin: 0,
@@ -612,7 +612,7 @@ const styles = {
     boxSizing: 'border-box',
   },
   modalCardName: {
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '11px',
     color: '#3B1A08',
     textAlign: 'center',
@@ -620,7 +620,7 @@ const styles = {
     wordBreak: 'break-word',
   },
   modalEmpty: {
-    fontFamily: 'system-ui, sans-serif',
+    fontFamily: 'Arial, sans-serif',
     fontSize: '15px',
     color: '#8B6A4E',
     textAlign: 'center',

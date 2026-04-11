@@ -1,10 +1,32 @@
+/* ── Design Tokens ──────────────────────────────────────────
+   FONT: Arial Bold is the single typeface across all pages.
+   Use var(--font-base) everywhere — never hardcode font-family inline.
+   Headings: font-weight 800, body/labels: 700, captions: 600.
+   ─────────────────────────────────────────────────────────── */
 :root {
+  /* Typography */
+  --font-base: Arial, 'Arial Black', Helvetica, sans-serif;
+  --fw-heading: 800;
+  --fw-body: 700;
+  --fw-caption: 600;
+
+  /* Colors */
   --color-beige: #F5ECD7;
   --color-beige-dark: #E8D5B0;
-  --font-retro: 'Fredoka One', cursive;
-  --font-retro-sm: 'Press Start 2P', monospace;
+  --color-brown: #8B4513;
+  --color-brown-dark: #5C2A00;
+  --color-cream: #FAF3E0;
+  --color-border: #D4C5A9;
+
+  /* Card */
   --border-radius-card: 16px;
   --shadow-card: 4px 4px 0px rgba(0,0,0,0.25);
+}
+
+/* ── Global font reset ── */
+body, button, input, select, textarea {
+  font-family: var(--font-base);
+  font-weight: var(--fw-body);
 }
 
 .walking-sprite {

@@ -24,7 +24,7 @@ export function EnvelopeAnimation({ teamColor, onComplete }) {
   }
 
   const labelStyle = {
-    fontFamily: "'Fredoka One', cursive",
+    fontFamily: 'Arial, sans-serif',
     fontSize: '22px',
     color: '#FFFFFF',
     letterSpacing: '2px',
@@ -64,7 +64,7 @@ export function EnvelopeAnimation({ teamColor, onComplete }) {
             textAnchor="middle"
             fill="white"
             fontSize="24"
-            fontFamily="Fredoka One, cursive"
+            fontFamily="Arial, sans-serif"
             fontWeight="bold"
           >
             PACK
