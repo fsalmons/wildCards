@@ -202,8 +202,23 @@ export function CardSwipeFlow({ cards, teamColor, onComplete }) {
       <div
         key={currentIndex}
         className={cardAnimClass}
-        style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '12px' }}
       >
+        {card.isNew && (
+          <div style={{
+            backgroundColor: '#CC0000',
+            color: '#FFFFFF',
+            fontFamily: 'Arial, sans-serif',
+            fontWeight: 800,
+            fontSize: '13px',
+            letterSpacing: '2px',
+            padding: '4px 14px',
+            borderRadius: '20px',
+            boxShadow: '0 2px 6px rgba(204,0,0,0.4)',
+          }}>
+            NEW
+          </div>
+        )}
         <PlayerCard
           player={card}
           teamColor={teamColor}

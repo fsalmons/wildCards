@@ -175,7 +175,19 @@ export function PackOpening({ stadium, onClose }) {
           .slice(0, 5)
           .map((p) => mapPlayer({ ...p, team_name: team.name }))
 
-        setCards(picked)
+        // 4. Check which are already owned
+        const userId = JSON.parse(localStorage.getItem('scc_user'))?.id
+        const pickedIds = picked.map((p) => p.id)
+        const { data: owned } = await supabase
+          .from('user_cards')
+          .select('player_id')
+          .eq('user_id', userId)
+          .in('player_id', pickedIds)
+        if (cancelled) return
+        const ownedSet = new Set((owned ?? []).map((r) => r.player_id))
+        const pickedWithNew = picked.map((p) => ({ ...p, isNew: !ownedSet.has(p.id) }))
+
+        setCards(pickedWithNew)
         setPhase('envelope')
       } catch (err) {
         if (!cancelled) {
