@@ -1,8 +1,10 @@
 export function getStravaAuthUrl() {
+  const clientId = import.meta.env.VITE_STRAVA_CLIENT_ID || '223711'
+  const redirectUri = import.meta.env.VITE_STRAVA_REDIRECT_URI || 'https://stadium-card-collector.vercel.app/profile'
   const params = new URLSearchParams({
-    client_id: import.meta.env.VITE_STRAVA_CLIENT_ID,
+    client_id: clientId,
     response_type: 'code',
-    redirect_uri: import.meta.env.VITE_STRAVA_REDIRECT_URI,
+    redirect_uri: redirectUri,
     approval_prompt: 'auto',
     scope: 'activity:read',
   })
