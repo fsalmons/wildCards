@@ -115,7 +115,17 @@ export function TradePage() {
     const { error: err } = await supabase.rpc('accept_trade', { trade_id: pendingTrade.id })
     setSubmitting(false)
     if (err) { setError('Failed to accept trade: ' + err.message); return }
-    navigate(-1)
+    // Get the player id of the card we just received (the proposer's offered card)
+    const { data: cardData } = await supabase
+      .from('user_cards')
+      .select('player_id')
+      .eq('id', pendingTrade.offered_card_id)
+      .single()
+    if (cardData?.player_id) {
+      navigate(`/collection?newCard=${cardData.player_id}`)
+    } else {
+      navigate('/collection')
+    }
   }
 
   async function handleReject() {
@@ -417,7 +427,7 @@ const styles = {
   modalEmpty: { fontFamily: 'Arial, sans-serif', fontWeight: 700, fontSize: '15px', color: '#8B6A4E', textAlign: 'center', padding: '32px 16px' },
   // Confirm/back preview inside modal
   previewCard: { display: 'flex', justifyContent: 'center', padding: '24px 16px 16px', overflowY: 'auto' },
-  previewButtons: { display: 'flex', gap: '12px', padding: '0 24px 28px', flexShrink: 0 },
+  previewButtons: { display: 'flex', gap: '12px', padding: '0 24px', paddingBottom: 'calc(80px + env(safe-area-inset-bottom))', flexShrink: 0 },
   confirmBtn: { flex: 1, backgroundColor: '#8B4513', color: '#FFF', border: 'none', borderRadius: '14px', padding: '14px', minHeight: '50px', fontFamily: 'Arial, sans-serif', fontWeight: 800, fontSize: '17px', cursor: 'pointer', boxShadow: '0 3px 0 #5C2A00' },
   backBtnModal: { flex: 1, backgroundColor: 'transparent', color: '#8B4513', border: '2px solid #8B4513', borderRadius: '14px', padding: '14px', minHeight: '50px', fontFamily: 'Arial, sans-serif', fontWeight: 800, fontSize: '17px', cursor: 'pointer' },
 }
