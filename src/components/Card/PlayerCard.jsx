@@ -143,8 +143,6 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full' }) {
 
   const displayAge = isCollected ? player.age : '?'
   const displayPosition = isCollected ? player.position : '?'
-  const displayHeight = isCollected ? player.height : '?'
-  const displayWeight = isCollected ? player.weight : '?'
   const cardNum = player.cardNumber
     ? `#${String(player.cardNumber).padStart(3, '0')}`
     : '#???'
@@ -187,12 +185,7 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full' }) {
             <span style={{ ...statLabelStyle, marginTop: '6px' }}>Position</span>
             <span style={statValueStyle}>{displayPosition}</span>
           </div>
-          <div style={{ ...statBlockStyle, textAlign: 'right' }}>
-            <span style={statLabelStyle}>Height</span>
-            <span style={statValueStyle}>{displayHeight}</span>
-            <span style={{ ...statLabelStyle, marginTop: '6px' }}>Weight</span>
-            <span style={statValueStyle}>{displayWeight}</span>
-          </div>
+          <div style={{ ...statBlockStyle, textAlign: 'right' }} />
         </div>
 
         {/* Divider */}
