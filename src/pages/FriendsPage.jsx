@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 
@@ -6,9 +6,10 @@ export function FriendsPage() {
   const navigate = useNavigate()
   const [userId, setUserId] = useState(null)
   const [friends, setFriends] = useState([])
-  const [pendingRequests, setPendingRequests] = useState([])   // received
-  const [sentRequests, setSentRequests] = useState([])         // sent
+  const [pendingRequests, setPendingRequests] = useState([])
+  const [sentRequests, setSentRequests] = useState([])
   const [pendingTradeProposers, setPendingTradeProposers] = useState(new Set())
+  const [sentTradeReceivers, setSentTradeReceivers] = useState(new Set())
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [addUsername, setAddUsername] = useState('')
@@ -16,6 +17,7 @@ export function FriendsPage() {
   const [addError, setAddError] = useState('')
   const [actionLoading, setActionLoading] = useState(null)
   const [showSent, setShowSent] = useState(false)
+  const [openMenu, setOpenMenu] = useState(null) // req.id of open three-dot menu
 
   useEffect(() => {
     const raw = localStorage.getItem('scc_user')
@@ -30,11 +32,19 @@ export function FriendsPage() {
     fetchAll()
   }, [userId])
 
+  // Close menu on outside click
+  useEffect(() => {
+    if (!openMenu) return
+    function handleClick() { setOpenMenu(null) }
+    document.addEventListener('click', handleClick)
+    return () => document.removeEventListener('click', handleClick)
+  }, [openMenu])
+
   async function fetchAll() {
     setLoading(true)
     setError(null)
     try {
-      await Promise.all([fetchFriends(), fetchPendingRequests(), fetchSentRequests(), fetchPendingTrades()])
+      await Promise.all([fetchFriends(), fetchPendingRequests(), fetchSentRequests(), fetchPendingTrades(), fetchSentTrades()])
     } catch {
       setError('Failed to load friends. Please try again.')
     } finally {
@@ -85,6 +95,16 @@ export function FriendsPage() {
     setPendingTradeProposers(new Set((data || []).map((t) => t.proposer_id)))
   }
 
+  async function fetchSentTrades() {
+    const { data, error: err } = await supabase
+      .from('trades')
+      .select('receiver_id')
+      .eq('proposer_id', userId)
+      .eq('status', 'pending')
+    if (err) throw err
+    setSentTradeReceivers(new Set((data || []).map((t) => t.receiver_id)))
+  }
+
   async function handleAccept(friendshipId) {
     setActionLoading(friendshipId)
     const { error: err } = await supabase.from('friendships').update({ status: 'accepted' }).eq('id', friendshipId)
@@ -98,6 +118,15 @@ export function FriendsPage() {
     const { error: err } = await supabase.from('friendships').update({ status: 'rejected' }).eq('id', friendshipId)
     setActionLoading(null)
     if (err) { setError('Could not reject request.'); return }
+    await fetchAll()
+  }
+
+  async function handleDeleteSentRequest(friendshipId) {
+    setActionLoading(friendshipId)
+    const { error: err } = await supabase.from('friendships').delete().eq('id', friendshipId)
+    setActionLoading(null)
+    setOpenMenu(null)
+    if (err) { setError('Could not delete request.'); return }
     await fetchAll()
   }
 
@@ -159,7 +188,7 @@ export function FriendsPage() {
         <h1 style={s.heading}>Friends</h1>
         {error && <p style={s.errorBanner}>{error}</p>}
 
-        {/* ── Add Friend (search bar at top) ── */}
+        {/* ── Add Friend ── */}
         <section style={s.section}>
           <h2 style={s.subheading}>Add Friend</h2>
           <form onSubmit={handleAddFriend} style={s.addForm}>
@@ -184,7 +213,7 @@ export function FriendsPage() {
           {addStatus === 'success' && <p style={s.addSuccess}>Friend request sent! ✓</p>}
         </section>
 
-        {/* ── Friends grid (below search) ── */}
+        {/* ── Friends grid ── */}
         <section style={s.section}>
           <h2 style={s.subheading}>My Friends</h2>
           {friends.length === 0 ? (
@@ -196,7 +225,10 @@ export function FriendsPage() {
                   <div style={s.avatar}>{friend.username?.[0]?.toUpperCase() || '?'}</div>
                   <span style={s.friendUsername}>{friend.username}</span>
                   {pendingTradeProposers.has(friend.id) && (
-                    <span style={s.tradeBadge}>Trade offer! 🔴</span>
+                    <span style={s.tradeBadge}>Trade Offer!</span>
+                  )}
+                  {!pendingTradeProposers.has(friend.id) && sentTradeReceivers.has(friend.id) && (
+                    <span style={s.tradeSentBadge}>Trade Sent!</span>
                   )}
                 </button>
               ))}
@@ -227,7 +259,7 @@ export function FriendsPage() {
           </section>
         )}
 
-        {/* ── Requests Sent toggle ── */}
+        {/* ── Requests Sent ── */}
         <section style={s.section}>
           <button style={s.sentToggleBtn} onClick={() => setShowSent((v) => !v)}>
             Requests Sent {sentRequests.length > 0 ? `(${sentRequests.length})` : ''} {showSent ? '▲' : '▼'}
@@ -243,6 +275,27 @@ export function FriendsPage() {
                       <div style={s.requestAvatar}>{req.addressee?.username?.[0]?.toUpperCase() || '?'}</div>
                       <span style={s.requestUsername}>{req.addressee?.username}</span>
                       <span style={s.pendingLabel}>Pending...</span>
+                      {/* Three-dot menu */}
+                      <div style={{ position: 'relative', flexShrink: 0 }} onClick={(e) => e.stopPropagation()}>
+                        <button
+                          style={s.dotsBtn}
+                          onClick={() => setOpenMenu(openMenu === req.id ? null : req.id)}
+                          aria-label="Options"
+                        >
+                          ⋮
+                        </button>
+                        {openMenu === req.id && (
+                          <div style={s.dropdown}>
+                            <button
+                              style={s.dropdownItem}
+                              onClick={() => handleDeleteSentRequest(req.id)}
+                              disabled={actionLoading === req.id}
+                            >
+                              {actionLoading === req.id ? '...' : 'Delete'}
+                            </button>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -273,20 +326,8 @@ const s = {
     margin: '0 auto',
     boxSizing: 'border-box',
   },
-  heading: {
-    fontFamily: 'Arial, sans-serif',
-    fontWeight: 800,
-    fontSize: 28,
-    color: '#3B1A08',
-    margin: '0 0 20px',
-  },
-  subheading: {
-    fontFamily: 'Arial, sans-serif',
-    fontWeight: 800,
-    fontSize: 18,
-    color: '#5A2D0C',
-    margin: '0 0 12px',
-  },
+  heading: { fontFamily: 'Arial, sans-serif', fontWeight: 800, fontSize: 28, color: '#3B1A08', margin: '0 0 20px' },
+  subheading: { fontFamily: 'Arial, sans-serif', fontWeight: 800, fontSize: 18, color: '#5A2D0C', margin: '0 0 12px' },
   section: { marginBottom: 28 },
   loadingWrap: { flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' },
   loadingText: { fontFamily: 'Arial, sans-serif', fontWeight: 700, fontSize: 18, color: '#8B4513' },
@@ -308,6 +349,23 @@ const s = {
   acceptBtn: { backgroundColor: '#8B4513', color: '#FFF', border: 'none', borderRadius: 10, padding: '8px 14px', minHeight: 44, fontFamily: 'Arial, sans-serif', fontWeight: 800, fontSize: 14, cursor: 'pointer', whiteSpace: 'nowrap' },
   rejectBtn: { backgroundColor: 'transparent', color: '#8B4513', border: '2px solid #8B4513', borderRadius: 10, padding: '8px 14px', minHeight: 44, fontFamily: 'Arial, sans-serif', fontWeight: 700, fontSize: 14, cursor: 'pointer', whiteSpace: 'nowrap' },
   pendingLabel: { fontFamily: 'Arial, sans-serif', fontWeight: 700, fontSize: 13, color: '#A07850', fontStyle: 'italic', flexShrink: 0 },
+  dotsBtn: {
+    background: 'none', border: 'none', cursor: 'pointer',
+    fontSize: 22, color: '#8B4513', padding: '4px 8px',
+    minHeight: 44, minWidth: 36, display: 'flex', alignItems: 'center', justifyContent: 'center',
+  },
+  dropdown: {
+    position: 'absolute', right: 0, top: '100%', zIndex: 50,
+    backgroundColor: '#FFF', border: '2px solid #E8D5B5',
+    borderRadius: 10, boxShadow: '0 4px 12px rgba(0,0,0,0.12)',
+    minWidth: 100, overflow: 'hidden',
+  },
+  dropdownItem: {
+    display: 'block', width: '100%', padding: '12px 16px',
+    background: 'none', border: 'none', cursor: 'pointer',
+    fontFamily: 'Arial, sans-serif', fontWeight: 700, fontSize: 15,
+    color: '#CC0000', textAlign: 'left',
+  },
   friendsGrid: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 },
   friendTile: {
     display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8,
@@ -318,7 +376,8 @@ const s = {
   },
   avatar: { width: 52, height: 52, borderRadius: '50%', backgroundColor: '#8B4513', color: '#FFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Arial, sans-serif', fontWeight: 800, fontSize: 22 },
   friendUsername: { fontFamily: 'Arial, sans-serif', fontWeight: 700, fontSize: 15, color: '#3B1A08', textAlign: 'center', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '100%' },
-  tradeBadge: { backgroundColor: '#FF4444', color: '#FFF', borderRadius: 20, padding: '3px 10px', fontSize: 12, fontFamily: 'Arial, sans-serif', fontWeight: 700, whiteSpace: 'nowrap' },
+  tradeBadge: { backgroundColor: '#CC0000', color: '#FFF', borderRadius: 20, padding: '3px 10px', fontSize: 12, fontFamily: 'Arial, sans-serif', fontWeight: 700, whiteSpace: 'nowrap' },
+  tradeSentBadge: { backgroundColor: '#CC0000', color: '#FFF', borderRadius: 20, padding: '3px 10px', fontSize: 12, fontFamily: 'Arial, sans-serif', fontWeight: 700, whiteSpace: 'nowrap' },
   emptyState: { fontFamily: 'Arial, sans-serif', fontWeight: 700, fontSize: 15, color: '#8B6A4E', textAlign: 'center', padding: '24px 0' },
   addForm: { display: 'flex', gap: 10, flexWrap: 'wrap' },
   addInput: { flex: '1 1 180px', border: '2px solid #C8A97A', borderRadius: 12, padding: '10px 14px', fontSize: 16, fontFamily: 'Arial, sans-serif', fontWeight: 700, backgroundColor: '#FFF8EC', color: '#3B1A08', minHeight: 44, boxSizing: 'border-box', outline: 'none' },
