@@ -51,11 +51,11 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full', rati
 
   const ratingBlockStyle = {
     position: 'absolute',
-    top: '10px',
-    left: '12px',
+    top: '8px',
+    left: '10px',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     lineHeight: 1,
   }
 
@@ -66,6 +66,43 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full', rati
     color: ratingColor,
     lineHeight: 1,
     textShadow: '0 1px 2px rgba(0,0,0,0.3)',
+  }
+
+  const ovrLabelStyle = {
+    fontSize: isFull ? '9px' : '7px',
+    fontWeight: '700',
+    fontFamily: 'Arial, sans-serif',
+    color: 'rgba(255,255,255,0.8)',
+    letterSpacing: '0.5px',
+    marginTop: '2px',
+  }
+
+  const ageBlockStyle = {
+    position: 'absolute',
+    top: '8px',
+    right: '10px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    lineHeight: 1,
+  }
+
+  const ageNumberStyle = {
+    fontSize: ratingFontSize,
+    fontWeight: '800',
+    fontFamily: 'Arial, sans-serif',
+    color: 'rgba(255,255,255,0.95)',
+    lineHeight: 1,
+    textShadow: '0 1px 2px rgba(0,0,0,0.3)',
+  }
+
+  const ageLabelStyle = {
+    fontSize: isFull ? '9px' : '7px',
+    fontWeight: '700',
+    fontFamily: 'Arial, sans-serif',
+    color: 'rgba(255,255,255,0.8)',
+    letterSpacing: '0.5px',
+    marginTop: '2px',
   }
 
   const playerNameStyle = {
@@ -185,26 +222,34 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full', rati
       <div style={cardStyle}>
         {/* Header */}
         <div style={headerStyle}>
-          {rating !== null && (
-            <div style={ratingBlockStyle}>
-              <span style={ratingNumberStyle}>{rating}</span>
-            </div>
-          )}
-          {isActiveCard && (
-            <span style={{
-              position: 'absolute',
-              top: '10px',
-              right: '12px',
-              fontSize: isFull ? '20px' : '16px',
-              lineHeight: 1,
-            }}>⚡</span>
-          )}
+          {/* Rating — top left */}
+          <div style={ratingBlockStyle}>
+            <span style={ratingNumberStyle}>
+              {rating !== null ? rating : '—'}
+            </span>
+            <span style={ovrLabelStyle}>OVR</span>
+          </div>
+
+          {/* Age — top right */}
+          <div style={ageBlockStyle}>
+            <span style={ageNumberStyle}>
+              {isCollected && displayAge ? displayAge : '—'}
+            </span>
+            <span style={ageLabelStyle}>AGE</span>
+          </div>
+
           <p style={playerNameStyle}>{displayName}</p>
           <p style={teamNameStyle}>{player.team || ''}</p>
         </div>
 
         {/* Face image */}
         <div style={imageAreaStyle}>
+          {isActiveCard && (
+            <span style={{
+              position: 'absolute', top: '8px', right: '8px',
+              fontSize: isFull ? '18px' : '14px', lineHeight: 1, zIndex: 1,
+            }}>⚡</span>
+          )}
           {isCollected && player.faceImage ? (
             <img
               src={player.faceImage}
@@ -227,12 +272,9 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full', rati
         {/* Stats row */}
         <div style={statsRowStyle}>
           <div style={statBlockStyle}>
-            <span style={statLabelStyle}>Age</span>
-            <span style={statValueStyle}>{displayAge}</span>
-            <span style={{ ...statLabelStyle, marginTop: '6px' }}>Position</span>
+            <span style={statLabelStyle}>Position</span>
             <span style={statValueStyle}>{displayPosition}</span>
           </div>
-          <div style={{ ...statBlockStyle, textAlign: 'right' }} />
         </div>
 
         {/* Divider */}
