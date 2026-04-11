@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { PlayerCard } from '../components/Card/PlayerCard'
 
@@ -8,7 +8,7 @@ function getUser() {
   catch { return null }
 }
 
-function TeamRow({ team, collectedIds, ratingMap, defaultOpen }) {
+function TeamRow({ team, collectedIds, ratingMap, onCardClick, defaultOpen }) {
   const [open, setOpen] = useState(defaultOpen)
 
   useEffect(() => { setOpen(defaultOpen) }, [defaultOpen])
@@ -30,33 +30,40 @@ function TeamRow({ team, collectedIds, ratingMap, defaultOpen }) {
       {/* Horizontal scroll strip */}
       <div style={{ ...s.cardStripWrapper, maxHeight: open ? '260px' : '0px' }} aria-hidden={!open}>
         <div style={s.cardStrip}>
-          {players.map((player) => (
-            <div key={player.id} style={s.cardStripItem}>
-              <PlayerCard
-                player={{
-                  id: player.id,
-                  firstName: player.first_name,
-                  lastName: player.last_name,
-                  faceImage: player.face_image,
-                  cardNumber: player.card_number,
-                  position: player.position,
-                  age: player.age,
-                  team: team.name,
-                }}
-                teamColor={team.primary_color ?? '#8B4513'}
-                isCollected={collectedIds.has(player.id)}
-                rating={ratingMap.get(player.id) ?? null}
-                size="small"
-              />
-            </div>
-          ))}
+          {players.map((player) => {
+            const playerObj = {
+              id: player.id,
+              firstName: player.first_name,
+              lastName: player.last_name,
+              faceImage: player.face_image,
+              cardNumber: player.card_number,
+              position: player.position,
+              age: player.age,
+              team: team.name,
+            }
+            return (
+              <div
+                key={player.id}
+                style={{ ...s.cardStripItem, cursor: 'pointer' }}
+                onClick={() => onCardClick({ player: playerObj, teamColor: team.primary_color ?? '#8B4513', rating: ratingMap.get(player.id) ?? null, isCollected: collectedIds.has(player.id) })}
+              >
+                <PlayerCard
+                  player={playerObj}
+                  teamColor={team.primary_color ?? '#8B4513'}
+                  isCollected={collectedIds.has(player.id)}
+                  rating={ratingMap.get(player.id) ?? null}
+                  size="small"
+                />
+              </div>
+            )
+          })}
         </div>
       </div>
     </div>
   )
 }
 
-function SportSection({ sport, teams, collectedIds, ratingMap }) {
+function SportSection({ sport, teams, collectedIds, ratingMap, onCardClick }) {
   const [allExpanded, setAllExpanded] = useState(false)
   const totalTeams = teams.length
   const teamsWithCards = teams.filter((t) => (t.players ?? []).some((p) => collectedIds.has(p.id))).length
@@ -73,7 +80,7 @@ function SportSection({ sport, teams, collectedIds, ratingMap }) {
         </button>
       </div>
       {teams.map((team) => (
-        <TeamRow key={team.id} team={team} collectedIds={collectedIds} ratingMap={ratingMap} defaultOpen={allExpanded} />
+        <TeamRow key={team.id} team={team} collectedIds={collectedIds} ratingMap={ratingMap} onCardClick={onCardClick} defaultOpen={allExpanded} />
       ))}
     </section>
   )
@@ -81,12 +88,17 @@ function SportSection({ sport, teams, collectedIds, ratingMap }) {
 
 export function CollectionPage() {
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
+  const newCardId = searchParams.get('newCard')
+
   const [user] = useState(() => getUser())
   const [teamsBySport, setTeamsBySport] = useState({})
   const [collectedIds, setCollectedIds] = useState(new Set())
   const [ratingMap, setRatingMap] = useState(new Map())
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [cardOverlay, setCardOverlay] = useState(null)
+  const [newCardData, setNewCardData] = useState(null)
 
   useEffect(() => { if (!user) window.location.href = '/login' }, [user])
 
@@ -114,13 +126,36 @@ export function CollectionPage() {
         grouped[sport].push(team)
       }
       setTeamsBySport(grouped)
+
+      if (newCardId) {
+        for (const team of teamsResult.data ?? []) {
+          const found = (team.players ?? []).find((p) => p.id === newCardId)
+          if (found) {
+            setNewCardData({
+              player: {
+                id: found.id,
+                firstName: found.first_name,
+                lastName: found.last_name,
+                faceImage: found.face_image,
+                cardNumber: found.card_number,
+                position: found.position,
+                age: found.age,
+                team: team.name,
+              },
+              teamColor: team.primary_color ?? '#8B4513',
+              rating: ratings.get(found.id) ?? null,
+            })
+            break
+          }
+        }
+      }
     } catch (err) {
       console.error('CollectionPage fetch error:', err)
       setError('Failed to load your collection. Please try again.')
     } finally {
       setLoading(false)
     }
-  }, [user])
+  }, [user, newCardId])
 
   useEffect(() => { fetchData() }, [fetchData])
 
@@ -134,6 +169,21 @@ export function CollectionPage() {
 
   return (
     <div style={s.page}>
+      {/* ── Card overlay ── */}
+      {cardOverlay && (
+        <div style={s.cardOverlay} onClick={() => setCardOverlay(null)}>
+          <div onClick={(e) => e.stopPropagation()}>
+            <PlayerCard
+              player={cardOverlay.player}
+              teamColor={cardOverlay.teamColor}
+              isCollected={cardOverlay.isCollected}
+              rating={cardOverlay.rating}
+              size="full"
+            />
+          </div>
+        </div>
+      )}
+
       {/* ── Header ── */}
       <header style={s.header}>
         <div style={s.headerTop}>
@@ -165,11 +215,39 @@ export function CollectionPage() {
             <span style={s.emptyText}>No cards yet! Visit a stadium to get started 🏟️</span>
           </div>
         )}
+        {!loading && !error && newCardData && (
+          <section style={s.newSection}>
+            <div style={s.newSectionHeader}>
+              <span style={s.newBadge}>NEW</span>
+            </div>
+            <div style={s.cardStrip}>
+              <div
+                style={{ ...s.cardStripItem, cursor: 'pointer' }}
+                onClick={() => setCardOverlay({ ...newCardData, isCollected: true })}
+              >
+                <PlayerCard
+                  player={newCardData.player}
+                  teamColor={newCardData.teamColor}
+                  isCollected={true}
+                  rating={newCardData.rating}
+                  size="small"
+                />
+              </div>
+            </div>
+          </section>
+        )}
         {!loading && !error && SPORT_META.map(({ key, emoji, label }) => {
           const teams = teamsBySport[key]
           if (!teams || teams.length === 0) return null
           return (
-            <SportSection key={key} sport={{ key, emoji, label }} teams={teams} collectedIds={collectedIds} ratingMap={ratingMap} />
+            <SportSection
+              key={key}
+              sport={{ key, emoji, label }}
+              teams={teams}
+              collectedIds={collectedIds}
+              ratingMap={ratingMap}
+              onCardClick={setCardOverlay}
+            />
           )
         })}
       </main>
@@ -339,4 +417,19 @@ const s = {
   errorText: { fontFamily: 'Arial, sans-serif', fontWeight: 700, fontSize: 16, color: '#CC3333', textAlign: 'center', lineHeight: 1.4 },
   retryBtn: { fontFamily: 'Arial, sans-serif', fontWeight: 800, fontSize: 15, color: '#FAF3E0', backgroundColor: '#8B4513', border: 'none', borderRadius: 8, padding: '8px 24px', cursor: 'pointer' },
   emptyText: { fontFamily: 'Arial, sans-serif', fontWeight: 700, fontSize: 18, color: '#8B4513', textAlign: 'center', lineHeight: 1.5 },
+  cardOverlay: {
+    position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.7)',
+    zIndex: 200, display: 'flex', alignItems: 'center', justifyContent: 'center',
+  },
+  newSection: { marginBottom: 8 },
+  newSectionHeader: {
+    backgroundColor: '#F5ECD7', padding: '12px 16px',
+    display: 'flex', alignItems: 'center',
+    borderBottom: '1px solid #E8D5B0',
+  },
+  newBadge: {
+    fontFamily: 'Arial, sans-serif', fontWeight: 800, fontSize: 17,
+    color: '#FFFFFF', backgroundColor: '#CC0000',
+    padding: '2px 10px', borderRadius: 8, letterSpacing: '1px',
+  },
 }
