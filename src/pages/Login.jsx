@@ -182,8 +182,23 @@ export function Login() {
           .select('*')
 
         if (insertError) throw insertError
-
         user = newUsers[0]
+
+        // Seed 10 random cards for the new user
+        const { data: allPlayers } = await supabase.from('players').select('id')
+        if (allPlayers && allPlayers.length > 0) {
+          const shuffled = [...allPlayers].sort(() => Math.random() - 0.5)
+          const picked = shuffled.slice(0, 10)
+          const rating = () => Math.floor(Math.random() * 99) + 1
+          await supabase.from('user_cards').insert(
+            picked.map(p => ({
+              user_id: user.id,
+              player_id: p.id,
+              rating: rating(),
+              collected_at: new Date().toISOString(),
+            }))
+          )
+        }
       }
 
       localStorage.setItem('scc_user', JSON.stringify(user))
