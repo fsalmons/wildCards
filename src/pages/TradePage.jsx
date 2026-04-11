@@ -70,11 +70,11 @@ export function TradePage() {
         supabase.from('users').select('*').eq('id', friendId).single(),
         supabase
           .from('user_cards')
-          .select('id, player:players(*, team:teams(name,primary_color))')
+          .select('id, player:players(*, team:teams!players_team_id_fkey(name,primary_color))')
           .eq('user_id', userId),
         supabase
           .from('user_cards')
-          .select('id, player:players(*, team:teams(name,primary_color))')
+          .select('id, player:players(*, team:teams!players_team_id_fkey(name,primary_color))')
           .eq('user_id', friendId),
         supabase
           .from('trades')

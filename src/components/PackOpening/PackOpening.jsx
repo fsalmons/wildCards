@@ -114,7 +114,7 @@ export function PackOpening({ stadium, onClose }) {
         // 1. Fetch stadium + team
         const { data: stadiumData, error: stadiumError } = await supabase
           .from('stadiums')
-          .select('*, team:teams(*)')
+          .select('*, team:teams!fk_stadiums_team_id(*)')
           .eq('id', stadium.id)
           .single()
 
