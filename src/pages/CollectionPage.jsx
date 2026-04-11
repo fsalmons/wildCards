@@ -8,7 +8,7 @@ function getUser() {
   catch { return null }
 }
 
-function TeamRow({ team, collectedIds, defaultOpen }) {
+function TeamRow({ team, collectedIds, ratingMap, defaultOpen }) {
   const [open, setOpen] = useState(defaultOpen)
 
   useEffect(() => { setOpen(defaultOpen) }, [defaultOpen])
@@ -45,6 +45,7 @@ function TeamRow({ team, collectedIds, defaultOpen }) {
                 }}
                 teamColor={team.primary_color ?? '#8B4513'}
                 isCollected={collectedIds.has(player.id)}
+                rating={ratingMap.get(player.id) ?? null}
                 size="small"
               />
             </div>
@@ -55,7 +56,7 @@ function TeamRow({ team, collectedIds, defaultOpen }) {
   )
 }
 
-function SportSection({ sport, teams, collectedIds }) {
+function SportSection({ sport, teams, collectedIds, ratingMap }) {
   const [allExpanded, setAllExpanded] = useState(false)
   const totalTeams = teams.length
   const teamsWithCards = teams.filter((t) => (t.players ?? []).some((p) => collectedIds.has(p.id))).length
@@ -72,7 +73,7 @@ function SportSection({ sport, teams, collectedIds }) {
         </button>
       </div>
       {teams.map((team) => (
-        <TeamRow key={team.id} team={team} collectedIds={collectedIds} defaultOpen={allExpanded} />
+        <TeamRow key={team.id} team={team} collectedIds={collectedIds} ratingMap={ratingMap} defaultOpen={allExpanded} />
       ))}
     </section>
   )
@@ -83,6 +84,7 @@ export function CollectionPage() {
   const [user] = useState(() => getUser())
   const [teamsBySport, setTeamsBySport] = useState({})
   const [collectedIds, setCollectedIds] = useState(new Set())
+  const [ratingMap, setRatingMap] = useState(new Map())
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
@@ -95,13 +97,15 @@ export function CollectionPage() {
     try {
       const [teamsResult, cardsResult] = await Promise.all([
         supabase.from('teams').select('*, players(*)'),
-        supabase.from('user_cards').select('player_id').eq('user_id', user.id),
+        supabase.from('user_cards').select('player_id, rating').eq('user_id', user.id),
       ])
       if (teamsResult.error) throw teamsResult.error
       if (cardsResult.error) throw cardsResult.error
 
       const ids = new Set((cardsResult.data ?? []).map((r) => r.player_id))
+      const ratings = new Map((cardsResult.data ?? []).map((r) => [r.player_id, r.rating]))
       setCollectedIds(ids)
+      setRatingMap(ratings)
 
       const grouped = {}
       for (const team of teamsResult.data ?? []) {
@@ -165,7 +169,7 @@ export function CollectionPage() {
           const teams = teamsBySport[key]
           if (!teams || teams.length === 0) return null
           return (
-            <SportSection key={key} sport={{ key, emoji, label }} teams={teams} collectedIds={collectedIds} />
+            <SportSection key={key} sport={{ key, emoji, label }} teams={teams} collectedIds={collectedIds} ratingMap={ratingMap} />
           )
         })}
       </main>
