@@ -1,0 +1,31 @@
+id,first_name,last_name,team_name,position,age,height,weight,face_image,card_number
+PLR001,Sofia,Martinez,Chicago Stars,Forward,24,5ft7,140lbs,,1
+PLR002,Aaliyah,Johnson,Chicago Stars,Midfielder,22,5ft5,130lbs,,2
+PLR003,Maya,Chen,Chicago Stars,Defender,26,5ft6,135lbs,,3
+PLR004,Priya,Patel,Chicago Stars,Goalkeeper,28,5ft9,155lbs,,4
+PLR005,Jordan,Williams,Chicago Stars,Forward,21,5ft8,145lbs,,5
+PLR006,Destiny,Brown,Chicago Stars,Midfielder,23,5ft4,125lbs,,6
+PLR007,Elena,Rodriguez,Chicago Stars,Defender,25,5ft6,138lbs,,7
+PLR008,Keisha,Thompson,Chicago Stars,Forward,27,5ft7,142lbs,,8
+PLR009,Ava,Kim,Chicago Stars,Midfielder,20,5ft5,128lbs,,9
+PLR010,Nadia,Hassan,Chicago Stars,Defender,24,5ft8,150lbs,,10
+PLR011,Chloe,Andrews,Portland Thorns,Forward,23,5ft6,137lbs,,1
+PLR012,Rachel,Nguyen,Portland Thorns,Midfielder,25,5ft5,132lbs,,2
+PLR013,Simone,Davis,Portland Thorns,Defender,27,5ft7,143lbs,,3
+PLR014,Brianna,Lee,Portland Thorns,Goalkeeper,26,5ft10,158lbs,,4
+PLR015,Tamara,Wilson,Portland Thorns,Forward,22,5ft8,146lbs,,5
+PLR016,Zoe,Hernandez,Portland Thorns,Midfielder,24,5ft4,126lbs,,6
+PLR017,Fatima,Ali,Portland Thorns,Defender,28,5ft6,139lbs,,7
+PLR018,Olivia,Scott,Portland Thorns,Forward,21,5ft7,141lbs,,8
+PLR019,Imani,Jackson,NorthWestern Wildcats,Guard,20,5ft11,165lbs,,1
+PLR020,Taylor,Moore,NorthWestern Wildcats,Forward,22,6ft1,180lbs,,2
+PLR021,Bianca,White,NorthWestern Wildcats,Center,21,6ft3,195lbs,,3
+PLR022,Jade,Thomas,NorthWestern Wildcats,Guard,23,5ft10,160lbs,,4
+PLR023,Camille,Walker,NorthWestern Wildcats,Forward,20,6ft0,175lbs,,5
+PLR024,Leah,Harris,NorthWestern Wildcats,Guard,22,5ft9,158lbs,,6
+PLR025,Destiny,Clark,Chicago Sky (CBB),Guard,21,5ft10,162lbs,,1
+PLR026,Amara,Lewis,Chicago Sky (CBB),Forward,23,6ft1,178lbs,,2
+PLR027,Nia,Robinson,Chicago Sky (CBB),Center,22,6ft2,190lbs,,3
+PLR028,Serena,Young,Chicago Sky (CBB),Guard,20,5ft9,155lbs,,4
+PLR029,Kiara,Hill,Chicago Sky (CBB),Forward,24,6ft0,173lbs,,5
+PLR030,Talia,Adams,Chicago Sky (CBB),Guard,21,5ft11,167lbs,,6

@@ -1,0 +1,71 @@
+:root {
+  --color-beige: #F5ECD7;
+  --color-beige-dark: #E8D5B0;
+  --font-retro: 'Fredoka One', cursive;
+  --font-retro-sm: 'Press Start 2P', monospace;
+  --border-radius-card: 16px;
+  --shadow-card: 4px 4px 0px rgba(0,0,0,0.25);
+}
+
+.walking-sprite {
+  font-size: 28px;
+  animation: walk-bob 0.4s ease-in-out infinite alternate;
+}
+@keyframes walk-bob {
+  from { transform: translateY(0px); }
+  to   { transform: translateY(-4px); }
+}
+
+.pack-btn-pulse {
+  animation: pulse-pack 1s ease-in-out infinite;
+}
+@keyframes pulse-pack {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(139, 69, 19, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 8px rgba(139, 69, 19, 0);
+  }
+}
+
+/* ── Envelope pack opening animation ── */
+.envelope-flap {
+  transform-origin: center top;
+  animation: flap-open 1.2s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+@keyframes flap-open {
+  0%   { transform: rotateX(0deg); }
+  100% { transform: rotateX(-180deg); }
+}
+
+/* ── Card swipe entrance / exit transitions ── */
+.card-enter {
+  animation: card-slide-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes card-slide-in {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+.card-exit {
+  animation: card-slide-out 0.28s cubic-bezier(0.55, 0, 1, 0.45) forwards;
+}
+@keyframes card-slide-out {
+  from { transform: translateX(0);     opacity: 1; }
+  to   { transform: translateX(-100%); opacity: 0; }
+}
+
+/* ── Loading skeleton ── */
+.skeleton {
+  background: linear-gradient(90deg, #E8D5B0 25%, #F5ECD7 50%, #E8D5B0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+@keyframes skeleton-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
