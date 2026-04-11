@@ -33,7 +33,16 @@ function TeamRow({ team, collectedIds, defaultOpen }) {
           {players.map((player) => (
             <div key={player.id} style={s.cardStripItem}>
               <PlayerCard
-                player={player}
+                player={{
+                  id: player.id,
+                  firstName: player.first_name,
+                  lastName: player.last_name,
+                  faceImage: player.face_image,
+                  cardNumber: player.card_number,
+                  position: player.position,
+                  age: player.age,
+                  team: team.name,
+                }}
                 teamColor={team.primary_color ?? '#8B4513'}
                 isCollected={collectedIds.has(player.id)}
                 size="small"
