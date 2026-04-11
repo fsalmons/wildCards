@@ -126,7 +126,7 @@ export function CollectionPage() {
         <div style={s.headerTop}>
           <div>
             <p style={s.usernameLabel}>{user.username}</p>
-            <h1 style={s.pageTitle}>MY COLLECTION</h1>
+            <h1 style={s.pageTitle}>WildCards</h1>
           </div>
           <button style={s.tradeBtn} onClick={() => navigate('/friends')}>
             Trade →
