@@ -14,21 +14,33 @@ import shadowUrl from 'leaflet/dist/images/marker-shadow.png'
 delete L.Icon.Default.prototype._getIconUrl
 L.Icon.Default.mergeOptions({ iconUrl, iconRetinaUrl, shadowUrl })
 
-// Stadium pin icon — bold red teardrop SVG
+// Stadium icon — emoji on a coloured pin bubble
 function makeStadiumIcon(isNearby) {
-  const color = isNearby ? '#FF6B35' : '#8B4513'
-  const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="40" viewBox="0 0 32 40">
-      <path d="M16 0 C7.16 0 0 7.16 0 16 C0 26 16 40 16 40 C16 40 32 26 32 16 C32 7.16 24.84 0 16 0Z"
-            fill="${color}" stroke="white" stroke-width="2"/>
-      <text x="16" y="21" text-anchor="middle" font-size="14" fill="white">🏟</text>
-    </svg>`
+  const bg = isNearby ? '#FF6B35' : '#8B4513'
+  const html = `
+    <div style="
+      display:flex;flex-direction:column;align-items:center;
+    ">
+      <div style="
+        background:${bg};border:2px solid white;border-radius:50%;
+        width:38px;height:38px;display:flex;align-items:center;
+        justify-content:center;font-size:20px;
+        box-shadow:0 2px 6px rgba(0,0,0,0.35);
+      ">🏟️</div>
+      <div style="
+        width:0;height:0;
+        border-left:6px solid transparent;
+        border-right:6px solid transparent;
+        border-top:8px solid ${bg};
+        margin-top:-1px;
+      "></div>
+    </div>`
   return L.divIcon({
-    html: svg,
+    html,
     className: '',
-    iconSize: [32, 40],
-    iconAnchor: [16, 40],
-    popupAnchor: [0, -40],
+    iconSize: [38, 50],
+    iconAnchor: [19, 50],
+    popupAnchor: [0, -52],
   })
 }
 
@@ -206,7 +218,7 @@ export function MapPage() {
         scrollWheelZoom={false}
         doubleClickZoom={false}
         touchZoom={false}
-        dragging={true}
+        dragging={false}
         attributionControl={false}
       >
         {/* CartoDB Positron — minimal detail, clean look */}
