@@ -187,10 +187,17 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full', rati
         <div style={headerStyle}>
           {rating !== null && (
             <div style={ratingBlockStyle}>
-              <span style={ratingNumberStyle}>
-                {rating}{isActiveCard ? ' ⚡' : ''}
-              </span>
+              <span style={ratingNumberStyle}>{rating}</span>
             </div>
+          )}
+          {isActiveCard && (
+            <span style={{
+              position: 'absolute',
+              top: '10px',
+              right: '12px',
+              fontSize: isFull ? '20px' : '16px',
+              lineHeight: 1,
+            }}>⚡</span>
           )}
           <p style={playerNameStyle}>{displayName}</p>
           <p style={teamNameStyle}>{player.team || ''}</p>
