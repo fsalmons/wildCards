@@ -33,6 +33,9 @@ df.columns = df.columns.str.strip()
 # Keep only selected columns
 df_small = df[["Team", "Head coach", "Stadium", "Founded", "Joined"]]
 df_small = df_small.apply(lambda col: col.str.strip())
+
+df_small.loc[df_small['Team'] == 'North Carolina Courage', 'Stadium'] = 'WakeMed Soccer Park'
+
 df_small.to_csv('../tables/nwls_teams.csv', index=False)
 
 
