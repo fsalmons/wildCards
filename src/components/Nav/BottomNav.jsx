@@ -23,9 +23,9 @@ export function BottomNav() {
         height: 60,
         paddingBottom: 'env(safe-area-inset-bottom)',
         background: '#FAF3E0',
-        borderTop: '1px solid #D4C5A9',
+        borderTop: '2px solid #8B4513',
         display: 'flex',
-        zIndex: 100,
+        zIndex: 10000,
       }}
     >
       {TABS.map((tab) => {

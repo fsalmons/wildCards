@@ -10,10 +10,12 @@ import './styles/retro.css'
 function AppLayout() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100dvh' }}>
-      <div style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
+      <div style={{ flex: 1, overflow: 'hidden', position: 'relative', minHeight: 0 }}>
         <Outlet />
       </div>
-      <BottomNav />
+      <div style={{ flexShrink: 0, height: 'calc(60px + env(safe-area-inset-bottom))', zIndex: 10000, position: 'relative' }}>
+        <BottomNav />
+      </div>
     </div>
   )
 }
