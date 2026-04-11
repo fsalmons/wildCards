@@ -1,68 +1,44 @@
 import { useState, useEffect, useCallback } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { PlayerCard } from '../components/Card/PlayerCard'
-import { BottomNav } from '../components/Nav/BottomNav'
-
-// ─── helpers ──────────────────────────────────────────────────────────────────
 
 function getUser() {
-  try {
-    return JSON.parse(localStorage.getItem('scc_user')) ?? null
-  } catch {
-    return null
-  }
+  try { return JSON.parse(localStorage.getItem('scc_user')) ?? null }
+  catch { return null }
 }
-
-// ─── sub-components ───────────────────────────────────────────────────────────
 
 function TeamRow({ team, collectedIds, defaultOpen }) {
   const [open, setOpen] = useState(defaultOpen)
 
-  // keep in sync when parent toggles "expand all"
-  useEffect(() => {
-    setOpen(defaultOpen)
-  }, [defaultOpen])
+  useEffect(() => { setOpen(defaultOpen) }, [defaultOpen])
 
   const players = team.players ?? []
   const collectedCount = players.filter((p) => collectedIds.has(p.id)).length
   const total = players.length
 
   return (
-    <div style={styles.teamRow}>
-      {/* Row header */}
-      <button
-        onClick={() => setOpen((o) => !o)}
-        style={styles.teamRowHeader}
-        aria-expanded={open}
-      >
-        <span style={styles.teamName}>{team.name}</span>
-        <span style={styles.teamRowRight}>
-          <span style={styles.progressBadge}>
-            {collectedCount}/{total}
-          </span>
-          <span style={{ ...styles.chevron, transform: open ? 'rotate(90deg)' : 'none' }}>
-            ▶
-          </span>
+    <div style={s.teamRow}>
+      <button onClick={() => setOpen((o) => !o)} style={s.teamRowHeader} aria-expanded={open}>
+        <span style={s.teamName}>{team.name}</span>
+        <span style={s.teamRowRight}>
+          <span style={s.progressBadge}>{collectedCount}/{total}</span>
+          <span style={{ ...s.chevron, transform: open ? 'rotate(90deg)' : 'none' }}>▶</span>
         </span>
       </button>
 
-      {/* Collapsible card grid */}
-      <div
-        style={{
-          ...styles.cardGridWrapper,
-          maxHeight: open ? '2000px' : '0px',
-        }}
-        aria-hidden={!open}
-      >
-        <div style={styles.cardGrid}>
+      {/* Horizontal scroll strip */}
+      <div style={{ ...s.cardStripWrapper, maxHeight: open ? '260px' : '0px' }} aria-hidden={!open}>
+        <div style={s.cardStrip}>
           {players.map((player) => (
-            <PlayerCard
-              key={player.id}
-              player={player}
-              teamColor={team.primary_color ?? '#8B4513'}
-              isCollected={collectedIds.has(player.id)}
-              size="small"
-            />
+            <div key={player.id} style={s.cardStripItem}>
+              <PlayerCard
+                player={player}
+                teamColor={team.primary_color ?? '#8B4513'}
+                isCollected={collectedIds.has(player.id)}
+                size="small"
+              />
+            </div>
           ))}
         </div>
       </div>
@@ -72,83 +48,52 @@ function TeamRow({ team, collectedIds, defaultOpen }) {
 
 function SportSection({ sport, teams, collectedIds }) {
   const [allExpanded, setAllExpanded] = useState(false)
-
   const totalTeams = teams.length
-  const teamsWithCards = teams.filter(
-    (t) => (t.players ?? []).some((p) => collectedIds.has(p.id))
-  ).length
+  const teamsWithCards = teams.filter((t) => (t.players ?? []).some((p) => collectedIds.has(p.id))).length
 
   return (
-    <section style={styles.sportSection}>
-      {/* Sport header */}
-      <div style={styles.sportHeader}>
-        <span style={styles.sportTitle}>
-          {sport.emoji}&nbsp;&nbsp;{sport.label}
-        </span>
-        <span style={styles.sportProgress}>
-          {teamsWithCards}/{totalTeams} teams with cards
-        </span>
+    <section style={s.sportSection}>
+      <div style={s.sportHeader}>
+        <span style={s.sportTitle}>{sport.emoji}&nbsp;&nbsp;{sport.label}</span>
+        <span style={s.sportProgress}>{teamsWithCards}/{totalTeams} teams</span>
       </div>
-
-      {/* Expand all */}
-      <div style={styles.expandAllRow}>
-        <button
-          onClick={() => setAllExpanded((v) => !v)}
-          style={styles.expandAllBtn}
-        >
+      <div style={s.expandAllRow}>
+        <button onClick={() => setAllExpanded((v) => !v)} style={s.expandAllBtn}>
           {allExpanded ? 'Collapse All' : 'Expand All'}
         </button>
       </div>
-
-      {/* Team rows */}
       {teams.map((team) => (
-        <TeamRow
-          key={team.id}
-          team={team}
-          collectedIds={collectedIds}
-          defaultOpen={allExpanded}
-        />
+        <TeamRow key={team.id} team={team} collectedIds={collectedIds} defaultOpen={allExpanded} />
       ))}
     </section>
   )
 }
 
-// ─── main page ────────────────────────────────────────────────────────────────
-
 export function CollectionPage() {
+  const navigate = useNavigate()
   const [user] = useState(() => getUser())
-  const [activeTab, setActiveTab] = useState('NAME') // 'NAME' | 'TRADE'
   const [teamsBySport, setTeamsBySport] = useState({})
   const [collectedIds, setCollectedIds] = useState(new Set())
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
-  // Redirect if no user
-  useEffect(() => {
-    if (!user) {
-      window.location.href = '/login'
-    }
-  }, [user])
+  useEffect(() => { if (!user) window.location.href = '/login' }, [user])
 
   const fetchData = useCallback(async () => {
     if (!user) return
     setLoading(true)
     setError(null)
-
     try {
       const [teamsResult, cardsResult] = await Promise.all([
         supabase.from('teams').select('*, players(*)'),
         supabase.from('user_cards').select('player_id').eq('user_id', user.id),
       ])
-
       if (teamsResult.error) throw teamsResult.error
       if (cardsResult.error) throw cardsResult.error
 
-      // Build Set of collected player ids
       const ids = new Set((cardsResult.data ?? []).map((r) => r.player_id))
       setCollectedIds(ids)
 
-      // Group teams by sport
       const grouped = {}
       for (const team of teamsResult.data ?? []) {
         const sport = team.sport ?? 'OTHER'
@@ -164,101 +109,70 @@ export function CollectionPage() {
     }
   }, [user])
 
-  useEffect(() => {
-    fetchData()
-  }, [fetchData])
+  useEffect(() => { fetchData() }, [fetchData])
 
   if (!user) return null
 
-  // ── empty state check
   const totalCollected = collectedIds.size
-
-  // ── sport ordering: NWSL first, then CBB
   const SPORT_META = [
     { key: 'NWSL', emoji: '⚽', label: 'NWSL' },
-    { key: 'CBB', emoji: '🏀', label: 'CBB' },
+    { key: 'CBB',  emoji: '🏀', label: 'CBB'  },
   ]
 
   return (
-    <div style={styles.page}>
-      {/* Header */}
-      <header style={styles.header}>
-        <h1 style={styles.pageTitle}>MY COLLECTION</h1>
-        <div style={styles.toggleRow}>
-          {['NAME', 'TRADE'].map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              style={{
-                ...styles.toggleBtn,
-                ...(activeTab === tab ? styles.toggleBtnActive : {}),
-              }}
-            >
-              {tab}
-            </button>
-          ))}
+    <div style={s.page}>
+      {/* ── Header ── */}
+      <header style={s.header}>
+        <div style={s.headerTop}>
+          <div>
+            <p style={s.usernameLabel}>{user.username}</p>
+            <h1 style={s.pageTitle}>MY COLLECTION</h1>
+          </div>
+          <button style={s.tradeBtn} onClick={() => navigate('/friends')}>
+            Trade →
+          </button>
         </div>
       </header>
 
-      {/* Body */}
-      <main style={styles.main}>
+      {/* ── Body ── */}
+      <main style={s.main}>
         {loading && (
-          <div style={styles.centeredMessage}>
-            <span style={styles.loadingText}>Loading your cards...</span>
+          <div style={s.centeredMessage}>
+            <span style={s.loadingText}>Loading your cards...</span>
           </div>
         )}
-
         {!loading && error && (
-          <div style={styles.centeredMessage}>
-            <span style={styles.errorText}>{error}</span>
-            <button onClick={fetchData} style={styles.retryBtn}>
-              Retry
-            </button>
+          <div style={s.centeredMessage}>
+            <span style={s.errorText}>{error}</span>
+            <button onClick={fetchData} style={s.retryBtn}>Retry</button>
           </div>
         )}
-
         {!loading && !error && totalCollected === 0 && (
-          <div style={styles.centeredMessage}>
-            <span style={styles.emptyText}>
-              No cards yet! Visit a stadium to get started 🏟️
-            </span>
+          <div style={s.centeredMessage}>
+            <span style={s.emptyText}>No cards yet! Visit a stadium to get started 🏟️</span>
           </div>
         )}
-
         {!loading && !error && SPORT_META.map(({ key, emoji, label }) => {
           const teams = teamsBySport[key]
           if (!teams || teams.length === 0) return null
           return (
-            <SportSection
-              key={key}
-              sport={{ key, emoji, label }}
-              teams={teams}
-              collectedIds={collectedIds}
-            />
+            <SportSection key={key} sport={{ key, emoji, label }} teams={teams} collectedIds={collectedIds} />
           )
         })}
       </main>
-
-      <BottomNav />
     </div>
   )
 }
 
-// ─── styles ───────────────────────────────────────────────────────────────────
-
-const styles = {
+const s = {
   page: {
-    minHeight: '100dvh',
+    minHeight: '100%',
     backgroundColor: '#FAF3E0',
     display: 'flex',
     flexDirection: 'column',
     fontFamily: 'Arial, sans-serif',
-    maxWidth: '390px',
-    margin: '0 auto',
-    overflowX: 'hidden',
+    fontWeight: 700,
   },
-
-  // Header
   header: {
     backgroundColor: '#FAF3E0',
     padding: '20px 16px 12px',
@@ -267,47 +181,47 @@ const styles = {
     top: 0,
     zIndex: 10,
   },
+  headerTop: {
+    display: 'flex',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+  },
+  usernameLabel: {
+    fontFamily: 'Arial, sans-serif',
+    fontWeight: 700,
+    fontSize: 13,
+    color: '#A07850',
+    margin: '0 0 2px',
+    textTransform: 'uppercase',
+    letterSpacing: '0.05em',
+  },
   pageTitle: {
     fontFamily: 'Arial, sans-serif',
-    fontSize: '28px',
+    fontWeight: 800,
+    fontSize: 26,
     color: '#8B4513',
-    margin: '0 0 12px 0',
+    margin: 0,
     letterSpacing: '1px',
   },
-  toggleRow: {
-    display: 'flex',
-    gap: '0',
-    border: '2px solid #8B4513',
-    borderRadius: '8px',
-    overflow: 'hidden',
-    width: 'fit-content',
-  },
-  toggleBtn: {
-    fontFamily: 'Arial, sans-serif',
-    fontSize: '14px',
-    padding: '6px 20px',
-    background: 'transparent',
-    color: '#8B4513',
-    border: 'none',
-    cursor: 'pointer',
-    letterSpacing: '0.5px',
-    transition: 'background 0.15s, color 0.15s',
-  },
-  toggleBtnActive: {
+  tradeBtn: {
     backgroundColor: '#8B4513',
     color: '#FAF3E0',
+    border: 'none',
+    borderRadius: 10,
+    padding: '10px 18px',
+    fontFamily: 'Arial, sans-serif',
+    fontWeight: 800,
+    fontSize: 15,
+    cursor: 'pointer',
+    minHeight: 44,
+    whiteSpace: 'nowrap',
+    boxShadow: '0 3px 0 #5C2A00',
   },
-
-  // Main content area
   main: {
     flex: 1,
-    paddingBottom: '80px', // space for bottom nav
+    paddingBottom: 24,
   },
-
-  // Sport section
-  sportSection: {
-    marginBottom: '8px',
-  },
+  sportSection: { marginBottom: 8 },
   sportHeader: {
     backgroundColor: '#F5ECD7',
     padding: '12px 16px',
@@ -318,13 +232,14 @@ const styles = {
   },
   sportTitle: {
     fontFamily: 'Arial, sans-serif',
-    fontSize: '18px',
+    fontWeight: 800,
+    fontSize: 17,
     color: '#8B4513',
-    letterSpacing: '0.5px',
   },
   sportProgress: {
     fontFamily: 'Arial, sans-serif',
-    fontSize: '13px',
+    fontWeight: 700,
+    fontSize: 13,
     color: '#8B4513',
     opacity: 0.7,
   },
@@ -335,17 +250,15 @@ const styles = {
   },
   expandAllBtn: {
     fontFamily: 'Arial, sans-serif',
-    fontSize: '13px',
+    fontWeight: 700,
+    fontSize: 13,
     color: '#8B4513',
     background: 'none',
     border: '1.5px solid #8B4513',
-    borderRadius: '6px',
+    borderRadius: 6,
     padding: '4px 12px',
     cursor: 'pointer',
-    letterSpacing: '0.3px',
   },
-
-  // Team row
   teamRow: {
     backgroundColor: '#FFFFFF',
     borderBottom: '1px solid #E8D5B0',
@@ -363,81 +276,54 @@ const styles = {
   },
   teamName: {
     fontFamily: 'Arial, sans-serif',
-    fontSize: '16px',
-    color: '#333333',
-    letterSpacing: '0.3px',
+    fontWeight: 700,
+    fontSize: 16,
+    color: '#333',
   },
-  teamRowRight: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '10px',
-  },
+  teamRowRight: { display: 'flex', alignItems: 'center', gap: 10 },
   progressBadge: {
     fontFamily: 'Arial, sans-serif',
-    fontSize: '14px',
+    fontWeight: 700,
+    fontSize: 14,
     color: '#8B4513',
     backgroundColor: '#F5ECD7',
     padding: '2px 8px',
-    borderRadius: '10px',
+    borderRadius: 10,
     border: '1px solid #E8D5B0',
   },
   chevron: {
-    fontSize: '12px',
+    fontSize: 12,
     color: '#8B4513',
     transition: 'transform 0.25s ease',
     display: 'inline-block',
   },
-
-  // Card grid — collapsible wrapper uses max-height CSS trick
-  cardGridWrapper: {
+  // Horizontal scroll strip
+  cardStripWrapper: {
     overflow: 'hidden',
     transition: 'max-height 0.35s ease',
   },
-  cardGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(4, 1fr)',
-    gap: '8px',
-    padding: '12px 12px 16px',
-    justifyItems: 'center',
+  cardStrip: {
+    display: 'flex',
+    flexDirection: 'row',
+    overflowX: 'auto',
+    gap: 10,
+    padding: '12px 16px 16px',
+    WebkitOverflowScrolling: 'touch',
+    scrollbarWidth: 'none',
   },
-
-  // States
+  cardStripItem: {
+    flexShrink: 0,
+  },
   centeredMessage: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     padding: '60px 24px',
-    gap: '16px',
+    gap: 16,
   },
-  loadingText: {
-    fontFamily: 'Arial, sans-serif',
-    fontSize: '18px',
-    color: '#8B4513',
-    opacity: 0.7,
-  },
-  errorText: {
-    fontFamily: 'Arial, sans-serif',
-    fontSize: '16px',
-    color: '#CC3333',
-    textAlign: 'center',
-    lineHeight: 1.4,
-  },
-  retryBtn: {
-    fontFamily: 'Arial, sans-serif',
-    fontSize: '15px',
-    color: '#FAF3E0',
-    backgroundColor: '#8B4513',
-    border: 'none',
-    borderRadius: '8px',
-    padding: '8px 24px',
-    cursor: 'pointer',
-  },
-  emptyText: {
-    fontFamily: 'Arial, sans-serif',
-    fontSize: '18px',
-    color: '#8B4513',
-    textAlign: 'center',
-    lineHeight: 1.5,
-  },
+  loadingText: { fontFamily: 'Arial, sans-serif', fontWeight: 700, fontSize: 18, color: '#8B4513', opacity: 0.7 },
+  errorText: { fontFamily: 'Arial, sans-serif', fontWeight: 700, fontSize: 16, color: '#CC3333', textAlign: 'center', lineHeight: 1.4 },
+  retryBtn: { fontFamily: 'Arial, sans-serif', fontWeight: 800, fontSize: 15, color: '#FAF3E0', backgroundColor: '#8B4513', border: 'none', borderRadius: 8, padding: '8px 24px', cursor: 'pointer' },
+  emptyText: { fontFamily: 'Arial, sans-serif', fontWeight: 700, fontSize: 18, color: '#8B4513', textAlign: 'center', lineHeight: 1.5 },
 }
