@@ -1,17 +1,13 @@
 first_name,last_name,Nation,Pos,Team,Age,photo_url
 Deborah,Abiodun,NGA,MF,Washington Spirit,22,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/91b542420acc43c6955b5f8a782b2adb
 Emeri,Adames,USA,MF,Seattle Reign FC,20,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/aaf2552ae4c54dcfa1ec352db94d8b0f
-Marie-Yasmine,Alidou,CAN,MF,Portland Thorns FC,30,
 Amanda,Allen,CAN,FW,Boston Legacy FC,21,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/a0afe0dd22bc4b4eb895446288d523c8
 Michelle,Alozie,NGA,DF,Chicago Stars FC,28,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/8772001989134074a48629a1110d6b62
 Angelina,Anderson,USA,GK,Angel City FC,25,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/e4c0dd7de1294525a9f1635b7e210792
 Hannah,Anderson,USA,DF,Orlando Pride,25,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/ebfc177248a54a0e972527b41871071e
 Joelle,Anderson,USA,DF,Bay FC,27,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/dd0a7a6f7ee5446e9ef8c0a20ed56e97
-Andressa,,BRA,DF,Boston Legacy FC,26,
-Angelina,,BRA,MF,Orlando Pride,26,
 Laurel,Ansbrow,USA,DF,Boston Legacy FC,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/16b5740bf4ff4fe1ae57b082ef35b27a
 Mackenzie,Arnold,AUS,GK,Portland Thorns FC,32,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/9ccd079f4b56432e8f21ede69aabddee
-Ary,Borges,BRA,MF,Angel City FC,26,
 Kimmi,Ascanio,USA,MF,San Diego Wave FC,18,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/e8b4386d7df847f6a328dea38ddc55ce
 Dorian,Bailey,USA,MF,Bay FC,29,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fa5ea5a9ad7d4694b932641bbe257de1
 Elizabeth,Ball,USA,DF,Kansas City Current,30,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/810db7679a9d4660929f485ed49e1988
@@ -24,7 +20,6 @@ Ann-Katrin,Berger,GER,GK,Gotham FC,35,https://images.nwslsoccer.com/image/privat
 Malia,Berkely,USA,DF,Houston Dash,28,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/907a57b1c41046b08063e94229484b5e
 Rebeca,Bernal,MEX,MF,Washington Spirit,28,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/8d41be19ea664cb5976221bb3592293d
 Hannah,Betfort,USA,FW,North Carolina Courage,27,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/93ab29167bcd49b1a9d06e29f2cfb3c2
-Player,,ion,Pos ,Squad ,,
 Croix,Bethune,USA,"MF,FW",Kansas City Current,25,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/71105581a0a143b18ac92760cc09c609
 Jenna,Bike,USA,DF,Chicago Stars FC,28,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/badbf997458d485caabfecfba5bb76f1
 Macy,Blackburn,USA,DF,Racing Louisville FC,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/3295626be24e453abe27e04c004ff97e
@@ -32,7 +27,6 @@ Jordyn,Bloomer,USA,GK,Racing Louisville FC,28,https://images.nwslsoccer.com/imag
 Tess,Boade,USA,"FW,MF",Bay FC,27,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/ad338528a3ad42769bc70668109da114
 Lisa,Boattin,ITA,DF,Houston Dash,28,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/10b990f3432f4383891922232cca020a
 Cassandra,Bogere,NOR,MF,Portland Thorns FC,20,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fallbacklogo.svg
-Kesley,Branson,,MF,Kansas City Current,,
 Messiah,Bright,USA,FW,Houston Dash,26,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/b0fe6c1df4fc4afeabe923ab23915632
 Courtney,Brown,USA,MF,Utah Royals,25,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/22f45241df0547e691e8ba6db03aaf7c
 Ryanne,Brown,USA,FW,Seattle Reign FC,27,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/3bc373314f634a4aad24e6ecb5847dde
@@ -48,9 +42,7 @@ Deyna,Castellanos,VEN,"FW,MF",Portland Thorns FC,26,https://images.nwslsoccer.co
 Sofía,Cedeño,USA,MF,Seattle Reign FC,19,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/c65f53172a64441da1827a457a29c250
 Ivonne,Chacón,COL,FW,Chicago Stars FC,28,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/03ef0251e6f546d09c0a41a5c52ce7b0
 Allysha,Chapman,CAN,DF,Houston Dash,37,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/7b95e77ca5184ed39abbd7481af81fee
-Temwa,Chaŵinga,MWI,MF,Kansas City Current,27,
 Prisca,Chilufya,ZAM,FW,Angel City FC,26,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/44789b184b6840b7b707d62b996ad090
-Player,,ion,Pos ,Squad ,,
 Danielle,Colaprico,USA,MF,Houston Dash,32,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/0bb3c16212754939b111d70c83644b8e
 Sydney,Collins,CAN,DF,Bay FC,26,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/4ad3b3ad9d90407181d76c98bb47e17a
 Aldana,Cometti,ARG,DF,Bay FC,30,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fallbacklogo.svg
@@ -63,22 +55,16 @@ Madison,Curry,USA,DF,Seattle Reign FC,25,https://images.nwslsoccer.com/image/pri
 Maddie,Dahlien,USA,MF,Seattle Reign FC,21,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/d48ecbd1e5b54125a1199c9f748fa1d3
 Kenza,Dali,FRA,MF,San Diego Wave FC,34,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/c143615f95aa493689aa185f5c465932
 Tierna,Davidson,USA,DF,Gotham FC,27,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/d9bb4ddad5e34f7b89ab4608dc8277d1
-Debinha,,BRA,MF,Kansas City Current,34,
 Kate,Del Fava,USA,DF,Utah Royals,27,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/6f8212aec8f14cdbbd061c7129d3dc20
 Tessa,Dellarose,USA,DF,Chicago Stars FC,22,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/f9e929bd0d8944df84529c5f31696413
 Cece,Delzer,USA,MF,Utah Royals,28,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/0fc6e8c0cd724c14b06c64c27c8331e6
 Anouk,Denton,ENG,DF,Bay FC,22,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/dead86b2fe8a4adc8ff4fb12d9111944
 Lucia,Di Guglielmo,ITA,DF,Washington Spirit,28,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/f7648a59714e413fafca3d1acec0e69d
 Claudia,Dickey,USA,GK,Seattle Reign FC,26,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/e58cc03e05a54a28bf3133ec9c1a3632
-Makenzy,Doniak,USA,FW,Houston Dash,32,
 Julie,Doyle,USA,MF,Orlando Pride,27,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/4cb80ed654ff46e8916779187fb88553
-Dudinha,,BRA,"FW,MF",San Diego Wave FC,20,
 Jordynn,Dudley,USA,FW,Gotham FC,21,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/aca2fdf863f449bda03f5f46f28ed9f4
-Kayla,Duran,,DF,Gotham FC,,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/328fcb7c689147afb61f408326d6d1bf
 Cori,Dyke,USA,DF,Orlando Pride,25,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/e51fe8ea427c4f39894fce94ed9fadcd
-Player,,ion,Pos ,Squad ,,
 Emma,Egizii,USA,MF,Chicago Stars FC,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/c1760c43c4464a9fa620e630b2e55842
-Kalea,Eichenberger,,MF,Utah Royals,,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fallbacklogo.svg
 Kate,Faasse,USA,FW,Houston Dash,21,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/b7f052b3fd2b44e798841bb74f5af288
 Aaliyah,Farmer,MEX,DF,Chicago Stars FC,22,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fallbacklogo.svg
 Laurina,Fazer,FRA,MF,San Diego Wave FC,22,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/78cf15f1649f4f158f04d3037cc2750f
@@ -101,16 +87,12 @@ Nahikari,García,ESP,FW,Denver Summit FC,29,https://images.nwslsoccer.com/image/
 Ryan,Gareis,USA,"MF,DF",Chicago Stars FC,27,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/676004a629cb4668972a79f81ed48f2f
 Cristiana,Girelli,ITA,FW,Bay FC,35,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fallbacklogo.svg
 Lia,Godfrey,USA,"MF,FW",San Diego Wave FC,24,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fallbacklogo.svg
-Nádia,Gomes,POR,FW,Chicago Stars FC,29,
-Player,,ion,Pos ,Squad ,,
 Esther,González,ESP,FW,Gotham FC,33,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/d8f389524b654b238b386797cb3b1216
 Sarah,Gorden,USA,DF,Angel City FC,33,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/4314e1fbd3924a09a365af62abcdb3b4
 Maggie,Graham,USA,MF,Houston Dash,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/d576555bc98d477a9c831e65e16f7626
 Julia,Grosso,CAN,MF,Chicago Stars FC,25,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/920f2b3f71554778a0f38f3ada7405ad
-Amanda,Gutierres,BRA,"MF,FW",Boston Legacy FC,22,
 Madison,Hammond,USA,MF,Utah Royals,28,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/c75e5a65dfaf42b588cbdf8ef5069537
 DiDi,Haracic,BIH,GK,San Diego Wave FC,33,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/ecf8d72c11704bb49de0461fa77d8cae
-Cate,Hardin,,DF,Houston Dash,,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fallbacklogo.svg
 Khyah,Harper,USA,FW,Gotham FC,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/88284f038be14a6d8b643df2bc4c7d6d
 Nya,Harrison,USA,DF,San Diego Wave FC,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/3f078157c6f841eabb9c5fa16ca7e4ef
 Shae,Harvey,USA,MF,Portland Thorns FC,21,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fallbacklogo.svg
@@ -121,14 +103,12 @@ Kathrin,Hendrich,GER,DF,Chicago Stars FC,34,https://images.nwslsoccer.com/image/
 Nicolette,Hernández,MEX,DF,Boston Legacy FC,27,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fallbacklogo.svg
 Oihane,Hernández,ESP,DF,Orlando Pride,25,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/909a06c8277b428f8e6acae7e1a62d39
 Hal,Hershfelt,USA,MF,Washington Spirit,24,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/4b0092d3c4b148ce81259ba635ca7777
-Samantha,Hiatt,USA,DF,Portland Thorns FC,28,
 Rachel,Hill,USA,"FW,MF",Racing Louisville FC,30,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/0b39e888cd6f4316b0765895dcfdf2fb
 Penelope,Hocking,USA,MF,Kansas City Current,26,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/2b79fff663274280b57a60c00163ff51
 Macey,Hodge,USA,MF,Racing Louisville FC,24,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/0953a675c64f45529f01d7a21eadc22a
 Haley,Hopkins,USA,MF,Kansas City Current,27,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/f82ac82c607145468005f6b2e5da5b72
 Jaelin,Howell,USA,MF,Gotham FC,26,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/95d2c552a83342bc947134ce8db57d56
 Kelli,Hubly,USA,DF,Bay FC,31,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/f9aafcad554041328a5420822e10d5a0
-Player,,ion,Pos ,Squad ,,
 Sofia,Huerta,USA,DF,Seattle Reign FC,33,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/4bd84fd5cceb4538a556a4b9eb250841
 Taylor,Huff,USA,MF,Bay FC,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fe7346f5616c46bb935320ed272de297
 Jordyn,Huitema,CAN,FW,Chicago Stars FC,24,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/72af8c4018b84dad9a4148ff1f920398
@@ -137,15 +117,11 @@ Evelyn,Ijeh,SWE,FW,North Carolina Courage,24,https://images.nwslsoccer.com/image
 Riley,Jackson,USA,MF,North Carolina Courage,20,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/b59aacbdbb734601810422f27dff5ddb
 Simone,Jackson,USA,FW,Orlando Pride,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/9a6e94e5fb19478f9dbc33f702d2d891
 Natalie,Jacobs,USA,DF,North Carolina Courage,28,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/98dcb1c31ca44fd195fa3302144a6140
-Angharad,James,WAL,MF,Seattle Reign FC,31,
-Sveindís,Jane Jónsdóttir,ISL,FW,Angel City FC,24,
 Ellie,Jean,USA,DF,Racing Louisville FC,29,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/f944dbf34fc14b0895cdfa68155404bb
 Micayla,Johnson,USA,FW,Chicago Stars FC,18,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/63da20737e074579b1383973fc24c6a1
 Jameese,Joseph,USA,MF,Chicago Stars FC,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/ca64614f15f447ffbad8df1731cf8af9
 Mia,Justus,USA,GK,Utah Royals,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/87f8bf57a0ed4238a026b49f9c2b276d
-Avery,Kalitta,,MF,Racing Louisville FC,,
 Annie,Karich,USA,"MF,DF",Boston Legacy FC,22,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fallbacklogo.svg
-Savannah,King,USA,DF,Angel City FC,21,
 Andrea,Kitahata,USA,MF,Gotham FC,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/091dffd7d5f244b291109607df38fbe0
 Leah,Klenke,USA,DF,Houston Dash,21,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/dd58c531924040d7b2a296847b8e2ef2
 Melissa,Kössler,GER,FW,Denver Summit FC,26,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fallbacklogo.svg
@@ -154,24 +130,15 @@ Shinomi,Koyama,JPN,"FW,MF",North Carolina Courage,21,https://images.nwslsoccer.c
 Racheal,Kundananji,ZAM,MF,Bay FC,25,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/06897a454ecd4389a815a64dfb95ba2d
 Kaleigh,Kurtz,USA,DF,Denver Summit FC,28,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/85399e003cd149ec991da7c3853143ad
 Lo'eau,LaBonta,USA,MF,Kansas City Current,33,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/9b7fd5c1259c48b1a87f1cc0c10f713c
-Player,,ion,Pos ,Squad ,,
 Cloé,Lacasse,CAN,"MF,FW",Utah Royals,32,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/ea630eb197bb4762b4b8b4c1b7ef363c
 Carina,Lageyre,USA,MF,Angel City FC,22,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/eefb8531af1342a496d4e65ba1257e37
-Clarissa,Larisey,CAN,FW,Houston Dash,26,
 Rose,Lavelle,USA,MF,Gotham FC,30,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/d1485dcbe6f34e4c9ba927371173260d
 Karlie,Lema,USA,"MF,FW",Bay FC,22,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/c9e1f316ddb24fa680b4806d95e707c6
 Ally,Lemos,USA,MF,Orlando Pride,22,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/ac29e17a8bff414e8ede153e5067e250
 Payton,Linnehan,USA,MF,North Carolina Courage,25,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/b79c07308de84ca7967c474613f2fe20
-Maitane,López Millán,ESP,MF,Chicago Stars FC,31,
-Lorena,,BRA,GK,Kansas City Current,28,
-Luana,,BRA,MF,Orlando Pride,32,
-Ludmila,,BRA,FW,San Diego Wave FC,31,
-Katie,Lund,USA,GK,Chicago Stars FC,29,
 Devin,Lynch,USA,MF,Denver Summit FC,22,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/6dbc458562f2406cb714ae051cf4d8c2
 Hailie,Mace,USA,DF,Orlando Pride,29,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/c7c35bca896849439784a5cdee73a0b1
 Sandy,MacIver,SCO,GK,Washington Spirit,27,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/22284069e4754b6585ce7f4dda01592d
-Maiara,,BRA,MF,Angel City FC,21,
-Marta,,BRA,"FW,MF",Orlando Pride,40,
 Nealy,Martin,USA,MF,Angel City FC,27,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fdc322f486b94e3a9043aee47c3daf93
 Claudia,Martínez,PAR,FW,Washington Spirit,18,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fallbacklogo.svg
 Emily,Mason,USA,DF,Seattle Reign FC,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/a439341551034a09972c0d4efd10ccc0
@@ -180,11 +147,9 @@ Ainsley,McCammon,USA,MF,Seattle Reign FC,18,https://images.nwslsoccer.com/image/
 Savannah,McCaskill,USA,MF,Gotham FC,29,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/169fa964031141e98831884983375011
 Phoebe,McClernon,USA,DF,Seattle Reign FC,28,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/47a580b9d9a64b508d4edde164580fb4
 Yuna,McCormack,USA,MF,Denver Summit FC,21,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fc45d1c634f14b6e8e5ae61b7f34f421
-Player,,ion,Pos ,Squad ,,
 Haley,McCutcheon,USA,MF,Orlando Pride,30,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/521bad7c3a2f49a185c968f9206da5b8
 Audrey,McKeen,USA,FW,Racing Louisville FC,17,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/81893f175a814e48bb103cda269cde2a
 Mallie,McKenzie,USA,MF,Portland Thorns FC,25,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/4829883bb4dc4fa48b63d43b720a4307
-Tara,McKeown,USA,DF,Washington Spirit,26,
 Quincy,McMahon,USA,DF,Racing Louisville FC,22,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/c4119bcbf98641c2b822788600449a33
 Kristen,McNabb,USA,DF,San Diego Wave FC,31,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/cafe0fb40c194bfd95bebea739443cd7
 Natalie,Means,USA,DF,Denver Summit FC,22,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/21b9db4547da430eb454d860966a8865
@@ -198,7 +163,6 @@ Lauren,Milliet,USA,DF,Racing Louisville FC,29,https://images.nwslsoccer.com/imag
 Gift,Monday,NGA,FW,Washington Spirit,24,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/3c58742afd5842708efeae28767d5d3c
 Nérilia,Mondésir,HAI,MF,Seattle Reign FC,27,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/996bf315d3dc4e479053da3ea31925ff
 Anna,Moorhouse,ENG,GK,Orlando Pride,31,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/15cbd2b4b39042eeb04d03affb712899
-Madeline,Moreau,USA,DF,Bay FC,25,
 Esme,Morgan,ENG,DF,Washington Spirit,25,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/18d7e7320d2949b083c7315e3831b1a1
 Miyabi,Moriya,JPN,DF,Utah Royals,29,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/9aa0ae7f0bc648da9095a03174257a3c
 Perle,Morroni,FRA,DF,San Diego Wave FC,28,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/bbee9da0fc744ebcabc586c3232bf4be
@@ -206,17 +170,12 @@ Olivia,Moultrie,USA,"MF,FW",Portland Thorns FC,20,https://images.nwslsoccer.com/
 Brecken,Mozingo,USA,"MF,FW",Utah Royals,25,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/41a5277f439b4063aa41d7f902111d8a
 Marie,Müller,GER,DF,Portland Thorns FC,25,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/7ff572896b4146d78ff5e10f1d8d65ab
 Casey,Murphy,USA,GK,Boston Legacy FC,29,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/572ca1acdb37419a843dafa8e828be66
-Player,,ion,Pos ,Squad ,,
 Alyssa,Naeher,USA,GK,Chicago Stars FC,37,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/57fe0d4b80e74d1fa6fc56aab0db25ad
-Aria,Nagai,,MF,Utah Royals,,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/8ced72b131844bca97a4728d075472a2
 Fauzia,Najjemba,UGA,MF,Boston Legacy FC,22,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/a1cb8dfb75ce4a89bdfe350de18b0410
 Leilanni,Nesbeth,BER,MF,Chicago Stars FC,24,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/bebc6af83c4342a38467774e2d6603ca
 Paige,Nielsen,USA,DF,Houston Dash,32,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/37c762eb698644fa88b9cb94cf4f0940
 Isabella,Obaze,DEN,DF,Portland Thorns FC,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/ab5925e484b549b084e72c85df4de7df
 Ayo,Oke,USA,DF,Denver Summit FC,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/12f3080c7af74e8bb619ae361ba8593f
-Bárbara,Olivieri,VEN,"MF,FW",Boston Legacy FC,24,
-Lizbeth,Ovalle,MEX,MF,Orlando Pride,26,
-Katie,O’Kane,,MF,Racing Louisville FC,,
 Maddie,Padelski,USA,FW,Portland Thorns FC,18,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/743907f6c95f40de9cac86cc0aeb2e5e
 Kiana,Palacios,MEX,FW,Utah Royals,29,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fallbacklogo.svg
 Avery,Patterson,USA,DF,Houston Dash,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/e9488064a60149bebd3650cfc6bb8a5c
@@ -228,19 +187,12 @@ Carson,Pickett,USA,DF,Denver Summit FC,32,https://images.nwslsoccer.com/image/pr
 Kiki,Pickett,USA,"DF,MF",San Diego Wave FC,26,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/75a5b73882ba47c29448e3a36c691717
 Dayana,Pierre-Louis,HAI,MF,Utah Royals,22,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fallbacklogo.svg
 Brianna,Pinto,USA,"MF,FW",Chicago Stars FC,25,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/336dc7bf1e5642c1a7a4a9fd8973f2a9
-Gabi,Portilho,BRA,FW,San Diego Wave FC,30,
-Lara,Prašnikar,SVN,"MF,FW",Utah Royals,27,
 Nichelle,Prince,CAN,"MF,DF",Boston Legacy FC,31,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/a58cdc45fc0448a28cbd965d9601aaf7
 Sarah,Puntigam,AUT,"DF,MF",Houston Dash,33,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/9e98c713a7154c928697e3cf043fec63
-Player,,ion,Pos ,Squad ,,
-Margaret,Purce,USA,"FW,DF",Gotham FC,30,
 Reagan,Raabe,USA,FW,Orlando Pride,24,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fallbacklogo.svg
 Kat,Rader,USA,MF,Houston Dash,21,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/7e125d671c06445880e000972f3ae412
-Rafaelle,,BRA,DF,Orlando Pride,34,
 Brittany,Ratcliffe,USA,MF,Seattle Reign FC,32,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/94de57f74c554630b9abe7bc1bd588f9
-Felicitas,Rauch,GER,DF,North Carolina Courage,29,
 Lilly,Reale,USA,DF,Gotham FC,22,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/8c0148936e98403ca045b722790deea0
-KK,Ream,USA,FW,Utah Royals,16,
 Emma,Regan,CAN,MF,Denver Summit FC,26,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/5c44cea6a05540639a949344419fa194
 Megan,Reid,USA,DF,Denver Summit FC,30,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/bb2e756c53984f5ebf78cd343ec20b70
 Reyna,Reyes,MEX,DF,Portland Thorns FC,25,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/b936d03963c947e7a137521ff4f578b3
@@ -249,8 +201,6 @@ Kaleigh,Riehl,USA,DF,Utah Royals,29,https://images.nwslsoccer.com/image/private/
 Gabrielle,Robinson,USA,DF,Kansas City Current,24,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/27615fa77e0f4bc78e0365f58a4df924
 Trinity,Rodman,USA,MF,Washington Spirit,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/738125313bdc48eda09c29b610520e26
 Izzy,Rodriguez,USA,DF,Kansas City Current,26,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/04a1aad603eb46dd9c349c2ba91d2322
-Raquel,Rodríguez,CRC,"FW,MF",Kansas City Current,32,
-Samantha,Rose Smith,USA,"DF,MF",Boston Legacy FC,24,
 Laney,Rouse,USA,DF,Kansas City Current,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/6d6d4a5642834e01ac61867306e1e367
 Yazmeen,Ryan,USA,MF,Denver Summit FC,27,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/d814c62705514d3ab343c0798bb924ba
 Yazmeen,Ryan,USA,"FW,MF",Houston Dash,27,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/d814c62705514d3ab343c0798bb924ba
@@ -258,7 +208,6 @@ Emily,Sams,USA,DF,Angel City FC,26,https://images.nwslsoccer.com/image/private/t
 Ashley,Sanchez,USA,"MF,FW",North Carolina Courage,27,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/ed7ee4eca97044dd97750b29c3850769
 Leicy,Santos,COL,MF,Washington Spirit,29,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/0ff461d4b7864e4387af66c2fdaa3710
 Ally,Schlegel,USA,"FW,MF",North Carolina Courage,26,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/d24c806737e2498c980976b0695bfbe8
-Player,,ion,Pos ,Squad ,,
 Sydney,Schmidt,USA,MF,North Carolina Courage,18,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/6a0f8138983847b9b9b165b4d961ba81
 Sarah,Schupansky,USA,"FW,MF",Gotham FC,22,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/d73ddb615f3149cfb6432c6f82b21ac9
 Katie,Scott,USA,MF,Kansas City Current,18,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/86e61d5213214742a5388b2df18ecbe1
@@ -279,14 +228,9 @@ Emily,Sonnett,USA,DF,Gotham FC,32,https://images.nwslsoccer.com/image/private/t_
 Alexa,Spaanstra,USA,DF,Utah Royals,26,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/d5c841dcdea54696979eda5b6d0fbdb6
 Alexa,Spaanstra,USA,MF,Portland Thorns FC,26,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/d5c841dcdea54696979eda5b6d0fbdb6
 Bianca,St-Georges,CAN,DF,Boston Legacy FC,28,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/0d2b0629ed6b43b8ae5e01f2d88fa515
-Samantha,Staab,USA,DF,Chicago Stars FC,29,
-Talia,Staude,USA,DF,North Carolina Courage,24,
-Katie,Stengel,USA,"FW,MF",Gotham FC,34,
 Ella,Stevens,USA,MF,Boston Legacy FC,28,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/f0b65e91132d452792a90bd80e377f0f
 Taylor,Suarez,USA,MF,Angel City FC,20,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/cbb95e0c05e942a7a4f2f0907da9d2fc
-Player,,ion,Pos ,Squad ,,
 Andi,Sullivan,USA,MF,Washington Spirit,30,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/75a1f211b7f04ffebe4cdd67cd838239
-Tâmara,,BRA,FW,Washington Spirit,22,
 Mina,Tanaka,JPN,MF,Utah Royals,31,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/3a45298a6ded492baa53c54797a41912
 Ana,Tejada,ESP,MF,Utah Royals,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/96199c0cfb7245f6b6460174fb25883b
 Olivia,Thomas,USA,FW,Denver Summit FC,20,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/eaa1ecbb20954389b35a972c41743b42
@@ -295,23 +239,14 @@ Lauryn,Thompson,ENG,FW,North Carolina Courage,18,https://images.nwslsoccer.com/i
 Janni,Thomsen,DEN,DF,Utah Royals,26,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/aca824486f9b4663bf4118794d4719c8
 Riley,Tiernan,USA,"MF,FW",Angel City FC,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/10da6024c1af4c84bf37b25a641f0866
 Pietra,Tordin,USA,"FW,MF",Portland Thorns FC,22,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/0faee2ad9e40492cbb9336bcbf79d651
-Aissata,Traoré,MLI,FW,Boston Legacy FC,28,
-Lou,Tsé,CAN,DF,Washington Spirit,23,
 Reilyn,Turner,USA,MF,Portland Thorns FC,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/d512157412184783822bc2cf21db09bf
 Linda,Ullmark,USA,MF,Houston Dash,19,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/cfe14710edf54a02806026e010c8c0cf
-Amelia,Van Zanten,JAM,DF,San Diego Wave FC,21,
-Kiki,Van Zanten,JAM,FW,Houston Dash,24,
-Mary,Vignola,USA,DF,Portland Thorns FC,28,
 Cortnee,Vine,AUS,"FW,MF",North Carolina Courage,28,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/a0b960ec400b4ad389c72e720e32e86d
 Holly,Ward,CAN,MF,Seattle Reign FC,22,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fallbacklogo.svg
 Solai,Washington,JAM,MF,Orlando Pride,20,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/1707398003674ec2a9b8855574cba470
-Ally,Watt,USA,FW,Denver Summit FC,29,
 Dani,Weatherholt,USA,DF,North Carolina Courage,32,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/405bbcc7f91848b4a28e72f45ffb7d55
 Sarah,Weber,USA,FW,Racing Louisville FC,23,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/83ee7340956c431b81b2caa9373d9e29
 Kennedy,Wesley,USA,DF,San Diego Wave FC,25,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/444e4e5d84d248e2841030cc724d2ffc
-Ellie,Wheeler,USA,DF,Kansas City Current,24,
-Player,,ion,Pos ,Squad ,,
-Amelia,White,,,Kansas City Current,,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/24d14aecb1aa4505a96c39f52a558e47
 Taylor,White,USA,MF,Racing Louisville FC,21,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/013bc7a18d344452bd3002c22b237f64
 Carly,Wickenheiser,USA,"MF,DF",North Carolina Courage,29,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/fallbacklogo.svg
 Kate,Wiesner,USA,DF,Washington Spirit,25,https://images.nwslsoccer.com/image/private/t_w_120/prd/assets/widgets/players/7e96efc5034f4e4abfafca1b06af33ab

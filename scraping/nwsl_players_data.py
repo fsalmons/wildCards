@@ -44,4 +44,27 @@ df[['first_name', 'last_name']] = df['Player'].str.split(' ', n=1, expand=True)
 df = df.drop('Player', axis = 1)
 df = df[['first_name', 'last_name'] + [c for c in df.columns if c not in ['first_name', 'last_name']]]
 
+rename_map = {
+    "Boston Legacy": "Boston Legacy FC",
+    "Chicago Stars": "Chicago Stars FC",
+    "Denver Summit": "Denver Summit FC",
+    "Current": "Kansas City Current",
+    "NC Courage": "North Carolina Courage",
+    "Portland Thorns": "Portland Thorns FC",
+    "Racing Louisville": "Racing Louisville FC",
+    "Reign": "Seattle Reign FC",
+    "Royals": "Utah Royals",
+    "SD Wave": "San Diego Wave FC"
+}
+
+df["Team"] = df["Team"].replace(rename_map)
+
+
 df.to_csv('../tables/nwls_players.csv', index=False)
+
+df_filtered = df.dropna()
+
+# save filtered version
+df_filtered.to_csv('../tables/nwls_players_with_photos.csv', index=False)
+
+print(df_filtered.Team.value_counts())
