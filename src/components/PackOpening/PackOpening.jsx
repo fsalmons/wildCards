@@ -176,7 +176,7 @@ export function PackOpening({ stadium, onClose }) {
         user_id: userId,
         player_id: card.id,
         team_id: teamId,
-        obtained_at: new Date().toISOString(),
+        collected_at: new Date().toISOString(),
       }))
 
       const { error } = await supabase.from('user_cards').insert(rows)
