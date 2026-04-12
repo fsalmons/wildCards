@@ -1,10 +1,30 @@
 import { useEffect, useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
+import { OnboardingModal } from '../components/Onboarding/OnboardingModal'
+
+const BATTLE_INFO_STEPS = [
+  {
+    icon: '⚔️',
+    heading: 'Best of 3 Rounds',
+    body: 'Each battle is a best-of-3 series. Pick 5 cards per round — highest combined rating wins the round.',
+  },
+  {
+    icon: '⚡',
+    heading: 'Lock-Ins',
+    body: 'You start with 3 Lock-Ins. Use them to hand-pick specific cards; empty slots are filled randomly.',
+  },
+  {
+    icon: '📈',
+    heading: 'ELO Rating',
+    body: 'Win battles to climb the leaderboard. Your ELO goes up with wins and down with losses.',
+  },
+]
 
 export function FriendsPage() {
   const navigate = useNavigate()
   const [userId, setUserId] = useState(null)
+  const [showBattleInfo, setShowBattleInfo] = useState(false)
   const [friends, setFriends] = useState([])
   const [pendingRequests, setPendingRequests] = useState([])
   const [sentRequests, setSentRequests] = useState([])
@@ -110,6 +130,7 @@ export function FriendsPage() {
     const { error: err } = await supabase.from('friendships').update({ status: 'accepted' }).eq('id', friendshipId)
     setActionLoading(null)
     if (err) { setError('Could not accept request.'); return }
+    if (!localStorage.getItem('scc_battle_info_seen')) setShowBattleInfo(true)
     await fetchAll()
   }
 
@@ -171,7 +192,9 @@ export function FriendsPage() {
 
     const { error: insertErr } = await supabase.from('friendships').insert({ requester_id: userId, addressee_id: found.id, status: 'pending' })
     if (insertErr) { setAddStatus('error'); setAddError('Failed to send request. Try again.'); return }
-    setAddStatus('success'); setAddUsername(''); await fetchAll()
+    setAddStatus('success'); setAddUsername('')
+    if (!localStorage.getItem('scc_battle_info_seen')) setShowBattleInfo(true)
+    await fetchAll()
   }
 
   if (loading) {
@@ -184,6 +207,16 @@ export function FriendsPage() {
 
   return (
     <div style={s.page}>
+      {showBattleInfo && (
+        <OnboardingModal
+          title="How Battles Work"
+          steps={BATTLE_INFO_STEPS}
+          onDone={() => {
+            localStorage.setItem('scc_battle_info_seen', '1')
+            setShowBattleInfo(false)
+          }}
+        />
+      )}
       <div style={s.content}>
         <h1 style={s.heading}>Friends</h1>
         {error && <p style={s.errorBanner}>{error}</p>}

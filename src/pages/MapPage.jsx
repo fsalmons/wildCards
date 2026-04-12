@@ -63,21 +63,21 @@ const DEFAULT_CENTER = { lat: 41.8781, lng: -87.6298 }
 const DEFAULT_ZOOM = 17
 const PROXIMITY_THRESHOLD_METERS = 100
 
-// Lock zoom and re-center on user position
+// Center on user position (first fix only), allow free zoom/pan after
 function MapController({ pos }) {
   const map = useMap()
+  const initializedRef = useRef(false)
+
   useEffect(() => {
-    map.setMinZoom(17)
-    map.setMaxZoom(17)
-    map.scrollWheelZoom.disable()
-    map.doubleClickZoom.disable()
-    map.touchZoom.disable()
-    map.boxZoom.disable()
-    map.keyboard.disable()
+    map.setMinZoom(13)
+    map.setMaxZoom(18)
   }, [map])
 
   useEffect(() => {
-    if (pos) map.setView([pos.lat, pos.lng], 17, { animate: true })
+    if (pos && !initializedRef.current) {
+      initializedRef.current = true
+      map.setView([pos.lat, pos.lng], 17, { animate: true })
+    }
   }, [pos, map])
 
   return null
@@ -222,10 +222,10 @@ export function MapPage() {
         zoom={DEFAULT_ZOOM}
         style={{ height: '100%', width: '100%' }}
         zoomControl={false}
-        scrollWheelZoom={false}
-        doubleClickZoom={false}
-        touchZoom={false}
-        dragging={false}
+        scrollWheelZoom={true}
+        doubleClickZoom={true}
+        touchZoom={true}
+        dragging={true}
         attributionControl={false}
       >
         {/* CartoDB Positron — minimal detail, clean look */}

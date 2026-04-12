@@ -1,6 +1,25 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
+import { OnboardingModal } from '../components/Onboarding/OnboardingModal'
+
+const WELCOME_STEPS = [
+  {
+    icon: '🗺️',
+    heading: 'Visit Stadiums',
+    body: 'Head to real stadiums near you to unlock packs and collect player cards.',
+  },
+  {
+    icon: '🎴',
+    heading: 'Trade with Friends',
+    body: 'Swap cards with friends to complete your collection. Every card has a unique rating!',
+  },
+  {
+    icon: '🎁',
+    heading: "You've Got 10 Cards!",
+    body: "We've added 10 starter cards to your collection to kick things off.",
+  },
+]
 
 const styles = `
 
@@ -145,6 +164,7 @@ export function Login() {
   const [username, setUsername] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
+  const [showWelcome, setShowWelcome] = useState(false)
   const navigate = useNavigate()
 
   async function handleSubmit(e) {
@@ -202,7 +222,11 @@ export function Login() {
       }
 
       localStorage.setItem('scc_user', JSON.stringify(user))
-      navigate('/map')
+      if (!localStorage.getItem('scc_welcomed')) {
+        setShowWelcome(true)
+      } else {
+        navigate('/map')
+      }
     } catch (err) {
       setError(err.message || 'Something went wrong. Try again.')
     } finally {
@@ -212,6 +236,16 @@ export function Login() {
 
   return (
     <>
+      {showWelcome && (
+        <OnboardingModal
+          title="Welcome to WildCards!"
+          steps={WELCOME_STEPS}
+          onDone={() => {
+            localStorage.setItem('scc_welcomed', '1')
+            navigate('/map')
+          }}
+        />
+      )}
       <style>{styles}</style>
       <div className="login-root">
         <div className="login-card">
