@@ -209,7 +209,11 @@ export function Login() {
         if (allPlayers && allPlayers.length > 0) {
           const shuffled = [...allPlayers].sort(() => Math.random() - 0.5)
           const picked = shuffled.slice(0, 10)
-          const rating = () => Math.floor(Math.random() * 99) + 1
+          const rating = () => {
+            const r = Math.random()
+            const biased = Math.pow(r, 5) // increase exponent = more low values
+            return Math.floor(biased * 99) + 1
+          }
           await supabase.from('user_cards').insert(
             picked.map(p => ({
               user_id: user.id,

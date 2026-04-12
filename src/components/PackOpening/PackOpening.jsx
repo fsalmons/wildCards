@@ -19,7 +19,7 @@ function mapPlayer(p) {
     height: p.height ?? '',
     weight: p.weight ?? '',
     cardNumber: p.card_number,
-    rating: Math.floor(Math.random() * 99) + 1,
+    rating: Math.floor(Math.random() * 61) + 20,
   }
 }
 
