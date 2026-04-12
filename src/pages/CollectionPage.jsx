@@ -212,13 +212,29 @@ export function CollectionPage() {
         <div style={s.headerTop}>
           <div>
             <p style={s.usernameLabel}>{user.username}</p>
-            <h1 style={s.pageTitle}>WildCards</h1>
+
+            {/* Title + image row */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+              <h1 style={s.pageTitle}>WildCards</h1>
+
+              <img
+                src="../../photos/penalty_cards.png"
+                alt="WildCards icon"
+                style={{
+                  width: 40,
+                  height: 40,
+                  objectFit: 'contain'
+                }}
+              />
+            </div>
           </div>
+
           <button style={s.tradeBtn} onClick={() => navigate('/friends')}>
             Trade →
           </button>
         </div>
       </header>
+
 
       {/* ── Body ── */}
       <main style={s.main}>
