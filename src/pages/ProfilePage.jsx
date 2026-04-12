@@ -25,12 +25,13 @@ function StatBox({ icon, value, label }) {
         boxShadow: `0 3px 0 #5C2A00`,
       }}
     >
-      <div style={{ fontSize: 28, lineHeight: 1 }}>
+      <div style={{ fontSize: 28, lineHeight: 1, textAlign: 'center' }}>
         <img
-              src={icon}
-              alt={label}
-              style={{ width: 30, height: 30 }}
-            /></div>
+          src={icon}
+          alt={label}
+          style={{ width: 30, height: 30 }}
+        />
+      </div>
       <div
         style={{
           fontFamily: 'Arial, sans-serif',
@@ -475,11 +476,8 @@ export function ProfilePage() {
               marginBottom: 12,
             }}
           >
-          <img
-              src={gymIcon}
-              alt='gym'
-              style={{ width: 30, height: 30 }}
-            /> TRAINING
+
+          TRAINING
           </div>
 
           {activeCard ? (
@@ -527,7 +525,12 @@ export function ProfilePage() {
                 backgroundColor: CARD_BG,
               }}
             >
-              <div style={{ fontSize: 40, marginBottom: 12 }}>🃏</div>
+              <div style={{ fontSize: 40, marginBottom: 12, textAlign: 'center'  }}><img
+              src={gymIcon}
+              alt='gym'
+              style={{ width: 40, height: 40 }}
+            />
+            </div>
               <p
                 style={{
                   fontFamily: 'Arial, sans-serif',
