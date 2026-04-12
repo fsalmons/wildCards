@@ -1,10 +1,10 @@
 import { useNavigate, useLocation } from 'react-router-dom'
 
 const TABS = [
-  { emoji: '../../../photos/nav_icons/card.png', label: 'Cards',   route: '/collection' },
-  { emoji: '../../../photos/nav_icons/compass.png', label: 'Map',     route: '/map' },
-  { emoji: '../../../photos/nav_icons/handshake.png', label: 'Friends', route: '/friends' },
-  { emoji: '../../../photos/nav_icons/trophy.png', label: 'Profile', route: '/profile' },
+  { icon: '../../../photos/nav_icons/card.png', label: 'Cards',   route: '/collection' },
+  { icon: '../../../photos/nav_icons/compass.png', label: 'Map',     route: '/map' },
+  { icon: '../../../photos/nav_icons/handshake.png', label: 'Friends', route: '/friends' },
+  { icon: '../../../photos/nav_icons/trophy.png', label: 'Profile', route: '/profile' },
 ]
 
 const ACTIVE_COLOR   = '#8B4513'
