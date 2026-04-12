@@ -1,10 +1,10 @@
 import { useNavigate, useLocation } from 'react-router-dom'
 
 const TABS = [
-  { emoji: '📕', label: 'Cards',   route: '/collection' },
-  { emoji: '🗺️', label: 'Map',     route: '/map' },
-  { emoji: '👥', label: 'Friends', route: '/friends' },
-  { emoji: '👤', label: 'Profile', route: '/profile' },
+  { emoji: 'https://cdn-icons-png.flaticon.com/512/895/895930.png', label: 'Cards',   route: '/collection' },
+  { emoji: 'https://cdn-icons-png.flaticon.com/512/4336/4336206.png', label: 'Map',     route: '/map' },
+  { emoji: 'https://cdn-icons-png.flaticon.com/512/2954/2954982.png', label: 'Friends', route: '/friends' },
+  { emoji: 'https://cdn-icons-png.flaticon.com/512/2784/2784439.png', label: 'Profile', route: '/profile' },
 ]
 
 const ACTIVE_COLOR   = '#8B4513'
@@ -54,7 +54,11 @@ export function BottomNav() {
               transition: 'color 0.15s ease',
             }}
           >
-            <span style={{ fontSize: 28, lineHeight: 1 }}>{tab.emoji}</span>
+            <img
+              src={tab.icon}
+              alt={tab.label}
+              style={{ width: 20, height: 20 }}
+            />
             <span
               style={{
                 fontSize: 10,
