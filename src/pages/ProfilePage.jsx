@@ -74,7 +74,7 @@ function CollectionPicker({ userId, onSelect, onClose }) {
     async function load() {
       const { data } = await supabase
         .from('user_cards')
-        .select('id, rating, player:players(id, first_name, last_name, face_image, position, age, card_number, team:teams(name, sport, primary_color, text_color, card_color))')
+        .select('id, rating, player:players(id, first_name, last_name, face_image, position, age, card_number, team:teams(name, sport, primary_color, text_color, card_color, logo_url))')
         .eq('user_id', userId)
 
       if (data) {
@@ -205,7 +205,7 @@ function CollectionPicker({ userId, onSelect, onClose }) {
               onClick={() => onSelect(c.userCardId)}
               style={{
                 background: 'none',
-                border: `2px solid ${c.teamColor}`,
+                border: 'none',
                 borderRadius: 12,
                 padding: 4,
                 cursor: 'pointer',
@@ -311,7 +311,7 @@ export function ProfilePage() {
     async function loadActiveCard() {
       const { data } = await supabase
         .from('user_cards')
-        .select('id, rating, player:players(id, first_name, last_name, face_image, position, age, card_number, team:teams(name, primary_color))')
+        .select('id, rating, player:players(id, first_name, last_name, face_image, position, age, card_number, team:teams(name, primary_color, card_color, text_color, sport, logo_url))')
         .eq('id', user.active_card_id)
         .single()
 
@@ -329,7 +329,11 @@ export function ProfilePage() {
             cardNumber: data.player.card_number,
             team: data.player.team?.name || '',
           },
-          teamColor: data.player.team?.primary_color || BROWN,
+          teamColor: uc.player.team?.primary_color ?? '#8B4513',
+          teamTextColor: uc.player.team?.text_color ?? '#FFFFFF',
+          cardColor: uc.player.team?.card_color ?? '#F5ECD7',
+          teamLogo: uc.player.team?.logo_url ?? null,
+          league: uc.player.team?.sport ?? '',
         })
       }
     }
