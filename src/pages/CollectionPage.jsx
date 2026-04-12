@@ -52,7 +52,7 @@ function TeamRow({ team, collectedIds, ratingMap, onCardClick, defaultOpen, hasC
            ...s.teamName, 
           color: hasCards ? '#333' : '#B5B5B5' }}>{team.name}</span>
         <span style={s.teamRowRight}>
-          <span style={{ ...s.progressBadge, opacity: isEmpty ? 0.5 : 1 }}>{collectedCount}/{total}</span>
+          <span style={{ ...s.progressBadge, opacity: hasCards ? 1 : 0.5 }}>{collectedCount}/{total}</span>
         </span>
       </button>
 
@@ -99,70 +99,97 @@ function TeamRow({ team, collectedIds, ratingMap, onCardClick, defaultOpen, hasC
 function SportSection({ sport, teams, collectedIds, ratingMap, onCardClick }) {
   const [collapsed, setCollapsed] = useState(true)
   const [expandAll, setExpandAll] = useState(false)
+
   const totalTeams = teams.length
-  const teamsWithCards = teams.filter((t) => (t.players ?? []).some((p) => collectedIds.has(p.id))).length
-  const hasCards = (team.players ?? []).some((p) =>
-    collectedIds.has(p.id)
-  )
+
+  const teamsWithCards = teams.filter((t) =>
+    (t.players ?? []).some((p) => collectedIds.has(p.id))
+  ).length
 
   return (
     <section style={s.sportSection}>
+      {/* HEADER */}
       <div
-          style={{ ...s.sportHeader, cursor: 'pointer' }}
-          onClick={() => setCollapsed((v) => !v)}
-        >
+        style={{ ...s.sportHeader, cursor: 'pointer' }}
+        onClick={() => {
+          setCollapsed((v) => !v)
+          setExpandAll(false) // reset expand-all when manually toggling
+        }}
+      >
         <span style={s.sportTitle}>
           <img
             src={sport.icon}
             alt={sport.label}
             style={{ width: 18, height: 18, marginRight: 8 }}
           />
-      {sport.label}</span>
-            {collapsed && (
+          {sport.label}
+        </span>
+
+        {/* Expand/Collapse All button (always visible when expanded section is shown) */}
+        {!collapsed && (
           <button
             onClick={(e) => {
               e.stopPropagation()
-              setExpandAll(true)
-              setCollapsed(false)
+              setExpandAll((v) => !v)
             }}
             style={s.expandAllBtn}
           >
-            Expand All
+            {expandAll ? 'Collapse All' : 'Expand All'}
           </button>
-        )}<span style={s.sportProgress}>{teamsWithCards}/{totalTeams} teams</span>
+        )}
+
+        <span style={s.sportProgress}>
+          {teamsWithCards}/{totalTeams} teams
+        </span>
       </div>
-      {teams
-        .slice()
-        .sort((a, b) => {
-          const aHasCards = (a.players ?? []).some((p) => collectedIds.has(p.id))
-          const bHasCards = (b.players ?? []).some((p) => collectedIds.has(p.id))
 
-          // 1. teams with cards first
-          if (aHasCards !== bHasCards) {
-            return aHasCards ? -1 : 1
-          }
+      {/* TEAM LIST (actual collapse behavior fixed) */}
+      {!collapsed && (
+        <div>
+          {teams
+            .slice()
+            .sort((a, b) => {
+              const aHasCards = (a.players ?? []).some((p) =>
+                collectedIds.has(p.id)
+              )
+              const bHasCards = (b.players ?? []).some((p) =>
+                collectedIds.has(p.id)
+              )
 
-          // 2. alphabetical by team name
-          const aName = (a.name ?? '').toLowerCase()
-          const bName = (b.name ?? '').toLowerCase()
+              // 1. teams with cards first
+              if (aHasCards !== bHasCards) {
+                return aHasCards ? -1 : 1
+              }
 
-          if (aName < bName) return -1
-          if (aName > bName) return 1
-          return 0
-        })
-        .map((team) => (
-        <TeamRow 
-          key={team.id} 
-          team={team} 
-          collectedIds={collectedIds} 
-          ratingMap={ratingMap} 
-          onCardClick={onCardClick} 
-          defaultOpen={expandAll} 
-          hasCards={teamsWithCards}/>
-      ))}
+              // 2. alphabetical by team name
+              const aName = (a.name ?? '').toLowerCase()
+              const bName = (b.name ?? '').toLowerCase()
+
+              return aName.localeCompare(bName)
+            })
+            .map((team) => {
+              const teamHasCards = (team.players ?? []).some((p) =>
+                collectedIds.has(p.id)
+              )
+
+              return (
+                <TeamRow
+                  key={team.id}
+                  team={team}
+                  collectedIds={collectedIds}
+                  ratingMap={ratingMap}
+                  onCardClick={onCardClick}
+                  defaultOpen={expandAll}
+                  hasCards={teamHasCards}
+                />
+              )
+            })}
+        </div>
+      )}
     </section>
   )
 }
+
 
 export function CollectionPage() {
   const navigate = useNavigate()
