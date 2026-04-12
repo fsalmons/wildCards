@@ -1,10 +1,10 @@
 import { useNavigate, useLocation } from 'react-router-dom'
 
 const TABS = [
-  { emoji: 'https://cdn-icons-png.flaticon.com/512/895/895930.png', label: 'Cards',   route: '/collection' },
-  { emoji: 'https://cdn-icons-png.flaticon.com/512/4336/4336206.png', label: 'Map',     route: '/map' },
-  { emoji: 'https://cdn-icons-png.flaticon.com/512/2954/2954982.png', label: 'Friends', route: '/friends' },
-  { emoji: 'https://cdn-icons-png.flaticon.com/512/2784/2784439.png', label: 'Profile', route: '/profile' },
+  { emoji: '../../../photo/nav_icons/card.png', label: 'Cards',   route: '/collection' },
+  { emoji: '../../../photo/nav_icons/compass.png', label: 'Map',     route: '/map' },
+  { emoji: '../../../photo/nav_icons/handshake.png', label: 'Friends', route: '/friends' },
+  { emoji: '../../../photo/nav_icons/trophy.png', label: 'Profile', route: '/profile' },
 ]
 
 const ACTIVE_COLOR   = '#8B4513'
