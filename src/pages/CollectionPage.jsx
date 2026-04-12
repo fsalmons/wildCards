@@ -8,7 +8,7 @@ import basketballIcon from '../../photos/sports_icons/basketball.png'
 import AppLogo from "../../photos/penalty_cards.png"
 const SPORT_META = [
   { key: 'NWSL', icon: soccerIcon, label: 'NWSL' },
-  { key: 'CBB',  icon: basketballIcon, label: 'NCAA'  },
+  { key: 'NCAA',  icon: basketballIcon, label: 'NCAA'  },
 ]
 
 
