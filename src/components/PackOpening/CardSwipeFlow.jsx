@@ -5,7 +5,7 @@ import '../../styles/retro.css'
 
 const TOTAL_CARDS = 5
 
-export function CardSwipeFlow({ cards, teamColor, onComplete }) {
+export function CardSwipeFlow({ cards, teamColor, teamTextColor = '#FFFFFF', onComplete }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [animState, setAnimState] = useState('idle') // 'idle' | 'exiting' | 'entering'
   const [showConfirm, setShowConfirm] = useState(false)
@@ -143,7 +143,7 @@ export function CardSwipeFlow({ cards, teamColor, onComplete }) {
             marginTop: '8px',
             padding: '14px 48px',
             backgroundColor: teamColor,
-            color: '#FFFFFF',
+            color: teamTextColor,
             border: 'none',
             borderRadius: '12px',
             fontFamily: 'Arial, sans-serif',
@@ -232,6 +232,7 @@ export function CardSwipeFlow({ cards, teamColor, onComplete }) {
         <PlayerCard
           player={card}
           teamColor={teamColor}
+          teamTextColor={teamTextColor}
           isCollected
           size="full"
           rating={card.rating ?? null}

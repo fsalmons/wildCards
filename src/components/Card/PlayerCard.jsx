@@ -11,7 +11,7 @@ function getRatingColor(rating, teamColor) {
   return teamColor || '#FFFFFF'
 }
 
-export function PlayerCard({ player, teamColor, isCollected, size = 'full', rating = null, isActiveCard = false }) {
+export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', isCollected, size = 'full', rating = null, isActiveCard = false }) {
   const isFull = size === 'full'
   const scale = isFull ? 1 : SMALL_WIDTH / FULL_WIDTH
 
@@ -39,7 +39,7 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full', rati
   const headerStyle = {
     padding: '12px 14px 8px',
     backgroundColor: isCollected ? teamColor : '#CCCCCC',
-    color: '#FFFFFF',
+    color: isCollected ? teamTextColor : '#FFFFFF',
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
@@ -72,7 +72,8 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full', rati
     fontSize: isFull ? '9px' : '7px',
     fontWeight: '700',
     fontFamily: 'Arial, sans-serif',
-    color: 'rgba(255,255,255,0.8)',
+    color: isCollected ? teamTextColor : '#FFFFFF',
+    opacity: 0.8,
     letterSpacing: '0.5px',
     marginTop: '2px',
   }
@@ -167,7 +168,7 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full', rati
     alignItems: 'center',
     padding: '8px 14px',
     backgroundColor: isCollected ? teamColor : '#CCCCCC',
-    color: '#FFFFFF',
+    color: isCollected ? teamTextColor : '#FFFFFF',
     marginTop: 'auto',
   }
 

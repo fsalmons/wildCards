@@ -45,11 +45,12 @@ function TeamRow({ team, collectedIds, ratingMap, onCardClick, defaultOpen }) {
               <div
                 key={player.id}
                 style={{ ...s.cardStripItem, cursor: 'pointer' }}
-                onClick={() => onCardClick({ player: playerObj, teamColor: team.primary_color ?? '#8B4513', rating: ratingMap.get(player.id) ?? null, isCollected: collectedIds.has(player.id) })}
+                onClick={() => onCardClick({ player: playerObj, teamColor: team.primary_color ?? '#8B4513', teamTextColor: team.text_color ?? '#FFFFFF', rating: ratingMap.get(player.id) ?? null, isCollected: collectedIds.has(player.id) })}
               >
                 <PlayerCard
                   player={playerObj}
                   teamColor={team.primary_color ?? '#8B4513'}
+                  teamTextColor={team.text_color ?? '#FFFFFF'}
                   isCollected={collectedIds.has(player.id)}
                   rating={ratingMap.get(player.id) ?? null}
                   size="small"
@@ -143,6 +144,7 @@ export function CollectionPage() {
                 team: team.name,
               },
               teamColor: team.primary_color ?? '#8B4513',
+              teamTextColor: team.text_color ?? '#FFFFFF',
               rating: ratings.get(found.id) ?? null,
             })
             break
@@ -176,6 +178,7 @@ export function CollectionPage() {
             <PlayerCard
               player={cardOverlay.player}
               teamColor={cardOverlay.teamColor}
+              teamTextColor={cardOverlay.teamTextColor ?? '#FFFFFF'}
               isCollected={cardOverlay.isCollected}
               rating={cardOverlay.rating}
               size="full"
@@ -228,6 +231,7 @@ export function CollectionPage() {
                 <PlayerCard
                   player={newCardData.player}
                   teamColor={newCardData.teamColor}
+                  teamTextColor={newCardData.teamTextColor ?? '#FFFFFF'}
                   isCollected={true}
                   rating={newCardData.rating}
                   size="small"

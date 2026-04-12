@@ -128,7 +128,7 @@ export function CompeteSection({ friendId, friendName, myCardCount, friendCardCo
     if (!userId) return
     const { data } = await supabase
       .from('user_cards')
-      .select('id, rating, player:players(first_name, last_name, face_image, position, age, card_number, team:teams(name, primary_color))')
+      .select('id, rating, player:players(first_name, last_name, face_image, position, age, card_number, team:teams(name, primary_color, text_color))')
       .eq('user_id', userId)
     setMyCards(data || [])
   }, [userId])

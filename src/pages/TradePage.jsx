@@ -21,6 +21,7 @@ function toPlayerCardProps(userCard) {
       team: p.team?.name ?? p.team_name ?? '',
     },
     teamColor: p.team?.primary_color ?? '#8B4513',
+    teamTextColor: p.team?.text_color ?? '#FFFFFF',
     isCollected: true,
     size: 'small',
   }
@@ -72,11 +73,11 @@ export function TradePage() {
         supabase.from('users').select('*').eq('id', friendId).single(),
         supabase
           .from('user_cards')
-          .select('id, rating, player:players(*, team:teams!players_team_id_fkey(name,primary_color))')
+          .select('id, rating, player:players(*, team:teams!players_team_id_fkey(name,primary_color,text_color))')
           .eq('user_id', userId),
         supabase
           .from('user_cards')
-          .select('id, rating, player:players(*, team:teams!players_team_id_fkey(name,primary_color))')
+          .select('id, rating, player:players(*, team:teams!players_team_id_fkey(name,primary_color,text_color))')
           .eq('user_id', friendId),
         supabase
           .from('trades')
