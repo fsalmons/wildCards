@@ -250,7 +250,7 @@ export function Login() {
       <div className="login-root">
         <div className="login-card">
           <h1 className="login-title">WildCards</h1>
-          <p className="login-subtitle">collect 'em at the stadium</p>
+          <p className="login-subtitle">Collect. Trade. Upgrade. Battle.</p>
           <div className="login-divider" />
           <form className="login-form" onSubmit={handleSubmit} noValidate>
             <input
