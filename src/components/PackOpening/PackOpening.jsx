@@ -180,12 +180,17 @@ export function PackOpening({ stadium, onClose }) {
         const pickedIds = picked.map((p) => p.id)
         const { data: owned } = await supabase
           .from('user_cards')
-          .select('player_id')
+          .select('player_id, rating')
           .eq('user_id', userId)
           .in('player_id', pickedIds)
         if (cancelled) return
-        const ownedSet = new Set((owned ?? []).map((r) => r.player_id))
-        const pickedWithNew = picked.map((p) => ({ ...p, isNew: !ownedSet.has(p.id) }))
+        const ownedMap = new Map((owned ?? []).map((r) => [r.player_id, r.rating]))
+        const pickedWithNew = picked.map((p) => {
+          const existingRating = ownedMap.get(p.id)
+          const isNew = existingRating === undefined
+          const isUpgrade = !isNew && p.rating > existingRating
+          return { ...p, isNew, isUpgrade }
+        })
 
         setCards(pickedWithNew)
         setPhase('envelope')

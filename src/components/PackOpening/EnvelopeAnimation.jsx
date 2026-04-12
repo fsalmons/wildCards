@@ -39,8 +39,6 @@ export function EnvelopeAnimation({ teamColor, onComplete }) {
 
   return (
     <div style={overlayStyle} aria-live="polite" aria-label="Opening pack">
-      <p style={labelStyle}>Opening Pack...</p>
-
       <div style={{ perspective: '600px' }}>
         <svg
           width="180"
@@ -79,6 +77,7 @@ export function EnvelopeAnimation({ teamColor, onComplete }) {
           />
         </svg>
       </div>
+      <p style={labelStyle}>Opening Pack...</p>
     </div>
   )
 }

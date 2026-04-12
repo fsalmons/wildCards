@@ -206,18 +206,21 @@ export function CardSwipeFlow({ cards, teamColor, onComplete }) {
       >
         {card.isNew && (
           <div style={{
-            backgroundColor: '#CC0000',
-            color: '#FFFFFF',
-            fontFamily: 'Arial, sans-serif',
-            fontWeight: 800,
-            fontSize: '13px',
-            letterSpacing: '2px',
-            padding: '4px 14px',
-            borderRadius: '20px',
+            backgroundColor: '#CC0000', color: '#FFFFFF',
+            fontFamily: 'Arial, sans-serif', fontWeight: 800,
+            fontSize: '13px', letterSpacing: '2px',
+            padding: '4px 14px', borderRadius: '20px',
             boxShadow: '0 2px 6px rgba(204,0,0,0.4)',
-          }}>
-            NEW
-          </div>
+          }}>NEW</div>
+        )}
+        {!card.isNew && card.isUpgrade && (
+          <div style={{
+            backgroundColor: '#1A7F3C', color: '#FFFFFF',
+            fontFamily: 'Arial, sans-serif', fontWeight: 800,
+            fontSize: '13px', letterSpacing: '2px',
+            padding: '4px 14px', borderRadius: '20px',
+            boxShadow: '0 2px 6px rgba(26,127,60,0.4)',
+          }}>UPGRADE</div>
         )}
         <PlayerCard
           player={card}
