@@ -22,7 +22,28 @@ function TeamRow({ team, collectedIds, ratingMap, onCardClick, defaultOpen }) {
 
   useEffect(() => { setOpen(defaultOpen) }, [defaultOpen])
 
-  const players = team.players ?? []
+  const players = (team.players ?? []).slice().sort((a, b) => {
+    const aCollected = collectedIds.has(a.id)
+    const bCollected = collectedIds.has(b.id)
+
+    if (aCollected && bCollected) {
+      const aLast = (a.last_name ?? '').toLowerCase()
+      const bLast = (b.last_name ?? '').toLowerCase()
+
+      if (aLast < bLast) return -1
+      if (aLast > bLast) return 1
+      return 0
+    }
+
+    const aLast = (a.last_name ?? '').toLowerCase()
+    const bLast = (b.last_name ?? '').toLowerCase()
+
+    if (aLast < bLast) return -1
+    if (aLast > bLast) return 1
+
+    return 0
+  })
+
   const collectedCount = players.filter((p) => collectedIds.has(p.id)).length
   const total = players.length
 
@@ -97,7 +118,26 @@ function SportSection({ sport, teams, collectedIds, ratingMap, onCardClick }) {
           {allExpanded ? 'Collapse All' : 'Expand All'}
         </button>
       </div>
-      {teams.map((team) => (
+      {teams
+        .slice()
+        .sort((a, b) => {
+          const aHasCards = (a.players ?? []).some((p) => collectedIds.has(p.id))
+          const bHasCards = (b.players ?? []).some((p) => collectedIds.has(p.id))
+
+          // 1. teams with cards first
+          if (aHasCards !== bHasCards) {
+            return aHasCards ? -1 : 1
+          }
+
+          // 2. alphabetical by team name
+          const aName = (a.name ?? '').toLowerCase()
+          const bName = (b.name ?? '').toLowerCase()
+
+          if (aName < bName) return -1
+          if (aName > bName) return 1
+          return 0
+        })
+        .map((team) => (
         <TeamRow key={team.id} team={team} collectedIds={collectedIds} ratingMap={ratingMap} onCardClick={onCardClick} defaultOpen={allExpanded} />
       ))}
     </section>

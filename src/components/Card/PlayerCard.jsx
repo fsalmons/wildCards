@@ -24,7 +24,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
   const cardStyle = {
     width: `${FULL_WIDTH}px`,
     height: `${FULL_HEIGHT}px`,
-    backgroundColor: isCollected ? cardColor : '#F5ECD7',
+    backgroundColor: isCollected ? cardColor : '#E0E0E0',
     border: `3px solid ${isCollected ? teamColor : '#CCCCCC'}`,
     borderRadius: '16px',
     boxShadow: '4px 4px 0 rgba(0,0,0,0.2)',
@@ -186,9 +186,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
     opacity: 0.85,
   }
 
-  const displayName = isCollected
-    ? `${player.firstName} ${player.lastName}`
-    : '???'
+  const displayName = `${player.firstName} ${player.lastName}`
 
   const displayAge = isCollected ? player.age : '?'
   const displayPosition = isCollected ? player.position : '?'

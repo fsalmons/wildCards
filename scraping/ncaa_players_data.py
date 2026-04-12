@@ -1,8 +1,10 @@
 import pandas as pd
+
 import string
 import time
+import re
+
 from playwright.sync_api import sync_playwright
-from io import StringIO
 
 base_url = "https://basketball.realgm.com/ncaa/players/2026/{}"
 
@@ -15,10 +17,9 @@ with sync_playwright() as p:
     browser = p.chromium.launch(headless=False)
     page = browser.new_page()
 
-    for letter in string.ascii_uppercase[0]:
+    for letter in string.ascii_uppercase:
         url = base_url.format(letter)
         print(f"Scraping table: {url}")
-
         try:
             page.goto(url, wait_until="domcontentloaded", timeout=60000)
             page.wait_for_timeout(3000)
@@ -54,7 +55,7 @@ with sync_playwright() as p:
 
     browser.close()
 
-print(f"Collected {len(rows_data)} players from tables")
+    print(f"Collected {len(rows_data)} players from tables")
 
 # =========================
 # STAGE 2: BUILD DATAFRAME FROM TABLE ONLY
@@ -74,7 +75,7 @@ df["profile_url"] = [r["profile_url"] for r in rows_data]
 
 
 # =========================
-# STAGE 3: VISIT PROFILES FOR IMAGES ONLY
+# STAGE 3: PROFILE ENRICHMENT (IMAGE + JERSEY + HOMETOWN + NATIONALITY + NBA STATUS)
 # =========================
 
 with sync_playwright() as p:
@@ -82,19 +83,29 @@ with sync_playwright() as p:
     page = browser.new_page()
 
     photo_urls = []
+    jersey_numbers = []
+    hometowns = []
+    nationalities = []
+    nba_statuses = []
 
-    for i, url in enumerate(df["profile_url"].head(2)):
-        print(f"Fetching image {i+1}/{len(df)}")
+    for i, url in enumerate(df["profile_url"]):
+        print(f"Fetching player {i+1}/{len(df)}")
 
         if not url:
             photo_urls.append(None)
+            jersey_numbers.append(None)
+            hometowns.append(None)
+            nationalities.append(None)
+            nba_statuses.append(None)
             continue
 
         try:
             page.goto(url, wait_until="domcontentloaded", timeout=60000)
-            page.wait_for_timeout(20)
+            page.wait_for_timeout(800)
 
-            # best selectors (RealGM varies a lot)
+            # -------------------------
+            # IMAGE
+            # -------------------------
             img = (
                 page.query_selector(".profile-box img") or
                 page.query_selector("img[alt*='Player']") or
@@ -102,29 +113,68 @@ with sync_playwright() as p:
             )
 
             if img:
-                photo_urls.append('https://basketball.realgm.com'+img.get_attribute("src"))
+                photo_urls.append(
+                    "https://basketball.realgm.com" + img.get_attribute("src")
+                )
             else:
                 photo_urls.append(None)
 
-        except Exception as e:
-            print(f"Error: {e}")
-            photo_urls.append(None)
+            # -------------------------
+            # PROFILE TEXT BLOCK
+            # -------------------------
+            profile_box = page.query_selector(".profile-box")
+            text = profile_box.inner_text() if profile_box else ""
 
-        time.sleep(1)
+            # -------------------------
+            # JERSEY NUMBER
+            # -------------------------
+            match_num = re.search(r"#(\d+)", text)
+            jersey_numbers.append(int(match_num.group(1)) if match_num else None)
+
+            # -------------------------
+            # HOMETOWN
+            # -------------------------
+            match_home = re.search(r"Hometown:\s*(.+)", text)
+            hometowns.append(match_home.group(1).strip() if match_home else None)
+
+            # -------------------------
+            # NATIONALITY
+            # -------------------------
+            match_nat = re.search(r"Nationality:\s*(.+)", text)
+            nationalities.append(match_nat.group(1).strip() if match_nat else None)
+
+            # -------------------------
+            # NBA STATUS
+            # -------------------------
+            match_status = re.search(r"NBA Status:\s*(.+)", text)
+            nba_statuses.append(match_status.group(1).strip() if match_status else None)
+
+        except Exception as e:
+            print(f"Error on {url}: {e}")
+            photo_urls.append(None)
+            jersey_numbers.append(None)
+            hometowns.append(None)
+            nationalities.append(None)
+            nba_statuses.append(None)
+
+        time.sleep(0.8)
 
     browser.close()
-
 
 # =========================
 # FINAL CLEANUP
 # =========================
 
-df.loc[df.index[:2],"photo_url"] = photo_urls
+df["photo_url"] = photo_urls
+df["jersey_number"] = jersey_numbers
+df["hometown"] = hometowns
+df["nationality"] = nationalities
+df["nba_status"] = nba_statuses
 
-# remove profile_url (NOT wanted in final output)
 df = df.drop(columns=["profile_url"])
 
 print(df.head())
 print(df.shape)
 
 df.to_csv("../tables/ncaa_players.csv", index=False)
+
