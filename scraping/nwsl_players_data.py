@@ -60,11 +60,9 @@ rename_map = {
 df["Team"] = df["Team"].replace(rename_map)
 
 
-df.to_csv('../tables/nwls_players.csv', index=False)
+df.to_csv('data/nwls_players.csv', index=False)
 
 df_filtered = df.dropna()
 
 # save filtered version
 df_filtered.to_csv('../tables/nwls_players_with_photos.csv', index=False)
-
-print(df_filtered.Team.value_counts())

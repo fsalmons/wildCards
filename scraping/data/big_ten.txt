@@ -1,0 +1,18 @@
+Illinois	Fighting Illini	ILL	Big Ten	Champaign, IL	State Farm Center
+Indiana	Hoosiers	IU	Big Ten	Bloomington, IN	Simon Skjodt Assembly Hall
+Iowa	Hawkeyes	IOWA	Big Ten	Iowa City, IA	Carver-Hawkeye Arena
+Maryland	Terrapins	UMD	Big Ten	College Park, MD	XFINITY Center
+Michigan	Wolverines	MICH	Big Ten	Ann Arbor, MI	Crisler Center
+Michigan State	Spartans	MCHST	Big Ten	East Lansing, MI	Breslin Center
+Minnesota	Golden Gophers	MINN	Big Ten	Minneapolis, MN	Williams Arena
+Nebraska	Cornhuskers	UNL	Big Ten	Lincoln, NE	Pinnacle Bank Arena
+Northwestern	Wildcats	NWU	Big Ten	Evanston, IL	Welsh-Ryan Arena
+Ohio State	Buckeyes	OSU	Big Ten	Columbus, OH	Value City Arena
+Oregon	Ducks	OREG	Big Ten	Eugene, OR	Matthew Knight Arena
+Penn State	Nittany Lions	PENST	Big Ten	University Park, PA	Bryce Jordan Center
+Purdue	Boilermakers	PURD	Big Ten	West Lafayette, IN	Mackey Arena
+Rutgers	Scarlet Knights	RUTG	Big Ten	Piscataway, NJ	Jersey Mike's Arena
+UCLA	Bruins	UCLA	Big Ten	Los Angeles, CA	Pauley Pavilion
+USC	Trojans	USC	Big Ten	Los Angeles, CA	Galen Center
+Washington	Huskies	UWASH	Big Ten	Seattle, WA	Alaska Airlines Arena at Hec Edmundson Pavilion
+Wisconsin	Badgers	UWISC	Big Ten	Madison, WI	Kohl Center
