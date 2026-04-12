@@ -197,33 +197,34 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
   return (
     <div style={containerStyle}>
       <div style={cardStyle}>
-        {/* Header */}
-        <div style={headerStyle}>
-          {/* Rating — top left */}
+
+        {/* Top overlay (rating + logo only) */}
+        <div style={{ position: 'absolute', top: 8, left: 8 }}>
           <div style={ratingBlockStyle}>
             <span style={ratingNumberStyle}>
               {rating !== null ? rating : '—'}
             </span>
             <span style={ovrLabelStyle}>OVR</span>
           </div>
-
-          {isCollected && teamLogo && (
-            <img
-              src={teamLogo}
-              alt=""
-              style={{
-                position: 'absolute', top: '8px', right: '8px',
-                width: '36px', height: '36px',
-                objectFit: 'contain',
-                filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.35))',
-                pointerEvents: 'none',
-              }}
-              onError={(e) => { e.currentTarget.style.display = 'none' }}
-            />
-          )}
-          <p style={playerNameStyle}>{displayName}</p>
-          <p style={teamNameStyle}>{player.team || ''}</p>
         </div>
+
+        {isCollected && teamLogo && (
+          <img
+            src={teamLogo}
+            alt=""
+            style={{
+              position: 'absolute',
+              top: 8,
+              right: 8,
+              width: 36,
+              height: 36,
+              objectFit: 'contain',
+              filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.35))',
+              pointerEvents: 'none',
+            }}
+            onError={(e) => { e.currentTarget.style.display = 'none' }}
+          />
+        )}
 
         {/* Face image */}
         <div style={imageAreaStyle}>
@@ -238,35 +239,60 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
               }}
             />
           ) : null}
+
           <div
             style={{
               ...greyCircleStyle,
               display: isCollected && player.faceImage ? 'none' : 'block',
             }}
           />
-
         </div>
 
-        {/* Stats row */}
-        <div style={statsRowStyle}>
+        {/* Stats LEFT aligned */}
+        <div style={{
+          ...statsRowStyle,
+          justifyContent: 'flex-start',
+          gap: '12px'
+        }}>
           <div style={statBlockStyle}>
             <span style={statLabelStyle}>Position</span>
             <span style={statValueStyle}>{displayPosition}</span>
           </div>
-          <div style={{ ...statBlockStyle, alignItems: 'flex-end' }}>
+
+          <div style={statBlockStyle}>
             <span style={statLabelStyle}>Age</span>
-            <span style={statValueStyle}>{isCollected && displayAge ? displayAge : '?'}</span>
+            <span style={statValueStyle}>
+              {isCollected && displayAge ? displayAge : '?'}
+            </span>
           </div>
         </div>
 
         {/* Divider */}
         <div style={dividerStyle} />
 
-        {/* Bottom bar */}
-        <div style={bottomBarStyle}>
-          <span style={bottomTeamStyle}>{league || player.team || ''}</span>
-          <span style={cardNumberStyle}>{cardNum}</span>
+        {/* Footer (NEW identity section) */}
+        <div style={{
+          ...bottomBarStyle,
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          gap: '2px'
+        }}>
+          <span style={playerNameStyle}>{displayName}</span>
+          <span style={teamNameStyle}>{player.team || ''}</span>
+
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            width: '100%',
+            marginTop: '4px'
+          }}>
+            <span style={bottomTeamStyle}>
+              {league || player.team || ''}
+            </span>
+            <span style={cardNumberStyle}>{cardNum}</span>
+          </div>
         </div>
+
       </div>
     </div>
   )
