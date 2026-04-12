@@ -1,10 +1,15 @@
 import { useNavigate, useLocation } from 'react-router-dom'
 
+import cardIcon from '../../../photos/nav_icons/card.png'
+import compassIcon from '../../../photos/nav_icons/compass.png'
+import handshakeIcon from '../../../photos/nav_icons/handshake.png'
+import trophyIcon from '../../../photos/nav_icons/trophy.png'
+
 const TABS = [
-  { icon: '../../../photos/nav_icons/card.png', label: 'Cards',   route: '/collection' },
-  { icon: '../../../photos/nav_icons/compass.png', label: 'Map',     route: '/map' },
-  { icon: '../../../photos/nav_icons/handshake.png', label: 'Friends', route: '/friends' },
-  { icon: '../../../photos/nav_icons/trophy.png', label: 'Profile', route: '/profile' },
+  { icon: cardIcon, label: 'Cards', route: '/collection' },
+  { icon: compassIcon, label: 'Map', route: '/map' },
+  { icon: handshakeIcon, label: 'Friends', route: '/friends' },
+  { icon: trophyIcon, label: 'Profile', route: '/profile' },
 ]
 
 const ACTIVE_COLOR   = '#8B4513'
