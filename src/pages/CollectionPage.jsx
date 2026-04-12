@@ -17,7 +17,8 @@ function getUser() {
   catch { return null }
 }
 
-function TeamRow({ team, collectedIds, ratingMap, onCardClick, defaultOpen }) {
+function TeamRow({ team, collectedIds, ratingMap, onCardClick, defaultOpen, hasCards })
+ {
   const [open, setOpen] = useState(defaultOpen)
 
   useEffect(() => { setOpen(defaultOpen) }, [defaultOpen])
@@ -26,15 +27,12 @@ function TeamRow({ team, collectedIds, ratingMap, onCardClick, defaultOpen }) {
     const aCollected = collectedIds.has(a.id)
     const bCollected = collectedIds.has(b.id)
 
-    if (aCollected && bCollected) {
-      const aLast = (a.last_name ?? '').toLowerCase()
-      const bLast = (b.last_name ?? '').toLowerCase()
-
-      if (aLast < bLast) return -1
-      if (aLast > bLast) return 1
-      return 0
+    // 1. collected first
+    if (aCollected !== bCollected) {
+      return aCollected ? -1 : 1
     }
 
+    // 2. alphabetical by last name
     const aLast = (a.last_name ?? '').toLowerCase()
     const bLast = (b.last_name ?? '').toLowerCase()
 
@@ -48,7 +46,11 @@ function TeamRow({ team, collectedIds, ratingMap, onCardClick, defaultOpen }) {
   const total = players.length
 
   return (
-    <div style={s.teamRow}>
+    <div style={{
+        ...s.teamRow,
+        opacity: hasCards ? 1 : 0.5,
+        filter: hasCards ? 'none' : 'grayscale(100%)',
+      }}>
       <button onClick={() => setOpen((o) => !o)} style={s.teamRowHeader} aria-expanded={open}>
         <span style={s.teamName}>{team.name}</span>
         <span style={s.teamRowRight}>
@@ -103,7 +105,10 @@ function SportSection({ sport, teams, collectedIds, ratingMap, onCardClick }) {
 
   return (
     <section style={s.sportSection}>
-      <div style={s.sportHeader}>
+      <div
+          style={{ ...s.sportHeader, cursor: 'pointer' }}
+          onClick={() => setAllExpanded((v) => !v)}
+        >
         <span style={s.sportTitle}>
           <img
             src={sport.icon}
@@ -138,7 +143,14 @@ function SportSection({ sport, teams, collectedIds, ratingMap, onCardClick }) {
           return 0
         })
         .map((team) => (
-        <TeamRow key={team.id} team={team} collectedIds={collectedIds} ratingMap={ratingMap} onCardClick={onCardClick} defaultOpen={allExpanded} />
+        <TeamRow 
+          key={team.id} 
+          team={team} 
+          collectedIds={collectedIds} 
+          ratingMap={ratingMap} 
+          onCardClick={onCardClick} 
+          defaultOpen={allExpanded} 
+          hasCards={hasCards}/>
       ))}
     </section>
   )
