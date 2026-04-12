@@ -329,11 +329,11 @@ export function ProfilePage() {
             cardNumber: data.player.card_number,
             team: data.player.team?.name || '',
           },
-          teamColor: uc.player.team?.primary_color ?? '#8B4513',
-          teamTextColor: uc.player.team?.text_color ?? '#FFFFFF',
-          cardColor: uc.player.team?.card_color ?? '#F5ECD7',
-          teamLogo: uc.player.team?.logo_url ?? null,
-          league: uc.player.team?.sport ?? '',
+          teamColor: data.player.team?.primary_color ?? '#8B4513',
+          teamTextColor: data.player.team?.text_color ?? '#FFFFFF',
+          cardColor: data.player.team?.card_color ?? '#F5ECD7',
+          teamLogo: data.player.team?.logo_url ?? null,
+          league: data.player.team?.sport ?? '',
         })
       }
     }
