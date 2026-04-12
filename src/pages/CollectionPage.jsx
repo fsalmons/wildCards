@@ -45,7 +45,7 @@ function TeamRow({ team, collectedIds, ratingMap, onCardClick, defaultOpen }) {
               <div
                 key={player.id}
                 style={{ ...s.cardStripItem, cursor: 'pointer' }}
-                onClick={() => onCardClick({ player: playerObj, teamColor: team.primary_color ?? '#8B4513', teamTextColor: team.text_color ?? '#FFFFFF', cardColor: team.card_color ?? '#F5ECD7', teamLogo: team.logo_url ?? null, rating: ratingMap.get(player.id) ?? null, isCollected: collectedIds.has(player.id) })}
+                onClick={() => onCardClick({ player: playerObj, teamColor: team.primary_color ?? '#8B4513', teamTextColor: team.text_color ?? '#FFFFFF', cardColor: team.card_color ?? '#F5ECD7', teamLogo: team.logo_url ?? null, league: team.sport ?? '', rating: ratingMap.get(player.id) ?? null, isCollected: collectedIds.has(player.id) })}
               >
                 <PlayerCard
                   player={playerObj}
@@ -53,6 +53,7 @@ function TeamRow({ team, collectedIds, ratingMap, onCardClick, defaultOpen }) {
                   teamTextColor={team.text_color ?? '#FFFFFF'}
                   cardColor={team.card_color ?? '#F5ECD7'}
                   teamLogo={team.logo_url ?? null}
+                  league={team.sport ?? ''}
                   isCollected={collectedIds.has(player.id)}
                   rating={ratingMap.get(player.id) ?? null}
                   size="small"
@@ -149,6 +150,7 @@ export function CollectionPage() {
               teamTextColor: team.text_color ?? '#FFFFFF',
               cardColor: team.card_color ?? '#F5ECD7',
               teamLogo: team.logo_url ?? null,
+              league: team.sport ?? '',
               rating: ratings.get(found.id) ?? null,
             })
             break
@@ -185,6 +187,7 @@ export function CollectionPage() {
               teamTextColor={cardOverlay.teamTextColor ?? '#FFFFFF'}
               cardColor={cardOverlay.cardColor ?? '#F5ECD7'}
               teamLogo={cardOverlay.teamLogo ?? null}
+              league={cardOverlay.league ?? ''}
               isCollected={cardOverlay.isCollected}
               rating={cardOverlay.rating}
               size="full"
@@ -240,6 +243,7 @@ export function CollectionPage() {
                   teamTextColor={newCardData.teamTextColor ?? '#FFFFFF'}
                   cardColor={newCardData.cardColor ?? '#F5ECD7'}
                   teamLogo={newCardData.teamLogo ?? null}
+                  league={newCardData.league ?? ''}
                   isCollected={true}
                   rating={newCardData.rating}
                   size="small"

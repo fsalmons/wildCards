@@ -11,7 +11,7 @@ function getRatingColor(rating, teamColor) {
   return teamColor || '#FFFFFF'
 }
 
-export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', teamLogo = null, isCollected, size = 'full', rating = null }) {
+export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardColor = '#F5ECD7', teamLogo = null, league = '', isCollected, size = 'full', rating = null }) {
   const isFull = size === 'full'
   const scale = isFull ? 1 : SMALL_WIDTH / FULL_WIDTH
 
@@ -24,7 +24,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', teamL
   const cardStyle = {
     width: `${FULL_WIDTH}px`,
     height: `${FULL_HEIGHT}px`,
-    backgroundColor: isCollected ? teamTextColor : '#F5ECD7',
+    backgroundColor: isCollected ? cardColor : '#F5ECD7',
     border: `3px solid ${isCollected ? teamColor : '#CCCCCC'}`,
     borderRadius: '16px',
     boxShadow: '4px 4px 0 rgba(0,0,0,0.2)',
@@ -266,7 +266,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', teamL
 
         {/* Bottom bar */}
         <div style={bottomBarStyle}>
-          <span style={bottomTeamStyle}>{player.team || ''}</span>
+          <span style={bottomTeamStyle}>{league || player.team || ''}</span>
           <span style={cardNumberStyle}>{cardNum}</span>
         </div>
       </div>

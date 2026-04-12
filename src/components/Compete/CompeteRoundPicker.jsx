@@ -22,6 +22,7 @@ function toProps(uc) {
     teamTextColor: p.team?.text_color ?? '#FFFFFF',
     cardColor: p.team?.card_color ?? '#F5ECD7',
     teamLogo: p.team?.logo_url ?? null,
+    league: p.team?.sport ?? '',
     isCollected: true,
     size: 'small',
     rating: uc.rating,

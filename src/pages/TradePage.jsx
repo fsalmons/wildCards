@@ -24,6 +24,7 @@ function toPlayerCardProps(userCard) {
     teamTextColor: p.team?.text_color ?? '#FFFFFF',
     cardColor: p.team?.card_color ?? '#F5ECD7',
     teamLogo: p.team?.logo_url ?? null,
+    league: p.team?.sport ?? '',
     isCollected: true,
     size: 'small',
   }
@@ -75,11 +76,11 @@ export function TradePage() {
         supabase.from('users').select('*').eq('id', friendId).single(),
         supabase
           .from('user_cards')
-          .select('id, rating, player:players(*, team:teams!players_team_id_fkey(name,primary_color,text_color,logo_url,card_color))')
+          .select('id, rating, player:players(*, team:teams!players_team_id_fkey(name,primary_color,text_color,logo_url,card_color,sport))')
           .eq('user_id', userId),
         supabase
           .from('user_cards')
-          .select('id, rating, player:players(*, team:teams!players_team_id_fkey(name,primary_color,text_color,logo_url,card_color))')
+          .select('id, rating, player:players(*, team:teams!players_team_id_fkey(name,primary_color,text_color,logo_url,card_color,sport))')
           .eq('user_id', friendId),
         supabase
           .from('trades')

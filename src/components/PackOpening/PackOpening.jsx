@@ -150,6 +150,7 @@ export function PackOpening({ stadium, onClose }) {
   const [teamTextColor, setTeamTextColor] = useState('#FFFFFF')
   const [teamLogo, setTeamLogo] = useState(null)
   const [cardColor, setCardColor] = useState('#F5ECD7')
+  const [league, setLeague] = useState('')
   const [teamId, setTeamId] = useState(null)
   const [cards, setCards] = useState([])
   const [errorMsg, setErrorMsg] = useState('')
@@ -178,6 +179,7 @@ export function PackOpening({ stadium, onClose }) {
         setTeamTextColor(team.text_color || '#FFFFFF')
         setTeamLogo(team.logo_url || null)
         setCardColor(team.card_color || '#F5ECD7')
+        setLeague(team.sport || '')
         setTeamId(team.id)
 
         // 2. Fetch players for that team
@@ -309,6 +311,7 @@ export function PackOpening({ stadium, onClose }) {
         teamTextColor={teamTextColor}
         cardColor={cardColor}
         teamLogo={teamLogo}
+        league={league}
         onComplete={handleSwipeComplete}
       />
     )
