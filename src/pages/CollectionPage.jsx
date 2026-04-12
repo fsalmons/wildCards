@@ -150,7 +150,7 @@ function SportSection({ sport, teams, collectedIds, ratingMap, onCardClick }) {
           ratingMap={ratingMap} 
           onCardClick={onCardClick} 
           defaultOpen={allExpanded} 
-          hasCards={hasCards}/>
+          hasCards={teamsWithCards}/>
       ))}
     </section>
   )
