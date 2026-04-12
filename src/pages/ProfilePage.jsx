@@ -312,7 +312,6 @@ export function ProfilePage() {
       const { data } = await supabase
         .from('user_cards')
         .select('id, rating, player:players(id, first_name, last_name, face_image, position, age, card_number, team:teams(name, primary_color, card_color, text_color, sport, logo_url))')
-        .order('last_name', { ascending: true })
         .eq('id', user.active_card_id)
         .single()
 
