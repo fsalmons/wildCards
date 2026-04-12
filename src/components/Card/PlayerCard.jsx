@@ -258,41 +258,63 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
             <span style={statLabelStyle}>Position</span>
             <span style={statValueStyle}>{displayPosition}</span>
           </div>
-
-          <div style={statBlockStyle}>
-            <span style={statLabelStyle}>Age</span>
-            <span style={statValueStyle}>
-              {isCollected && displayAge ? displayAge : '?'}
-            </span>
-          </div>
         </div>
 
         {/* Divider */}
         <div style={dividerStyle} />
 
-        {/* Footer (NEW identity section) */}
+        {/* Footer */}
         <div style={{
           ...bottomBarStyle,
-          flexDirection: 'column',
-          alignItems: 'flex-start',
-          gap: '2px'
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          padding: '8px 10px'
         }}>
-          <span style={playerNameStyle}>{displayName}</span>
-          <span style={teamNameStyle}>{player.team || ''}</span>
 
+          {/* LEFT: Division / League */}
           <div style={{
             display: 'flex',
-            justifyContent: 'space-between',
-            width: '100%',
-            marginTop: '4px'
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            gap: '2px'
           }}>
-            <span style={bottomTeamStyle}>
-              {league || player.team || ''}
-            </span>
-            <span style={cardNumberStyle}>{cardNum}</span>
-          </div>
-        </div>
+            <span style={{ fontSize: '18px' }}>?</span>
 
+            <span style={{
+              ...bottomTeamStyle,
+              fontSize: '10px',
+              opacity: 0.8
+            }}>
+              {league || ''}
+            </span>
+          </div>
+
+          {/* RIGHT: Player Identity */}
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-end',
+            textAlign: 'right'
+          }}>
+            <span style={{
+              ...playerNameStyle,
+              fontWeight: 700,
+              fontSize: '14px'
+            }}>
+              {displayName}
+            </span>
+
+            <span style={{
+              ...teamNameStyle,
+              fontSize: '11px',
+              opacity: 0.85
+            }}>
+              {player.team || ''}
+            </span>
+          </div>
+
+        </div>
       </div>
     </div>
   )
