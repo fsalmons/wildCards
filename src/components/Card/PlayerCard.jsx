@@ -24,7 +24,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', teamL
   const cardStyle = {
     width: `${FULL_WIDTH}px`,
     height: `${FULL_HEIGHT}px`,
-    backgroundColor: '#F5ECD7',
+    backgroundColor: isCollected ? teamTextColor : '#F5ECD7',
     border: `3px solid ${isCollected ? teamColor : '#CCCCCC'}`,
     borderRadius: '16px',
     boxShadow: '4px 4px 0 rgba(0,0,0,0.2)',
@@ -142,7 +142,8 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', teamL
 
   const statLabelStyle = {
     fontSize: '9px',
-    color: '#888888',
+    color: isCollected ? teamColor : '#888888',
+    opacity: isCollected ? 0.6 : 1,
     textTransform: 'uppercase',
     letterSpacing: '0.5px',
     fontFamily: 'Arial, sans-serif',
@@ -150,7 +151,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', teamL
 
   const statValueStyle = {
     fontSize: '13px',
-    color: isCollected ? '#333333' : '#AAAAAA',
+    color: isCollected ? teamColor : '#AAAAAA',
     fontFamily: 'Arial, sans-serif',
     fontWeight: '600',
   }
@@ -159,7 +160,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', teamL
     height: '2px',
     backgroundColor: isCollected ? teamColor : '#CCCCCC',
     margin: '0 14px',
-    opacity: 0.4,
+    opacity: 0.3,
   }
 
   const bottomBarStyle = {
