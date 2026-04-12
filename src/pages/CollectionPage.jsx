@@ -3,6 +3,9 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { PlayerCard } from '../components/Card/PlayerCard'
 
+import soccerIcon from '../../../photos/sport_icons/football.png'
+import basketballIcon from '../../../photos/sport_icons/basketball.png'
+
 function getUser() {
   try { return JSON.parse(localStorage.getItem('scc_user')) ?? null }
   catch { return null }
@@ -171,8 +174,8 @@ export function CollectionPage() {
 
   const totalCollected = collectedIds.size
   const SPORT_META = [
-    { key: 'NWSL', emoji: '⚽', label: 'NWSL' },
-    { key: 'CBB',  emoji: '🏀', label: 'CBB'  },
+    { key: 'NWSL', icon: soccerIcon, label: 'NWSL' },
+    { key: 'CBB',  icon: basketballIcon, label: 'NCAA'  },
   ]
 
   return (
@@ -252,13 +255,13 @@ export function CollectionPage() {
             </div>
           </section>
         )}
-        {!loading && !error && SPORT_META.map(({ key, emoji, label }) => {
+        {!loading && !error && SPORT_META.map(({ key, icon, label }) => {
           const teams = teamsBySport[key]
           if (!teams || teams.length === 0) return null
           return (
             <SportSection
               key={key}
-              sport={{ key, emoji, label }}
+              sport={{ key, icon, label }}
               teams={teams}
               collectedIds={collectedIds}
               ratingMap={ratingMap}
