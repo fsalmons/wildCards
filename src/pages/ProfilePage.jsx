@@ -3,6 +3,11 @@ import { supabase } from '../lib/supabase'
 import { getStravaAuthUrl, syncStrava } from '../lib/strava'
 import { PlayerCard } from '../components/Card/PlayerCard'
 
+import trophyIcon from '../../photos/trophy.png'
+import gymIcon from '../../photos/gym.png'
+import runIcon from '../../photos/run.png'
+
+
 const BROWN = '#8B4513'
 const BEIGE = '#FAF3E0'
 const CARD_BG = '#F5ECD7'
@@ -20,7 +25,12 @@ function StatBox({ icon, value, label }) {
         boxShadow: `0 3px 0 #5C2A00`,
       }}
     >
-      <div style={{ fontSize: 28, lineHeight: 1 }}>{icon}</div>
+      <div style={{ fontSize: 28, lineHeight: 1 }}>
+        <img
+              src={icon}
+              alt={label}
+              style={{ width: 30, height: 30 }}
+            /></div>
       <div
         style={{
           fontFamily: 'Arial, sans-serif',
@@ -193,7 +203,11 @@ function CollectionPicker({ userId, onSelect, onClose }) {
             >
               <PlayerCard
                 player={c.player}
-                teamColor={c.teamColor}
+                teamColor={c.primary_color ?? '#8B4513'}
+                teamTextColor={c.text_color ?? '#FFFFFF'}
+                cardColor={c.card_color ?? '#F5ECD7'}
+                teamLogo={c.logo_url ?? null}
+                league={c.sport ?? ''}
                 isCollected
                 size="small"
                 rating={c.rating}
@@ -461,7 +475,11 @@ export function ProfilePage() {
               marginBottom: 12,
             }}
           >
-            ⚡ TRAINING
+          <img
+              src={gymIcon}
+              alt='gym'
+              style={{ width: 30, height: 30 }}
+            /> TRAINING
           </div>
 
           {activeCard ? (
@@ -674,12 +692,12 @@ export function ProfilePage() {
           </div>
           <div style={{ display: 'flex', gap: 12 }}>
             <StatBox
-              icon="⏱"
+              icon={runIcon}
               value={user.total_exercise_minutes ?? 0}
               label="Exercise logged"
             />
             <StatBox
-              icon="⚡"
+              icon={trophyIcon}
               value={user.total_rating_points_earned ?? 0}
               label="Rating points earned"
             />
