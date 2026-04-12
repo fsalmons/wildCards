@@ -85,6 +85,11 @@ export function PlayerCard({ player, teamColor, isCollected, size = 'full', rati
     fontFamily: 'Arial, sans-serif',
     margin: 0,
     textAlign: 'center',
+    padding: '0 44px',
+    width: '100%',
+    boxSizing: 'border-box',
+    wordBreak: 'break-word',
+    overflowWrap: 'break-word',
   }
 
   const teamNameStyle = {
