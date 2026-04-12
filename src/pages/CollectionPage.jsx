@@ -78,7 +78,13 @@ function SportSection({ sport, teams, collectedIds, ratingMap, onCardClick }) {
   return (
     <section style={s.sportSection}>
       <div style={s.sportHeader}>
-        <span style={s.sportTitle}>{sport.emoji}&nbsp;&nbsp;{sport.label}</span>
+        <span style={s.sportTitle}>
+          <img
+            src={sport.icon}
+            alt={sport.label}
+            style={{ width: 18, height: 18, marginRight: 8 }}
+          />
+      {sport.label}</span>
         <span style={s.sportProgress}>{teamsWithCards}/{totalTeams} teams</span>
       </div>
       <div style={s.expandAllRow}>
