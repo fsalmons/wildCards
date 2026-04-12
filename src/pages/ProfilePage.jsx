@@ -73,20 +73,27 @@ function CollectionPicker({ userId, onSelect, onClose }) {
 
       if (data) {
         setCards(data.map((uc) => ({
-          userCardId: uc.id,
-          rating: uc.rating,
-          player: {
-            id: uc.player.id,
-            firstName: uc.player.first_name,
-            lastName: uc.player.last_name,
-            faceImage: uc.player.face_image,
-            position: uc.player.position,
-            age: uc.player.age,
-            cardNumber: uc.player.card_number,
-            team: uc.player.team?.name || '',
-          },
-          teamColor: uc.player.team?.primary_color || BROWN,
-        })))
+        userCardId: uc.id,
+        rating: uc.rating,
+        player: {
+          id: uc.player.id,
+          firstName: uc.player.first_name,
+          lastName: uc.player.last_name,
+          faceImage: uc.player.face_image,
+          position: uc.player.position,
+          age: uc.player.age,
+          cardNumber: uc.player.card_number,
+          team: uc.player.team?.name || '',
+        },
+
+        // ✅ FULL TEAM THEME PALETTE
+        teamColor: uc.player.team?.primary_color ?? '#8B4513',
+        teamTextColor: uc.player.team?.text_color ?? '#FFFFFF',
+        cardColor: uc.player.team?.card_color ?? '#F5ECD7',
+        teamLogo: uc.player.team?.logo_url ?? null,
+        league: uc.player.team?.sport ?? '',
+      })))
+
       }
       setLoading(false)
     }
@@ -204,11 +211,11 @@ function CollectionPicker({ userId, onSelect, onClose }) {
             >
               <PlayerCard
                 player={c.player}
-                teamColor={c.primary_color ?? '#8B4513'}
-                teamTextColor={c.text_color ?? '#FFFFFF'}
-                cardColor={c.card_color ?? '#F5ECD7'}
-                teamLogo={c.logo_url ?? null}
-                league={c.sport ?? ''}
+                teamColor={c.teamColor}
+                teamTextColor={c.teamTextColor}
+                cardColor={c.cardColor}
+                teamLogo={c.teamLogo}
+                league={c.league}
                 isCollected
                 size="small"
                 rating={c.rating}
@@ -525,12 +532,21 @@ export function ProfilePage() {
                 backgroundColor: CARD_BG,
               }}
             >
-              <div style={{ fontSize: 40, marginBottom: 12, textAlign: 'center'  }}><img
-              src={gymIcon}
-              alt='gym'
-              style={{ width: 40, height: 40 }}
-            />
-            </div>
+              <div
+                style={{
+                  width: '100%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  marginBottom: 12
+                }}
+              >
+                <img
+                  src={gymIcon}
+                  alt="gym"
+                  style={{ width: 40, height: 40 }}
+                />
+              </div>
               <p
                 style={{
                   fontFamily: 'Arial, sans-serif',
