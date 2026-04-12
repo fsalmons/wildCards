@@ -46,7 +46,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', isCol
     alignItems: 'center',
   }
 
-  const ratingColor = rating !== null ? getRatingColor(rating, '#FFFFFF') : '#FFFFFF'
+  const ratingColor = isCollected ? teamTextColor : '#FFFFFF'
   const ratingFontSize = isFull ? '28px' : '20px'
 
   const ratingBlockStyle = {
