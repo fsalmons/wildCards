@@ -46,15 +46,13 @@ function TeamRow({ team, collectedIds, ratingMap, onCardClick, defaultOpen, hasC
   const total = players.length
 
   return (
-    <div style={{
-        ...s.teamRow,
-        opacity: hasCards ? 1 : 0.5,
-        filter: hasCards ? 'none' : 'grayscale(100%)',
-      }}>
+    <div style={s.teamRow}>
       <button onClick={() => setOpen((o) => !o)} style={s.teamRowHeader} aria-expanded={open}>
-        <span style={s.teamName}>{team.name}</span>
+        <span style={{
+           ...s.teamName, 
+          color: isEmpty ? '#B5B5B5' : '#333' }}>{team.name}</span>
         <span style={s.teamRowRight}>
-          <span style={s.progressBadge}>{collectedCount}/{total}</span>
+          <span style={{ ...s.progressBadge, opacity: isEmpty ? 0.5 : 1 }}>{collectedCount}/{total}</span>
         </span>
       </button>
 
@@ -99,7 +97,8 @@ function TeamRow({ team, collectedIds, ratingMap, onCardClick, defaultOpen, hasC
 }
 
 function SportSection({ sport, teams, collectedIds, ratingMap, onCardClick }) {
-  const [allExpanded, setAllExpanded] = useState(false)
+  const [collapsed, setCollapsed] = useState(true)
+  const [expandAll, setExpandAll] = useState(false)
   const totalTeams = teams.length
   const teamsWithCards = teams.filter((t) => (t.players ?? []).some((p) => collectedIds.has(p.id))).length
 
@@ -107,7 +106,7 @@ function SportSection({ sport, teams, collectedIds, ratingMap, onCardClick }) {
     <section style={s.sportSection}>
       <div
           style={{ ...s.sportHeader, cursor: 'pointer' }}
-          onClick={() => setAllExpanded((v) => !v)}
+          onClick={() => setCollapsed((v) => !v)}
         >
         <span style={s.sportTitle}>
           <img
@@ -116,12 +115,18 @@ function SportSection({ sport, teams, collectedIds, ratingMap, onCardClick }) {
             style={{ width: 18, height: 18, marginRight: 8 }}
           />
       {sport.label}</span>
-        <span style={s.sportProgress}>{teamsWithCards}/{totalTeams} teams</span>
-      </div>
-      <div style={s.expandAllRow}>
-        <button onClick={() => setAllExpanded((v) => !v)} style={s.expandAllBtn}>
-          {allExpanded ? 'Collapse All' : 'Expand All'}
-        </button>
+            {collapsed && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation()
+              setExpandAll(true)
+              setCollapsed(false)
+            }}
+            style={s.expandAllBtn}
+          >
+            Expand All
+          </button>
+        )}<span style={s.sportProgress}>{teamsWithCards}/{totalTeams} teams</span>
       </div>
       {teams
         .slice()
@@ -149,7 +154,7 @@ function SportSection({ sport, teams, collectedIds, ratingMap, onCardClick }) {
           collectedIds={collectedIds} 
           ratingMap={ratingMap} 
           onCardClick={onCardClick} 
-          defaultOpen={allExpanded} 
+          defaultOpen={expandAll} 
           hasCards={teamsWithCards}/>
       ))}
     </section>
