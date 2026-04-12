@@ -50,7 +50,7 @@ function TeamRow({ team, collectedIds, ratingMap, onCardClick, defaultOpen, hasC
       <button onClick={() => setOpen((o) => !o)} style={s.teamRowHeader} aria-expanded={open}>
         <span style={{
            ...s.teamName, 
-          color: isEmpty ? '#B5B5B5' : '#333' }}>{team.name}</span>
+          color: hasCards ? '#333' : '#B5B5B5' }}>{team.name}</span>
         <span style={s.teamRowRight}>
           <span style={{ ...s.progressBadge, opacity: isEmpty ? 0.5 : 1 }}>{collectedCount}/{total}</span>
         </span>
@@ -101,6 +101,9 @@ function SportSection({ sport, teams, collectedIds, ratingMap, onCardClick }) {
   const [expandAll, setExpandAll] = useState(false)
   const totalTeams = teams.length
   const teamsWithCards = teams.filter((t) => (t.players ?? []).some((p) => collectedIds.has(p.id))).length
+  const hasCards = (team.players ?? []).some((p) =>
+    collectedIds.has(p.id)
+  )
 
   return (
     <section style={s.sportSection}>
@@ -155,7 +158,7 @@ function SportSection({ sport, teams, collectedIds, ratingMap, onCardClick }) {
           ratingMap={ratingMap} 
           onCardClick={onCardClick} 
           defaultOpen={expandAll} 
-          hasCards={teamsWithCards}/>
+          hasCards={hasCards}/>
       ))}
     </section>
   )
