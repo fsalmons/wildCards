@@ -11,7 +11,7 @@ function getRatingColor(rating, teamColor) {
   return teamColor || '#FFFFFF'
 }
 
-export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', isCollected, size = 'full', rating = null, isActiveCard = false }) {
+export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', teamLogo = null, isCollected, size = 'full', rating = null }) {
   const isFull = size === 'full'
   const scale = isFull ? 1 : SMALL_WIDTH / FULL_WIDTH
 
@@ -208,18 +208,26 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', isCol
             <span style={ovrLabelStyle}>OVR</span>
           </div>
 
+          {isCollected && teamLogo && (
+            <img
+              src={teamLogo}
+              alt=""
+              style={{
+                position: 'absolute', top: '8px', right: '8px',
+                width: '36px', height: '36px',
+                objectFit: 'contain',
+                filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.35))',
+                pointerEvents: 'none',
+              }}
+              onError={(e) => { e.currentTarget.style.display = 'none' }}
+            />
+          )}
           <p style={playerNameStyle}>{displayName}</p>
           <p style={teamNameStyle}>{player.team || ''}</p>
         </div>
 
         {/* Face image */}
         <div style={imageAreaStyle}>
-          {isActiveCard && (
-            <span style={{
-              position: 'absolute', top: '8px', right: '8px',
-              fontSize: isFull ? '18px' : '14px', lineHeight: 1, zIndex: 1,
-            }}>⚡</span>
-          )}
           {isCollected && player.faceImage ? (
             <img
               src={player.faceImage}

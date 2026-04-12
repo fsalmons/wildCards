@@ -20,6 +20,7 @@ function toProps(uc) {
     },
     teamColor: p.team?.primary_color ?? BROWN,
     teamTextColor: p.team?.text_color ?? '#FFFFFF',
+    teamLogo: p.team?.logo_url ?? null,
     isCollected: true,
     size: 'small',
     rating: uc.rating,
