@@ -25,7 +25,7 @@ function StatBox({ icon, value, label }) {
         boxShadow: `0 3px 0 #5C2A00`,
       }}
     >
-      <div sstyle={{
+      <div style={{
                   width: '100%',
                   display: 'flex',
                   justifyContent: 'center',
@@ -74,7 +74,7 @@ function CollectionPicker({ userId, onSelect, onClose }) {
     async function load() {
       const { data } = await supabase
         .from('user_cards')
-        .select('id, rating, player:players(id, first_name, last_name, face_image, position, age, card_number, team:teams(name, sport, primary_color, text_color, card_color)')
+        .select('id, rating, player:players(id, first_name, last_name, face_image, position, age, card_number, team:teams(name, sport, primary_color, text_color, card_color))')
         .eq('user_id', userId)
 
       if (data) {
