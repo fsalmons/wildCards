@@ -220,6 +220,7 @@ function CollectionPicker({ userId, onSelect, onClose }) {
 
 export function ProfilePage() {
   const [user, setUser] = useState(null)
+  const [elo, setElo] = useState(null)
   const [activeCard, setActiveCard] = useState(null)
   const [showPicker, setShowPicker] = useState(false)
   const [syncing, setSyncing] = useState(false)
@@ -232,6 +233,20 @@ export function ProfilePage() {
       try { setUser(JSON.parse(stored)) } catch { /* ignore */ }
     }
   }, [])
+
+  // Fetch fresh ELO from DB whenever user id is known
+  useEffect(() => {
+    if (!user?.id) return
+    async function fetchElo() {
+      const { data } = await supabase
+        .from('users')
+        .select('elo')
+        .eq('id', user.id)
+        .single()
+      if (data?.elo != null) setElo(data.elo)
+    }
+    fetchElo()
+  }, [user?.id])
 
   // Handle Strava OAuth callback code in URL
   useEffect(() => {
@@ -366,6 +381,7 @@ export function ProfilePage() {
   }
 
   const username = user.username || user.email || 'Trainer'
+  const displayElo = elo ?? user.elo ?? 1000
 
   return (
     <div
@@ -415,6 +431,18 @@ export function ProfilePage() {
           }}
         >
           WildCards
+        </div>
+        <div
+          style={{
+            fontFamily: 'Arial, sans-serif',
+            fontWeight: '700',
+            fontSize: 13,
+            color: 'rgba(255,255,255,0.6)',
+            marginTop: 6,
+            letterSpacing: '1px',
+          }}
+        >
+          ELO: {displayElo.toLocaleString()}
         </div>
       </div>
 

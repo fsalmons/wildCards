@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { PlayerCard } from '../components/Card/PlayerCard'
 import { BottomNav } from '../components/Nav/BottomNav'
+import { CompeteSection } from '../components/Compete/CompeteSection'
 
 function toPlayerCardProps(userCard) {
   const p = userCard?.player
@@ -34,6 +35,8 @@ export function TradePage() {
   const [myCards, setMyCards] = useState([])
   const [theirCards, setTheirCards] = useState([])
   const [pendingTrade, setPendingTrade] = useState(null)
+  const [myCardCount, setMyCardCount] = useState(0)
+  const [friendCardCount, setFriendCardCount] = useState(0)
 
   const [mySelected, setMySelected] = useState(null)
   const [theirSelected, setTheirSelected] = useState(null)
@@ -87,18 +90,23 @@ export function TradePage() {
 
       if (friendRes.error) throw friendRes.error
       setFriend(friendRes.data)
-      setMyCards(myCardsRes.data || [])
-      setTheirCards(theirCardsRes.data || [])
+
+      const myCardsData = myCardsRes.data || []
+      const theirCardsData = theirCardsRes.data || []
+      setMyCards(myCardsData)
+      setTheirCards(theirCardsData)
+      setMyCardCount(myCardsData.length)
+      setFriendCardCount(theirCardsData.length)
 
       const trade = tradeRes.data || null
       setPendingTrade(trade)
 
       if (trade && trade.proposer_id === friendId) {
-        const allCards = [...(myCardsRes.data || []), ...(theirCardsRes.data || [])]
+        const allCards = [...myCardsData, ...theirCardsData]
         setMySelected(allCards.find((c) => c.id === trade.requested_card_id) || null)
         setTheirSelected(allCards.find((c) => c.id === trade.offered_card_id) || null)
       } else if (trade && trade.proposer_id === userId) {
-        const allCards = [...(myCardsRes.data || []), ...(theirCardsRes.data || [])]
+        const allCards = [...myCardsData, ...theirCardsData]
         setMySelected(allCards.find((c) => c.id === trade.offered_card_id) || null)
         setTheirSelected(allCards.find((c) => c.id === trade.requested_card_id) || null)
       }
@@ -305,6 +313,24 @@ export function TradePage() {
               {submitting ? 'Sending...' : 'Offer Trade'}
             </button>
           </div>
+        )}
+
+        {/* Battle / Compete section */}
+        {userId && friendId && (
+          <>
+            <div style={{ height: '2px', backgroundColor: '#E8D5B0', margin: '16px 0' }} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '0 0 8px' }}>
+              <span style={{ fontSize: '18px' }}>⚔️</span>
+              <span style={{ fontFamily: 'Arial', fontWeight: 800, fontSize: '18px', color: '#8B4513' }}>BATTLE</span>
+            </div>
+            <CompeteSection
+              friendId={friendId}
+              friendName={friendName}
+              myCardCount={myCardCount}
+              friendCardCount={friendCardCount}
+              userId={userId}
+            />
+          </>
         )}
       </div>
 
