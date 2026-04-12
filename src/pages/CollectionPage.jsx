@@ -3,8 +3,8 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { PlayerCard } from '../components/Card/PlayerCard'
 
-import soccerIcon from '../../../photos/sport_icons/football.png'
-import basketballIcon from '../../../photos/sport_icons/basketball.png'
+import soccerIcon from '../../../photos/sports_icons/football.png'
+import basketballIcon from '../../../photos/sports_icons/basketball.png'
 
 function getUser() {
   try { return JSON.parse(localStorage.getItem('scc_user')) ?? null }
