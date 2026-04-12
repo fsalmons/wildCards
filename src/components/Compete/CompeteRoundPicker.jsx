@@ -20,6 +20,7 @@ function toProps(uc) {
     },
     teamColor: p.team?.primary_color ?? BROWN,
     teamTextColor: p.team?.text_color ?? '#FFFFFF',
+    cardColor: p.team?.card_color ?? '#F5ECD7',
     teamLogo: p.team?.logo_url ?? null,
     isCollected: true,
     size: 'small',
