@@ -112,7 +112,7 @@ export function CollectionPage() {
     setError(null)
     try {
       const [teamsResult, cardsResult] = await Promise.all([
-        supabase.from('teams').select('*, players(*)'),
+        supabase.from('teams').select('*, players(*)').order('name', { ascending: true }),
         supabase.from('user_cards').select('player_id, rating').eq('user_id', user.id),
       ])
       if (teamsResult.error) throw teamsResult.error
