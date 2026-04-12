@@ -25,7 +25,13 @@ function StatBox({ icon, value, label }) {
         boxShadow: `0 3px 0 #5C2A00`,
       }}
     >
-      <div style={{ fontSize: 28, lineHeight: 1, textAlign: 'center' }}>
+      <div sstyle={{
+                  width: '100%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  marginBottom: 12
+                }}>
         <img
           src={icon}
           alt={label}
@@ -68,7 +74,7 @@ function CollectionPicker({ userId, onSelect, onClose }) {
     async function load() {
       const { data } = await supabase
         .from('user_cards')
-        .select('id, rating, player:players(id, first_name, last_name, face_image, position, age, card_number, team:teams(name, primary_color))')
+        .select('id, rating, player:players(id, first_name, last_name, face_image, position, age, card_number, team:teams(name, sport, primary_color, text_color, card_color)')
         .eq('user_id', userId)
 
       if (data) {
@@ -220,18 +226,6 @@ function CollectionPicker({ userId, onSelect, onClose }) {
                 size="small"
                 rating={c.rating}
               />
-              <span
-                style={{
-                  fontFamily: 'Arial, sans-serif',
-                  fontSize: 10,
-                  fontWeight: '700',
-                  color: BROWN,
-                  textAlign: 'center',
-                  lineHeight: 1.2,
-                }}
-              >
-                {c.player.firstName} {c.player.lastName}
-              </span>
             </button>
           ))}
         </div>
