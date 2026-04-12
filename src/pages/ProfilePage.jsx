@@ -315,11 +315,7 @@ export function ProfilePage() {
         .order('last_name', { ascending: true })
         .eq('id', user.active_card_id)
         .single()
-      
-      data.sort((a, b) =>
-        a.player.last_name.localeCompare(b.player.last_name)
-      )
-      
+
       if (data) {
         setActiveCard({
           userCardId: data.id,
