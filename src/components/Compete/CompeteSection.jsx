@@ -69,7 +69,7 @@ export function CompeteSection({ friendId, friendName, myCardCount, friendCardCo
       .or(
         `and(challenger_id.eq.${userId},opponent_id.eq.${friendId}),and(challenger_id.eq.${friendId},opponent_id.eq.${userId})`
       )
-      .in('status', ['pending', 'active'])
+      .in('status', ['pending', 'active', 'complete', 'rejected', 'forfeited'])
       .order('created_at', { ascending: false })
       .limit(1)
       .maybeSingle()
@@ -262,13 +262,8 @@ export function CompeteSection({ friendId, friendName, myCardCount, friendCardCo
     }
   }
 
-  async function handleSeriesDone() {
-    // Try to find completed competition to show
-    await fetchCompleted()
-    if (!competition || competition.status === 'complete') {
-      // Already showing complete, just reset to no_competition view
-      setCompetition(null)
-    }
+  function handleSeriesDone() {
+    setCompetition(null)
   }
 
   if (competition === undefined) {
