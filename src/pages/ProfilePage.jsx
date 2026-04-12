@@ -497,6 +497,10 @@ export function ProfilePage() {
               <PlayerCard
                 player={activeCard.player}
                 teamColor={activeCard.teamColor}
+                cardColor={activeCard.cardColor}
+                textColor={activeCard.textColor}
+                league={activeCard.league}
+                teamLogo={activeCard.teamLogo}
                 isCollected
                 size="full"
                 rating={activeCard.rating}
