@@ -5,6 +5,7 @@ import { PlayerCard } from '../components/Card/PlayerCard'
 
 import soccerIcon from '../../photos/sports_icons/football.png'
 import basketballIcon from '../../photos/sports_icons/basketball.png'
+import AppLogo from "../../photos/penalty_cards.png"
 const SPORT_META = [
   { key: 'NWSL', icon: soccerIcon, label: 'NWSL' },
   { key: 'CBB',  icon: basketballIcon, label: 'NCAA'  },
@@ -31,7 +32,6 @@ function TeamRow({ team, collectedIds, ratingMap, onCardClick, defaultOpen }) {
         <span style={s.teamName}>{team.name}</span>
         <span style={s.teamRowRight}>
           <span style={s.progressBadge}>{collectedCount}/{total}</span>
-          <span style={{ ...s.chevron, transform: open ? 'rotate(90deg)' : 'none' }}>▶</span>
         </span>
       </button>
 
@@ -218,7 +218,7 @@ export function CollectionPage() {
               <h1 style={s.pageTitle}>WildCards</h1>
 
               <img
-                src="../../photos/penalty_cards.png"
+                src={AppLogo}
                 alt="WildCards icon"
                 style={{
                   width: 40,
