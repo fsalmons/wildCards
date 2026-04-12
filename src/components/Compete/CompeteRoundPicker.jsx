@@ -168,11 +168,10 @@ export function CompeteRoundPicker({ availableCards, lockedInsRemaining, onSubmi
 
   function handleSlotTap(idx) {
     if (slots[idx] !== null) {
-      // Tap filled slot to remove
+      // Only locked (hand-picked) slots can be removed; random slots are permanent
+      if (!slots[idx].isLocked) return
       const newSlots = [...slots]
-      if (slots[idx].isLocked) {
-        setLocalLockIns(prev => prev + 1)
-      }
+      setLocalLockIns(prev => prev + 1)
       newSlots[idx] = null
       setSlots(newSlots)
       return
@@ -234,11 +233,12 @@ export function CompeteRoundPicker({ availableCards, lockedInsRemaining, onSubmi
         {slot ? (
           <button
             style={{
-              background: 'none', border: 'none', padding: 0, cursor: 'pointer',
+              background: 'none', border: 'none', padding: 0,
+              cursor: slot.isLocked ? 'pointer' : 'default',
               position: 'relative', borderRadius: '12px', overflow: 'visible',
             }}
             onClick={() => handleSlotTap(idx)}
-            title="Tap to remove"
+            title={slot.isLocked ? 'Tap to remove' : 'Randomly assigned'}
           >
             <PlayerCard {...toProps(slot.card)} />
             <span style={{

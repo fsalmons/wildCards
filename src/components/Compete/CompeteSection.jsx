@@ -74,9 +74,13 @@ export function CompeteSection({ friendId, friendName, myCardCount, friendCardCo
       .limit(1)
       .maybeSingle()
 
-    setCompetition(comp ?? null)
+    // Filter out dismissed completed competitions
+    const dismissed = JSON.parse(localStorage.getItem('scc_dismissed_comps') ?? '[]')
+    const dismissedSet = new Set(dismissed)
+    const visibleComp = (comp && comp.status === 'complete' && dismissedSet.has(comp.id)) ? null : comp
+    setCompetition(visibleComp ?? null)
 
-    if (!comp) {
+    if (!visibleComp) {
       setCurrentRound(null)
       setMyUsedCardIds([])
       return
@@ -263,6 +267,11 @@ export function CompeteSection({ friendId, friendName, myCardCount, friendCardCo
   }
 
   function handleSeriesDone() {
+    if (competition?.id) {
+      const dismissed = JSON.parse(localStorage.getItem('scc_dismissed_comps') ?? '[]')
+      dismissed.push(competition.id)
+      localStorage.setItem('scc_dismissed_comps', JSON.stringify(dismissed))
+    }
     setCompetition(null)
   }
 

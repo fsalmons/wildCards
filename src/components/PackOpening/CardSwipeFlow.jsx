@@ -118,7 +118,14 @@ export function CardSwipeFlow({ cards, teamColor, onComplete }) {
             padding: '0 32px',
           }}
         >
-          {cards.length} new cards added!
+          {(() => {
+            const newCount = cards.filter(c => c.isNew).length
+            const upgradeCount = cards.filter(c => c.isUpgrade).length
+            if (newCount === 0 && upgradeCount === 0) return 'No new cards this time'
+            if (newCount === 0) return `${upgradeCount} upgrade${upgradeCount > 1 ? 's' : ''}!`
+            if (upgradeCount === 0) return `${newCount} new card${newCount > 1 ? 's' : ''} added!`
+            return `${newCount} new + ${upgradeCount} upgrade${upgradeCount > 1 ? 's' : ''}!`
+          })()}
         </h2>
         <p
           style={{

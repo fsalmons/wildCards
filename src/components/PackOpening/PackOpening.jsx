@@ -128,12 +128,29 @@ async function resolveCard(card, userId) {
   return { isDupe: true, won: false, keptRating: existing.rating, newRating }
 }
 
+const COOLDOWN_MS = 30 * 60 * 1000 // 30 minutes
+
+function getCooldownKey(stadiumId) { return `scc_pack_cd_${stadiumId}` }
+function getCooldownRemaining(stadiumId) {
+  const ts = parseInt(localStorage.getItem(getCooldownKey(stadiumId)) ?? '0', 10)
+  return Math.max(0, ts - Date.now())
+}
+function setCooldown(stadiumId) {
+  localStorage.setItem(getCooldownKey(stadiumId), String(Date.now() + COOLDOWN_MS))
+}
+function formatCooldown(ms) {
+  const m = Math.floor(ms / 60000)
+  const s = Math.floor((ms % 60000) / 1000)
+  return m > 0 ? `${m}m ${s}s` : `${s}s`
+}
+
 export function PackOpening({ stadium, onClose }) {
-  const [phase, setPhase] = useState('loading') // 'loading' | 'envelope' | 'swipe' | 'saving' | 'error'
+  const [phase, setPhase] = useState('loading') // 'loading' | 'cooldown' | 'envelope' | 'swipe' | 'saving' | 'error'
   const [teamColor, setTeamColor] = useState('#2B6CB0')
   const [teamId, setTeamId] = useState(null)
   const [cards, setCards] = useState([])
   const [errorMsg, setErrorMsg] = useState('')
+  const [cooldownMs, setCooldownMs] = useState(0)
 
   useEffect(() => {
     let cancelled = false
@@ -203,6 +220,14 @@ export function PackOpening({ stadium, onClose }) {
       }
     }
 
+    // Check cooldown before loading
+    const remaining = getCooldownRemaining(stadium.id)
+    if (remaining > 0) {
+      setCooldownMs(remaining)
+      setPhase('cooldown')
+      return
+    }
+
     loadData()
     return () => { cancelled = true }
   }, [stadium.id])
@@ -221,6 +246,7 @@ export function PackOpening({ stadium, onClose }) {
       // Resolve each card (handles duplicates + rating upgrades)
       await Promise.all(cards.map((card) => resolveCard(card, userId)))
 
+      setCooldown(stadium.id)
       onClose()
     } catch (err) {
       console.error('[PackOpening] save error:', err)
@@ -229,8 +255,27 @@ export function PackOpening({ stadium, onClose }) {
     }
   }, [cards, onClose])
 
+  useEffect(() => {
+    if (phase !== 'cooldown') return
+    const interval = setInterval(() => {
+      const rem = getCooldownRemaining(stadium.id)
+      setCooldownMs(rem)
+      if (rem <= 0) clearInterval(interval)
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [phase, stadium.id])
+
   if (phase === 'loading') {
     return <Spinner color={teamColor} />
+  }
+
+  if (phase === 'cooldown') {
+    return (
+      <ErrorOverlay
+        message={`You already opened a pack here!\nCome back in ${formatCooldown(cooldownMs)}`}
+        onClose={onClose}
+      />
+    )
   }
 
   if (phase === 'error') {
