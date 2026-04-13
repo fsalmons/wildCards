@@ -79,7 +79,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
   }
 
   const playerNameStyle = {
-    fontSize: '50px',
+    fontSize: '40px',
     fontWeight: '700',
     letterSpacing: '0.5px',
     lineHeight: 1.1,
@@ -297,11 +297,11 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
             alignItems: 'flex-end',
             textAlign: 'right'
           }}>
-            <span style={{playerNameStyle}}>
+            <span style={playerNameStyle}>
               {displayName}
             </span>
 
-            <span style={{teamNameStyle}}>
+            <span style={teamNameStyle}>
               {player.team || ''}
             </span>
           </div>
