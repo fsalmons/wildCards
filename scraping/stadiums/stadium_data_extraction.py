@@ -37,7 +37,7 @@ STADIUM_FIXES = sorted(STADIUM_FIXES, key=len, reverse=True)
 
 rows = []
 
-with open("data/stadiums.txt", "r", encoding="utf-8") as f:
+with open("data_stadiums/stadiums.txt", "r", encoding="utf-8") as f:
     for line in f:
         line = line.strip()
 
@@ -220,7 +220,7 @@ print("Done — All Coords Extracted")
 df['lat'] = lat_list
 df['lon'] = lon_list
 
-df.to_csv("data/stadiums.csv", index=False, encoding="utf-8")
+df.to_csv("data_stadiums/stadiums_unclean.csv", index=False, encoding="utf-8")
 
 
 

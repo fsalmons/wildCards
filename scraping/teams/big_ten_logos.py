@@ -65,5 +65,5 @@ df = pd.DataFrame({"logo_url": logo_urls})
 
 print(df)
 
-df.to_csv("big_ten_logos.csv", index=False)
+df.to_csv("data_teams/big_ten_logos.csv", index=False)
 

@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('data/stadiums.csv')
+df = pd.read_csv('data_stadiums/stadiums_unclean.csv')
 
 cent = 'Denver Summit FC, Soccer, NWLS, Centennial Stadium, 10200, Centennial, CO, 39.59587228389544, -104.9398720763269'
 ill = 'Gotham FC, Soccer, NWLS, Sports Illustrated Stadium, 25000, Harrison, NJ, 40.736667, -74.150278'
@@ -15,4 +15,4 @@ new_df = pd.DataFrame([r.split(", ") for r in new_rows], columns=df.columns)
 df = pd.concat([df, new_df], ignore_index=True)
 
 # save back
-df.to_csv('../tables/stadiums.csv', index=False)
+df.to_csv('data_stadiums/stadiums.csv', index=False)

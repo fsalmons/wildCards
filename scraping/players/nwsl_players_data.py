@@ -24,7 +24,7 @@ df['Age'] = pd.to_numeric(age, errors='coerce').astype('Int64')
 # optional: ensure Player is clean string
 df['Player'] = df['Player'].str.strip()
 
-photos = pd.read_csv("data/nwsl_players_with_photos.csv")
+photos = pd.read_csv("data_players/nwsl_players_photos.csv")
 
 # optional safety: clean join keys
 df['Player'] = df['Player'].str.strip()
@@ -59,10 +59,7 @@ rename_map = {
 
 df["Team"] = df["Team"].replace(rename_map)
 
-
-df.to_csv('data/nwls_players.csv', index=False)
-
 df_filtered = df.dropna()
 
 # save filtered version
-df_filtered.to_csv('../tables/nwls_players_with_photos.csv', index=False)
+df_filtered.to_csv('data_players/nwls_players.csv', index=False)

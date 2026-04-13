@@ -219,7 +219,5 @@ df['ice_hockey_stadium'] = ice_hockey_arena
 df["other_stadiums"] = other_stadiums
 df["color_hex"] = colors_hex
 
-df.to_csv("../tables/ncaa_schools.csv", index=False)
+df.to_csv("data_teams/ncaa_schools.csv", index=False)
 
-print(df.head())
-print(df.shape)

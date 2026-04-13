@@ -4,7 +4,7 @@ import pandas as pd
 # 1. Load txt file
 # -----------------------------
 df = pd.read_csv(
-    "data/big_ten.txt",
+    "data_teams/big_ten.txt",
     sep="\t",
     header=None,
     names=["team", "nickname", "school", "conference", "location", "stadium"]
@@ -36,4 +36,4 @@ df = df[["team", "full_name", "stadium"]]
 
 df['Sport'] = 'Basketball'
 
-df.to_csv('../tables/big_ten_teams.csv')
+df.to_csv('data_teams/big_ten_teams.csv')

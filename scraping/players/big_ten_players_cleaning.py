@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('data/big_ten_players_unclean.csv')
+df = pd.read_csv('data_players/big_ten_players_unclean.csv')
 
 # -----------------------------
 # 1. Split name column
@@ -97,5 +97,5 @@ df = df[[
     'photo_url'
 ]]
 
-df.to_csv('../tables/big_ten_players.csv')
+df.to_csv('data_players/big_ten_players.csv')
 

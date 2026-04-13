@@ -73,4 +73,4 @@ df = pd.DataFrame(rows_data)
 
 print(df)
 
-df.to_csv("../tables/nwsl_logos.csv", index=False)
+df.to_csv("data_teams/nwsl_logos.csv", index=False)
