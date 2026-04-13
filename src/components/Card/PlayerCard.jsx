@@ -134,7 +134,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
 
   const faceImageStyle = {
     width: 'auto', 
-    height: '50%', 
+    height: '75%', 
     objectFit: 'contain', 
     objectPosition: 'bottom',
     marginBottom: '6px',
