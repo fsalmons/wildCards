@@ -25,12 +25,13 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
     width: `${FULL_WIDTH}px`,
     height: `${FULL_HEIGHT}px`,
     backgroundColor: isCollected ? cardColor : '#E0E0E0',
-    border: `3px solid ${isCollected ? teamColor : '#CCCCCC'}`,
+    border: `10px solid ${isCollected ? teamColor : '#CCCCCC'}`,
     borderRadius: '16px',
     boxShadow: '4px 4px 0 rgba(0,0,0,0.2)',
     display: 'flex',
     flexDirection: 'column',
     overflow: 'hidden',
+    position: 'relative',
     fontFamily: 'Arial, sans-serif',
     transformOrigin: 'top left',
     transform: isFull ? 'none' : `scale(${scale})`,
@@ -128,7 +129,6 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: '12px',
     position: 'relative',
   }
 
@@ -136,9 +136,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
     width: '140px',
     height: '160px',
     objectFit: 'cover',
-    objectPosition: 'top',
-    borderRadius: '8px',
-    border: `2px solid ${isCollected ? teamColor : '#CCCCCC'}`,
+    objectPosition: 'bottom',
   }
 
   const greyCircleStyle = {
@@ -271,7 +269,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
           />
         </div>
 
-        {/* Stats LEFT aligned */}
+        {/* Stats LEFT aligned 
         <div style={{
           ...statsRowStyle,
           justifyContent: 'flex-start',
@@ -282,6 +280,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
             <span style={statValueStyle}>{displayPosition}</span>
           </div>
         </div>
+        */}
 
         {/* Divider */}
         <div style={dividerStyle} />
