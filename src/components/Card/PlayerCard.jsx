@@ -91,7 +91,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
   }
 
   const playerFirstNameStyle = {
-    fontSize: '14px',
+    fontSize: '18px',
     fontWeight: '700',
     letterSpacing: '0.5px',
     lineHeight: 1.1,
@@ -103,7 +103,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
   }
 
   const playerLastNameStyle = {
-    fontSize: '25px',
+    fontSize: '32px',
     fontWeight: '700',
     letterSpacing: '0.5px',
     lineHeight: 1.1,
