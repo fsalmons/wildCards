@@ -133,11 +133,10 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
   }
 
   const faceImageStyle = {
-    width: '140px',
-    height: '160px',
-    objectFit: 'cover',
+    width: '80%', 
+    height: 'auto', 
+    objectFit: 'contain', 
     objectPosition: 'bottom',
-
     marginBottom: '6px',
   }
 
@@ -263,13 +262,15 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
               }}
             />
           ) : null}
-
+          {/*
           <div
             style={{
               ...greyCircleStyle,
               display: isCollected && player.faceImage ? 'none' : 'block',
             }}
           />
+          */}
+
         </div>
 
         {/* Stats LEFT aligned 
