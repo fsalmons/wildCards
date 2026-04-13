@@ -25,7 +25,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
     width: `${FULL_WIDTH}px`,
     height: `${FULL_HEIGHT}px`,
     backgroundColor: isCollected ? cardColor : '#E0E0E0',
-    border: `10px solid ${isCollected ? teamColor : '#CCCCCC'}`,
+    border: `7px solid ${isCollected ? teamColor : '#CCCCCC'}`,
     borderRadius: '16px',
     boxShadow: '4px 4px 0 rgba(0,0,0,0.2)',
     display: 'flex',
@@ -280,11 +280,12 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
             <span style={statValueStyle}>{displayPosition}</span>
           </div>
         </div>
-        */}
+        
 
-        {/* Divider */}
+      
         <div style={dividerStyle} />
 
+        */}
         {/* Footer */}
         <div style={{
           ...bottomBarStyle,
