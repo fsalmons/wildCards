@@ -297,19 +297,11 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
             alignItems: 'flex-end',
             textAlign: 'right'
           }}>
-            <span style={{
-              ...playerNameStyle,
-              fontWeight: 700,
-              fontSize: '14px'
-            }}>
+            <span style={{playerNameStyle}}>
               {displayName}
             </span>
 
-            <span style={{
-              ...teamNameStyle,
-              fontSize: '11px',
-              opacity: 0.85
-            }}>
+            <span style={{teamNameStyle}}>
               {player.team || ''}
             </span>
           </div>
