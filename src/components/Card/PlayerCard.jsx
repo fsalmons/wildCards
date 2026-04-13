@@ -30,10 +30,10 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
     boxShadow: '4px 4px 0 rgba(0,0,0,0.2)',
     display: 'flex',
     flexDirection: 'column',
-    height: '100%',
     fontFamily: 'Arial, sans-serif',
     transformOrigin: 'top left',
     transform: isFull ? 'none' : `scale(${scale})`,
+    height: '100%'
   }
 
   const headerStyle = {
@@ -198,8 +198,8 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
     <div style={containerStyle}>
       <div style={cardStyle}>
 
-        {/* Top overlay */}
-        <div style={{ position: 'absolute', top: 8, left: 8, zIndex: 2 }}>
+        {/* Top overlay (rating + logo only) */}
+        <div style={{ position: 'absolute', top: 8, left: 8 }}>
           <div style={ratingBlockStyle}>
             <span style={ratingNumberStyle}>
               {rating !== null ? rating : '—'}
@@ -208,7 +208,6 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
           </div>
         </div>
 
-        {/* Top-right logo (stays anchored to card, NOT screen) */}
         {isCollected && teamLogo && (
           <img
             src={teamLogo}
@@ -222,60 +221,55 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
               objectFit: 'contain',
               filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.35))',
               pointerEvents: 'none',
-              zIndex: 2
             }}
             onError={(e) => { e.currentTarget.style.display = 'none' }}
           />
         )}
 
-        {/* MAIN CONTENT (fills remaining ~75%) */}
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-
-          {/* Face image */}
-          <div style={imageAreaStyle}>
-            {isCollected && player.faceImage ? (
-              <img
-                src={player.faceImage}
-                alt={displayName}
-                style={faceImageStyle}
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none'
-                  e.currentTarget.nextSibling.style.display = 'block'
-                }}
-              />
-            ) : null}
-
-            <div
-              style={{
-                ...greyCircleStyle,
-                display: isCollected && player.faceImage ? 'none' : 'block',
+        {/* Face image */}
+        <div style={imageAreaStyle}>
+          {isCollected && player.faceImage ? (
+            <img
+              src={player.faceImage}
+              alt={displayName}
+              style={faceImageStyle}
+              onError={(e) => {
+                e.currentTarget.style.display = 'none'
+                e.currentTarget.nextSibling.style.display = 'block'
               }}
             />
-          </div>
+          ) : null}
 
-          {/* Stats LEFT aligned */}
-          <div style={{
-            ...statsRowStyle,
-            justifyContent: 'flex-start',
-            gap: '12px'
-          }}>
-            <div style={statBlockStyle}>
-              <span style={statLabelStyle}>Position</span>
-              <span style={statValueStyle}>{displayPosition}</span>
-            </div>
-          </div>
-
-          {/* Divider */}
-          <div style={dividerStyle} />
+          <div
+            style={{
+              ...greyCircleStyle,
+              display: isCollected && player.faceImage ? 'none' : 'block',
+            }}
+          />
         </div>
 
-        {/* FOOTER (25% of card height) */}
+        {/* Stats LEFT aligned */}
         <div style={{
-          flex: '0 0 25%',
+          ...statsRowStyle,
+          justifyContent: 'flex-start',
+          gap: '12px'
+        }}>
+          <div style={statBlockStyle}>
+            <span style={statLabelStyle}>Position</span>
+            <span style={statValueStyle}>{displayPosition}</span>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div style={dividerStyle} />
+
+        {/* Footer */}
+        <div style={{
+          ...bottomBarStyle,
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          padding: '10px 12px'
+          padding: '8px 10px'
         }}>
 
           {/* LEFT: Division / League */}
@@ -321,7 +315,6 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
           </div>
 
         </div>
-
       </div>
     </div>
   )
