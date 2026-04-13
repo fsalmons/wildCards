@@ -86,7 +86,30 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
     fontFamily: 'Arial, sans-serif',
     margin: 0,
     textAlign: 'right',
-    padding: '0 44px',
+    width: '100%',
+    boxSizing: 'border-box',
+  }
+
+  const playerFirstNameStyle = {
+    fontSize: '14px',
+    fontWeight: '700',
+    letterSpacing: '0.5px',
+    lineHeight: 1.1,
+    fontFamily: 'Arial, sans-serif',
+    margin: 0,
+    textAlign: 'right',
+    width: '100%',
+    boxSizing: 'border-box',
+  }
+
+  const playerLastNameStyle = {
+    fontSize: '25px',
+    fontWeight: '700',
+    letterSpacing: '0.5px',
+    lineHeight: 1.1,
+    fontFamily: 'Arial, sans-serif',
+    margin: 0,
+    textAlign: 'right',
     width: '100%',
     boxSizing: 'border-box',
   }
@@ -185,6 +208,8 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
   }
 
   const displayName = `${player.firstName} ${player.lastName}`
+  const displayFirstName = `${player.firstName}`
+  const displayLastName = `${player.lastName}`
 
   const displayAge = isCollected ? player.age : '?'
   const displayPosition = isCollected ? player.position : '?'
@@ -295,8 +320,12 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
             alignItems: 'flex-end',
             textAlign: 'right'
           }}>
-            <span style={playerNameStyle}>
-              {displayName}
+            <span style={playerFirstNameStyle}>
+              {displayFirstName}
+            </span>
+
+            <span style={playerLastNameStyle}>
+              {displayLastName}
             </span>
 
             <span style={teamNameStyle}>
