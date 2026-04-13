@@ -79,13 +79,13 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
   }
 
   const playerNameStyle = {
-    fontSize: '40px',
+    fontSize: '30px',
     fontWeight: '700',
     letterSpacing: '0.5px',
     lineHeight: 1.1,
     fontFamily: 'Arial, sans-serif',
     margin: 0,
-    textAlign: 'center',
+    textAlign: 'right',
     padding: '0 44px',
     width: '100%',
     boxSizing: 'border-box',
@@ -99,7 +99,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
     marginTop: '2px',
     fontFamily: 'Arial, sans-serif',
     letterSpacing: '0.3px',
-    textAlign: 'center',
+    textAlign: 'right',
   }
 
   const imageAreaStyle = {
