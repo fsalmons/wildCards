@@ -6,175 +6,177 @@ import re
 
 from playwright.sync_api import sync_playwright
 
-base_url = "https://basketball.realgm.com/ncaa/players/2026/{}"
+def get_basketball():
 
-rows_data = []
+    base_url = "https://basketball.realgm.com/ncaa/players/2026/{}"
 
-# =========================
-# STAGE 1: SCRAPE MAIN TABLE ONLY
-# =========================
-with sync_playwright() as p:
-    browser = p.chromium.launch(headless=False)
-    page = browser.new_page()
+    rows_data = []
 
-    for letter in string.ascii_uppercase:
-        url = base_url.format(letter)
-        print(f"Scraping table: {url}")
-        try:
-            page.goto(url, wait_until="domcontentloaded", timeout=60000)
-            page.wait_for_timeout(3000)
+    # =========================
+    # STAGE 1: SCRAPE MAIN TABLE ONLY
+    # =========================
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=False)
+        page = browser.new_page()
 
-            table_rows = page.query_selector_all("table tbody tr")
+        for letter in string.ascii_uppercase:
+            url = base_url.format(letter)
+            print(f"Scraping table: {url}")
+            try:
+                page.goto(url, wait_until="domcontentloaded", timeout=60000)
+                page.wait_for_timeout(3000)
 
-            for row in table_rows:
-                cols = row.query_selector_all("td")
+                table_rows = page.query_selector_all("table tbody tr")
 
-                if len(cols) < 1:
-                    continue
+                for row in table_rows:
+                    cols = row.query_selector_all("td")
 
-                # extract full row text (table data only)
-                row_values = [col.inner_text().strip() for col in cols]
+                    if len(cols) < 1:
+                        continue
 
-                # get player name + link (NOT saving link)
-                link_el = cols[0].query_selector("a")
-                profile_url = None
+                    # extract full row text (table data only)
+                    row_values = [col.inner_text().strip() for col in cols]
 
-                if link_el:
-                    href = link_el.get_attribute("href")
-                    if href:
-                        profile_url = "https://basketball.realgm.com" + href
+                    # get player name + link (NOT saving link)
+                    link_el = cols[0].query_selector("a")
+                    profile_url = None
 
-                # store table row + hidden url for later scraping
-                rows_data.append({
-                    "row_values": row_values,
-                    "profile_url": profile_url
-                })
+                    if link_el:
+                        href = link_el.get_attribute("href")
+                        if href:
+                            profile_url = "https://basketball.realgm.com" + href
 
-        except Exception as e:
-            print(f"Error on {letter}: {e}")
+                    # store table row + hidden url for later scraping
+                    rows_data.append({
+                        "row_values": row_values,
+                        "profile_url": profile_url
+                    })
 
-    browser.close()
+            except Exception as e:
+                print(f"Error on {letter}: {e}")
 
-    print(f"Collected {len(rows_data)} players from tables")
+        browser.close()
 
-# =========================
-# STAGE 2: BUILD DATAFRAME FROM TABLE ONLY
-# =========================
+        print(f"Collected {len(rows_data)} players from tables")
 
-# parse first row to infer structure
-sample_cols = rows_data[0]["row_values"]
-n_cols = len(sample_cols)
+    # =========================
+    # STAGE 2: BUILD DATAFRAME FROM TABLE ONLY
+    # =========================
 
-df = pd.DataFrame(
-    [r["row_values"] for r in rows_data],
-    columns=[f"col_{i}" for i in range(n_cols)]
-)
+    # parse first row to infer structure
+    sample_cols = rows_data[0]["row_values"]
+    n_cols = len(sample_cols)
 
-# add profile_url temporarily for scraping images
-df["profile_url"] = [r["profile_url"] for r in rows_data]
+    df = pd.DataFrame(
+        [r["row_values"] for r in rows_data],
+        columns=[f"col_{i}" for i in range(n_cols)]
+    )
+
+    # add profile_url temporarily for scraping images
+    df["profile_url"] = [r["profile_url"] for r in rows_data]
 
 
-# =========================
-# STAGE 3: PROFILE ENRICHMENT (IMAGE + JERSEY + HOMETOWN + NATIONALITY + NBA STATUS)
-# =========================
+    # =========================
+    # STAGE 3: PROFILE ENRICHMENT (IMAGE + JERSEY + HOMETOWN + NATIONALITY + NBA STATUS)
+    # =========================
 
-with sync_playwright() as p:
-    browser = p.chromium.launch(headless=False)
-    page = browser.new_page()
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=False)
+        page = browser.new_page()
 
-    photo_urls = []
-    jersey_numbers = []
-    hometowns = []
-    nationalities = []
-    nba_statuses = []
+        photo_urls = []
+        jersey_numbers = []
+        hometowns = []
+        nationalities = []
+        nba_statuses = []
 
-    for i, url in enumerate(df["profile_url"]):
-        print(f"Fetching player {i+1}/{len(df)}")
+        for i, url in enumerate(df["profile_url"]):
+            print(f"Fetching player {i+1}/{len(df)}")
 
-        if not url:
-            photo_urls.append(None)
-            jersey_numbers.append(None)
-            hometowns.append(None)
-            nationalities.append(None)
-            nba_statuses.append(None)
-            continue
-
-        try:
-            page.goto(url, wait_until="domcontentloaded", timeout=60000)
-            page.wait_for_timeout(800)
-
-            # -------------------------
-            # IMAGE
-            # -------------------------
-            img = (
-                page.query_selector(".profile-box img") or
-                page.query_selector("img[alt*='Player']") or
-                page.query_selector("img")
-            )
-
-            if img:
-                photo_urls.append(
-                    "https://basketball.realgm.com" + img.get_attribute("src")
-                )
-            else:
+            if not url:
                 photo_urls.append(None)
+                jersey_numbers.append(None)
+                hometowns.append(None)
+                nationalities.append(None)
+                nba_statuses.append(None)
+                continue
 
-            # -------------------------
-            # PROFILE TEXT BLOCK
-            # -------------------------
-            profile_box = page.query_selector(".profile-box")
-            text = profile_box.inner_text() if profile_box else ""
+            try:
+                page.goto(url, wait_until="domcontentloaded", timeout=60000)
+                page.wait_for_timeout(800)
 
-            # -------------------------
-            # JERSEY NUMBER
-            # -------------------------
-            match_num = re.search(r"#(\d+)", text)
-            jersey_numbers.append(int(match_num.group(1)) if match_num else None)
+                # -------------------------
+                # IMAGE
+                # -------------------------
+                img = (
+                    page.query_selector(".profile-box img") or
+                    page.query_selector("img[alt*='Player']") or
+                    page.query_selector("img")
+                )
 
-            # -------------------------
-            # HOMETOWN
-            # -------------------------
-            match_home = re.search(r"Hometown:\s*(.+)", text)
-            hometowns.append(match_home.group(1).strip() if match_home else None)
+                if img:
+                    photo_urls.append(
+                        "https://basketball.realgm.com" + img.get_attribute("src")
+                    )
+                else:
+                    photo_urls.append(None)
 
-            # -------------------------
-            # NATIONALITY
-            # -------------------------
-            match_nat = re.search(r"Nationality:\s*(.+)", text)
-            nationalities.append(match_nat.group(1).strip() if match_nat else None)
+                # -------------------------
+                # PROFILE TEXT BLOCK
+                # -------------------------
+                profile_box = page.query_selector(".profile-box")
+                text = profile_box.inner_text() if profile_box else ""
 
-            # -------------------------
-            # NBA STATUS
-            # -------------------------
-            match_status = re.search(r"NBA Status:\s*(.+)", text)
-            nba_statuses.append(match_status.group(1).strip() if match_status else None)
+                # -------------------------
+                # JERSEY NUMBER
+                # -------------------------
+                match_num = re.search(r"#(\d+)", text)
+                jersey_numbers.append(int(match_num.group(1)) if match_num else None)
 
-        except Exception as e:
-            print(f"Error on {url}: {e}")
-            photo_urls.append(None)
-            jersey_numbers.append(None)
-            hometowns.append(None)
-            nationalities.append(None)
-            nba_statuses.append(None)
+                # -------------------------
+                # HOMETOWN
+                # -------------------------
+                match_home = re.search(r"Hometown:\s*(.+)", text)
+                hometowns.append(match_home.group(1).strip() if match_home else None)
 
-        time.sleep(0.8)
+                # -------------------------
+                # NATIONALITY
+                # -------------------------
+                match_nat = re.search(r"Nationality:\s*(.+)", text)
+                nationalities.append(match_nat.group(1).strip() if match_nat else None)
 
-    browser.close()
+                # -------------------------
+                # NBA STATUS
+                # -------------------------
+                match_status = re.search(r"NBA Status:\s*(.+)", text)
+                nba_statuses.append(match_status.group(1).strip() if match_status else None)
 
-# =========================
-# FINAL CLEANUP
-# =========================
+            except Exception as e:
+                print(f"Error on {url}: {e}")
+                photo_urls.append(None)
+                jersey_numbers.append(None)
+                hometowns.append(None)
+                nationalities.append(None)
+                nba_statuses.append(None)
 
-df["photo_url"] = photo_urls
-df["jersey_number"] = jersey_numbers
-df["hometown"] = hometowns
-df["nationality"] = nationalities
-df["nba_status"] = nba_statuses
+            time.sleep(0.8)
 
-df = df.drop(columns=["profile_url"])
+        browser.close()
 
-print(df.head())
-print(df.shape)
+    # =========================
+    # FINAL CLEANUP
+    # =========================
 
-df.to_csv("../tables/ncaa_players.csv", index=False)
+    df["photo_url"] = photo_urls
+    df["jersey_number"] = jersey_numbers
+    df["hometown"] = hometowns
+    df["nationality"] = nationalities
+    df["nba_status"] = nba_statuses
+
+    df = df.drop(columns=["profile_url"])
+
+    print(df.head())
+    print(df.shape)
+
+    df.to_csv("../tables/ncaa_players.csv", index=False)
 

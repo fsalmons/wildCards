@@ -92,6 +92,8 @@ export function TradePage() {
           .maybeSingle(),
       ])
 
+      
+
       if (friendRes.error) throw friendRes.error
       setFriend(friendRes.data)
 

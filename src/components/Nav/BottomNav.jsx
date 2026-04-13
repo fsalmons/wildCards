@@ -62,7 +62,7 @@ export function BottomNav() {
             <img
               src={tab.icon}
               alt={tab.label}
-              style={{ width: 20, height: 20 }}
+              style={{ width: 30, height: 30 }}
             />
             <span
               style={{
