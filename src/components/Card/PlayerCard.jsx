@@ -335,7 +335,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
                 alt=""
                 style={{
                   position: 'absolute',
-                  right: '-10px',
+                  left: '-10px',
                   top: '50%',
                   transform: 'translateY(-50%)',
                   width: '60px',
