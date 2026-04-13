@@ -299,86 +299,56 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
           padding: '8px 10px'
         }}>
 
-          {/* LEFT: Division / League */}
+          {/* LEFT: Player Identity */}
           <div style={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
-            gap: '2px'
+            textAlign: 'left'
           }}>
-            <span style={{ fontSize: '18px' }}>?</span>
 
-            <span style={{
-              ...bottomTeamStyle,
-              fontSize: '10px',
-              opacity: 0.8
-            }}>
-              {league || ''}
+            <span style={playerFirstNameStyle}>
+              {displayFirstName}
             </span>
+
+            <span style={playerLastNameStyle}>
+              {displayLastName}
+            </span>
+
+            <span style={teamNameStyle}>
+              {player.team || ''}
+            </span>
+
           </div>
 
-          {/* RIGHT: Player Identity */}
+          {/* RIGHT: Team Logo */}
           <div style={{
             display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-end',
-            textAlign: 'right',
-            position: 'relative',
-            overflow: 'hidden',
-            padding: '2px 6px'
+            alignItems: 'center',
+            justifyContent: 'flex-end'
           }}>
 
-            {/* Background logo */}
             {isCollected && teamLogo && (
               <img
                 src={teamLogo}
                 alt=""
                 style={{
-                  position: 'absolute',
-                  left: '-10px',
-                  top: '50%',
-                  transform: 'translateY(-50%)',
-                  width: '60px',
-                  height: '60px',
+                  width: '48px',
+                  height: '48px',
                   objectFit: 'contain',
-                  opacity: 0.5,
-                  filter: 'grayscale(1)',
+                  filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.35))',
                   pointerEvents: 'none',
                 }}
                 onError={(e) => { e.currentTarget.style.display = 'none' }}
               />
             )}
 
-            {/* Player name (foreground) */}
-            <span style={{
-              ...playerFirstNameStyle,
-              position: 'relative',
-              zIndex: 2
-            }}>
-              {displayFirstName}
-            </span>
-
-            <span style={{
-              ...playerLastNameStyle,
-              position: 'relative',
-              zIndex: 2
-            }}>
-              {displayLastName}
-            </span>
-
-            {/* Team name */}
-            <span style={{
-              ...teamNameStyle,
-              position: 'relative',
-              zIndex: 2
-            }}>
-              {player.team || ''}
-            </span>
-
           </div>
+
         </div>
       </div>
     </div>
+  
 
   )
 }
