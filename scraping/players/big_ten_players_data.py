@@ -126,4 +126,4 @@ df = df.drop(columns=["profile_url"])
 print(df.head())
 print(df.shape)
 
-df.to_csv("data/big_ten_players_unclean.csv", index=False)
+df.to_csv("data_players/big_ten_players_unclean.csv", index=False)

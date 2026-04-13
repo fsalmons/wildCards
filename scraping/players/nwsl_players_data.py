@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("data/nwsl_players_info.txt", sep="\t")
+df = pd.read_csv("data_players/nwsl_players_info.txt", sep="\t")
 # strip whitespace from column names
 df.columns = df.columns.str.strip()
 

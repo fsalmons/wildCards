@@ -55,7 +55,7 @@ def scrape_players():
 data = scrape_players()
 
 df = pd.DataFrame(data).drop_duplicates()
-df.to_csv("nwsl_players_with_photos.csv", index=False)
+df.to_csv("data_players/nwsl_players_with_photos.csv", index=False)
 
 print(df.head())
 print(f"Saved {len(df)} players")

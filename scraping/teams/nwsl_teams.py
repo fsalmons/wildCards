@@ -2,7 +2,7 @@ import pandas as pd
 import re
 
 # 1. Read file (pretend this is your txt file)
-with open("data/nwsl_teams.txt", "r", encoding="utf-8") as f:
+with open("data_teams/nwsl_teams.txt", "r", encoding="utf-8") as f:
     raw = f.read()
 
 # 2. Remove Wikipedia-style footnotes like [a], [b], [36]
@@ -36,6 +36,6 @@ df_small = df_small.apply(lambda col: col.str.strip())
 
 df_small.loc[df_small['Team'] == 'North Carolina Courage', 'Stadium'] = 'WakeMed Soccer Park'
 
-df_small.to_csv('../tables/nwls_teams.csv', index=False)
+df_small.to_csv('data_teams/nwls_teams.csv', index=False)
 
 
