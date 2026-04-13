@@ -24,8 +24,8 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
   const cardStyle = {
     width: `${FULL_WIDTH}px`,
     height: `${FULL_HEIGHT}px`,
-    backgroundColor: isCollected ? cardColor : '#E0E0E0',
-    border: `7px solid ${isCollected ? teamColor : '#CCCCCC'}`,
+    backgroundColor: isCollected ? teamColor : '#E0E0E0',
+    border: `7px solid ${isCollected ? cardColor : '#CCCCCC'}`,
     borderRadius: '16px',
     boxShadow: '4px 4px 0 rgba(0,0,0,0.2)',
     display: 'flex',
@@ -188,7 +188,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '8px 14px',
-    backgroundColor: isCollected ? teamColor : '#CCCCCC',
+    backgroundColor: isCollected ? cardColor : '#CCCCCC',
     color: isCollected ? teamTextColor : '#FFFFFF',
 
     flex: '0 0 80px',
