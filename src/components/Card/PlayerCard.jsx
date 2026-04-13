@@ -30,10 +30,10 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
     boxShadow: '4px 4px 0 rgba(0,0,0,0.2)',
     display: 'flex',
     flexDirection: 'column',
+    overflow: 'hidden',
     fontFamily: 'Arial, sans-serif',
     transformOrigin: 'top left',
     transform: isFull ? 'none' : `scale(${scale})`,
-    height: '100%'
   }
 
   const headerStyle = {
@@ -79,7 +79,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
   }
 
   const playerNameStyle = {
-    fontSize: '40px',
+    fontSize: '20px',
     fontWeight: '700',
     letterSpacing: '0.5px',
     lineHeight: 1.1,
