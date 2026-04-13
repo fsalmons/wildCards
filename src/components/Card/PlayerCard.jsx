@@ -127,7 +127,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
   const imageAreaStyle = {
     flex: 1,
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'flex-end',
     justifyContent: 'center',
     position: 'relative',
   }
@@ -137,6 +137,8 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
     height: '160px',
     objectFit: 'cover',
     objectPosition: 'bottom',
+
+    marginBottom: '6px',
   }
 
   const greyCircleStyle = {
@@ -189,7 +191,8 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
     padding: '8px 14px',
     backgroundColor: isCollected ? teamColor : '#CCCCCC',
     color: isCollected ? teamTextColor : '#FFFFFF',
-    marginTop: 'auto',
+
+    flex: '0 0 80px',
   }
 
   const bottomTeamStyle = {
