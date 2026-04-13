@@ -133,8 +133,8 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
   }
 
   const faceImageStyle = {
-    width: '80%', 
-    height: 'auto', 
+    width: 'auto', 
+    height: '50%', 
     objectFit: 'contain', 
     objectPosition: 'bottom',
     marginBottom: '6px',
@@ -323,7 +323,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
             flexDirection: 'column',
             alignItems: 'flex-end',
             textAlign: 'right',
-            position: 'relative', // 🔥 needed for background logo
+            position: 'relative',
             overflow: 'hidden',
             padding: '2px 6px'
           }}>
@@ -341,7 +341,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
                   width: '60px',
                   height: '60px',
                   objectFit: 'contain',
-                  opacity: 0.15,   // 🔥 transparency
+                  opacity: 0.5,
                   filter: 'grayscale(1)',
                   pointerEvents: 'none',
                 }}
