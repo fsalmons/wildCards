@@ -86,7 +86,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
     lineHeight: 1.1,
     fontFamily: 'Arial, sans-serif',
     margin: 0,
-    textAlign: 'right',
+    textAlign: 'left',
     width: '100%',
     boxSizing: 'border-box',
   }
@@ -98,7 +98,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
     lineHeight: 1.1,
     fontFamily: 'Arial, sans-serif',
     margin: 0,
-    textAlign: 'right',
+    textAlign: 'left',
     width: '100%',
     boxSizing: 'border-box',
   }
@@ -110,7 +110,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
     lineHeight: 1.1,
     fontFamily: 'Arial, sans-serif',
     margin: 0,
-    textAlign: 'right',
+    textAlign: 'left',
     width: '100%',
     boxSizing: 'border-box',
   }
@@ -121,7 +121,7 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
     marginTop: '2px',
     fontFamily: 'Arial, sans-serif',
     letterSpacing: '0.3px',
-    textAlign: 'right',
+    textAlign: 'left',
   }
 
   const imageAreaStyle = {
