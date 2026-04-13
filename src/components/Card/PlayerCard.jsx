@@ -322,23 +322,63 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-end',
-            textAlign: 'right'
+            textAlign: 'right',
+            position: 'relative', // 🔥 needed for background logo
+            overflow: 'hidden',
+            padding: '2px 6px'
           }}>
-            <span style={playerFirstNameStyle}>
+
+            {/* Background logo */}
+            {isCollected && teamLogo && (
+              <img
+                src={teamLogo}
+                alt=""
+                style={{
+                  position: 'absolute',
+                  right: '-10px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  width: '60px',
+                  height: '60px',
+                  objectFit: 'contain',
+                  opacity: 0.15,   // 🔥 transparency
+                  filter: 'grayscale(1)',
+                  pointerEvents: 'none',
+                }}
+                onError={(e) => { e.currentTarget.style.display = 'none' }}
+              />
+            )}
+
+            {/* Player name (foreground) */}
+            <span style={{
+              ...playerFirstNameStyle,
+              position: 'relative',
+              zIndex: 2
+            }}>
               {displayFirstName}
             </span>
 
-            <span style={playerLastNameStyle}>
+            <span style={{
+              ...playerLastNameStyle,
+              position: 'relative',
+              zIndex: 2
+            }}>
               {displayLastName}
             </span>
 
-            <span style={teamNameStyle}>
+            {/* Team name */}
+            <span style={{
+              ...teamNameStyle,
+              position: 'relative',
+              zIndex: 2
+            }}>
               {player.team || ''}
             </span>
-          </div>
 
+          </div>
         </div>
       </div>
     </div>
+
   )
 }
