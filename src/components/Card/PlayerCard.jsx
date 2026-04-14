@@ -189,7 +189,9 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
     alignItems: 'center',
     padding: '8px 14px',
     backgroundColor: isCollected ? cardColor : '#CCCCCC',
-    color: isCollected ? teamTextColor : '#FFFFFF',
+    color: isCollected
+    ? (teamTextColor !== cardColor ? teamTextColor : teamColor)
+    : '#FFFFFF',
 
     flex: '0 0 80px',
   }
@@ -327,20 +329,32 @@ export function PlayerCard({ player, teamColor, teamTextColor = '#FFFFFF', cardC
             alignItems: 'center',
             justifyContent: 'flex-end'
           }}>
-
             {isCollected && teamLogo && (
-              <img
-                src={teamLogo}
-                alt=""
+              <div
                 style={{
-                  width: '48px',
-                  height: '48px',
-                  objectFit: 'contain',
-                  filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.35))',
-                  pointerEvents: 'none',
+                  width: '56px',
+                  height: '56px',
+                  borderRadius: '50%',
+                  backgroundColor: '#FFFFFF',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  boxShadow: '0 1px 4px rgba(0,0,0,0.2)',
                 }}
-                onError={(e) => { e.currentTarget.style.display = 'none' }}
-              />
+              >
+                <img
+                  src={teamLogo}
+                  alt=""
+                  style={{
+                    width: '40px',
+                    height: '40px',
+                    objectFit: 'contain',
+                    filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.35))',
+                    pointerEvents: 'none',
+                  }}
+                  onError={(e) => { e.currentTarget.style.display = 'none' }}
+                />
+              </div>
             )}
 
           </div>

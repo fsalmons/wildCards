@@ -1,0 +1,366 @@
+,name,logo_url,primary_color,card_color,text_color,sport
+0, Abilene Christian  Wildcats, https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Abilene_Christian_University_seal.svg/330px-Abilene_Christian_University_seal.svg.png,#4F2170,#FFFFFF,#FFFFFF,NCAA
+1,Alabama A&M Bulldogs,https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Alabama_a%26m_bulldog_logo.png/250px-Alabama_a%26m_bulldog_logo.png,#FFFFFF,#660000,#660000,NCAA
+2,Alabama State Hornets,https://upload.wikimedia.org/wikipedia/en/thumb/7/7f/Alabama_State_Hornets_logo.svg/250px-Alabama_State_Hornets_logo.svg.png,#C99700,#000000,#000000,NCAA
+3,Alcorn State Braves,https://upload.wikimedia.org/wikipedia/en/thumb/8/82/Alcorn_State_athletics_logo.svg/250px-Alcorn_State_athletics_logo.svg.png,#512D6D,#CC8A00,#CC8A00,NCAA
+4,American University Eagles,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/American_Eagles_logo.svg/250px-American_Eagles_logo.svg.png,#005099,#C4122E,#FFFFFF,NCAA
+5,Appalachian State Mountaineers,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Appalachian_State_Mountaineers_logo.svg/250px-Appalachian_State_Mountaineers_logo.svg.png,#222222,#FFCC00,#FFCC00,NCAA
+6,Arizona State Sun Devils,https://upload.wikimedia.org/wikipedia/en/thumb/0/0a/Arizona_State_Sun_Devils_logo.svg/120px-Arizona_State_Sun_Devils_logo.svg.png,#7D2248,#FFC72C,#FFC72C,NCAA
+7,Arkansas State Red Wolves,https://upload.wikimedia.org/wikipedia/en/thumb/3/36/Arkansas_State_Red_Wolves_logo.svg/250px-Arkansas_State_Red_Wolves_logo.svg.png,#CC092F,#000000,#000000,NCAA
+8,Auburn Tigers,https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Auburn_Tigers_logo.svg/250px-Auburn_Tigers_logo.svg.png,#F26522,#03244d,#03244d,NCAA
+9,Austin Peay Governors,https://upload.wikimedia.org/wikipedia/en/thumb/a/a8/Austin_Peay_Governors_logo.svg/250px-Austin_Peay_Governors_logo.svg.png,#C41E3A,#FFFFFF,#FFFFFF,NCAA
+10,Ball State Cardinals,https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Ball_State_Cardinals_logo.svg/250px-Ball_State_Cardinals_logo.svg.png,#BA0C2F,#FFFFFF,#FFFFFF,NCAA
+11,Baylor Bears,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Baylor_Athletics_logo.svg/250px-Baylor_Athletics_logo.svg.png,#FFB81C,#154734,#154734,NCAA
+12,Bellarmine Knights,https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Bellarmine_knights_logo20.png/250px-Bellarmine_knights_logo20.png,#CCCCCC,#660000,#660000,NCAA
+13,Belmont Bruins,https://upload.wikimedia.org/wikipedia/en/thumb/d/d6/Belmont_Bruins_logo.svg/250px-Belmont_Bruins_logo.svg.png,#C8102E,#FFFFFF,#00205B,NCAA
+14,Bethune-Cookman Wildcats,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Bethune%E2%80%93Cookman_Wildcats_logo.svg/250px-Bethune%E2%80%93Cookman_Wildcats_logo.svg.png,#6F263D,#F2A900,#F2A900,NCAA
+15,Boise State Broncos,https://upload.wikimedia.org/wikipedia/en/thumb/9/94/Primary_Boise_State_Broncos_Athletics_Logo.svg/250px-Primary_Boise_State_Broncos_Athletics_Logo.svg.png,#0033A0,#D64309,#D64309,NCAA
+16,Boston College Eagles,https://upload.wikimedia.org/wikipedia/en/thumb/9/96/Boston_College_Eagles_logo.svg/250px-Boston_College_Eagles_logo.svg.png,#FFFFFF,#8C2232,#DBCCA6,NCAA
+17,Boston University Terriers,https://upload.wikimedia.org/wikipedia/en/thumb/1/15/Boston_University_Terriers_logo.svg/250px-Boston_University_Terriers_logo.svg.png,#CC0000,#FFFFFF,#FFFFFF,NCAA
+18,Bowling Green Falcons,https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/Bowling_Green_Falcons_logo.svg/250px-Bowling_Green_Falcons_logo.svg.png,#4F2C1D,#FF7300,#FF7300,NCAA
+19,Bradley Braves,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Bradley_Braves_logo.svg/250px-Bradley_Braves_logo.svg.png,#A50000,#FFFFFF,#FFFFFF,NCAA
+20,BYU Cougars,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/BYU_Stretch_Y_Logo.png/250px-BYU_Stretch_Y_Logo.png,#003DA5,#FFFFFF,#FFFFFF,NCAA
+21,Brown Bears,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Brown_Bears_Athletics_logo.svg/120px-Brown_Bears_Athletics_logo.svg.png,#C00404,#FFFFFF,#4E3629,NCAA
+22,Bryant Bulldogs,https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Bryant_Bulldogs_logo.svg/250px-Bryant_Bulldogs_logo.svg.png,#B09863,#231F20,#231F20,NCAA
+23,Bucknell Bison,https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Bucknell_Bison_logo.svg/250px-Bucknell_Bison_logo.svg.png,#003865,#EF5B0C,#EF5B0C,NCAA
+24,Butler Bulldogs,https://upload.wikimedia.org/wikipedia/en/thumb/0/06/Butler_Bulldogs_logo.svg/250px-Butler_Bulldogs_logo.svg.png,#13294B,#FFFFFF,#FFFFFF,NCAA
+25,Cal Baptist Lancers,https://upload.wikimedia.org/wikipedia/en/thumb/3/3f/Cbu_lancers_logo.png/250px-Cbu_lancers_logo.png,#002554,#A07400,#A07400,NCAA
+26,Cal Poly Mustangs,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Cal_Poly_Mustangs_logo.svg/250px-Cal_Poly_Mustangs_logo.svg.png,#B38F4F,#F8E08E,#154734,NCAA
+27,Bakersfield Roadrunners,https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Cal_State_Bakersfield_Roadrunners_logo.svg/250px-Cal_State_Bakersfield_Roadrunners_logo.svg.png,#FFC72C,#003594,#003594,NCAA
+28,Fresno State Bulldogs,https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Fresno_State_Bulldogs_logo.svg/250px-Fresno_State_Bulldogs_logo.svg.png,#13284C,#C41230,#C41230,NCAA
+29,Cal State Fullerton Titans,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Cal_State_Fullerton_Titans_logo.svg/250px-Cal_State_Fullerton_Titans_logo.svg.png,#000000,#DCDCDC,#DCDCDC,NCAA
+30,Long Beach State Beach,https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Long_Beach_State_Athletics_logo.svg/250px-Long_Beach_State_Athletics_logo.svg.png,#ECAA00,#000000,#000000,NCAA
+31,Cal State Northridge Matadors,https://upload.wikimedia.org/wikipedia/en/thumb/5/51/CSUN_Matadors_logo.svg/250px-CSUN_Matadors_logo.svg.png,#000000,#CE1126,#FFFFFF,NCAA
+32,Sacramento State Hornets,https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Sacramento_State_Hornets_logo.svg/250px-Sacramento_State_Hornets_logo.svg.png,#C4B581,#043927,#043927,NCAA
+33,Campbell Fighting Camels,https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Campbell_Fighting_Camels_logo.svg/250px-Campbell_Fighting_Camels_logo.svg.png,#FB471F,#000000,#000000,NCAA
+34,Canisius Golden Griffins,https://upload.wikimedia.org/wikipedia/en/thumb/6/69/Canisius_Golden_Griffins_Logo.svg/250px-Canisius_Golden_Griffins_Logo.svg.png,#FFBA00,#0E2756,#0E2756,NCAA
+35,Central Connecticut Blue Devils,https://upload.wikimedia.org/wikipedia/en/thumb/9/90/Central_Connecticut_Blue_Devils_logo.svg/250px-Central_Connecticut_Blue_Devils_logo.svg.png,#1A4784,#FFFFFF,#FFFFFF,NCAA
+36,Central Michigan Chippewas,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Central_Michigan_Chippewas_logo.svg/250px-Central_Michigan_Chippewas_logo.svg.png,#FFC82E,#6A0032,#6A0032,NCAA
+37,Charleston Southern Buccaneers,https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Charleston_Southern_Buccaneers_logo.svg/250px-Charleston_Southern_Buccaneers_logo.svg.png,#A89968,#002855,#002855,NCAA
+38,Chicago State Cougars,https://upload.wikimedia.org/wikipedia/en/thumb/b/b2/Chicago_State_Cougars_logo.svg/250px-Chicago_State_Cougars_logo.svg.png,#006666,#FFFFFF,#FFFFFF,NCAA
+39,Clemson Tigers,https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Clemson_Tigers_logo.svg/250px-Clemson_Tigers_logo.svg.png,#F56600,#522D80,#522D80,NCAA
+40,Cleveland State Vikings,https://upload.wikimedia.org/wikipedia/en/thumb/7/70/Cleveland_State_Vikings_logo.svg/250px-Cleveland_State_Vikings_logo.svg.png,#FFFFFF,#006A4D,#006A4D,NCAA
+41,Coastal Carolina Chanticleers,https://upload.wikimedia.org/wikipedia/en/thumb/e/ef/Coastal_Carolina_Chanticleers_logo.svg/250px-Coastal_Carolina_Chanticleers_logo.svg.png,#006F71,#111111,#FFFFFF,NCAA
+42,Colgate Raiders,https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Colgate_Raiders_%282020%29_logo.svg/250px-Colgate_Raiders_%282020%29_logo.svg.png,#FFFFFF,#821019,#821019,NCAA
+43,Charleston Cougars,https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/College_of_Charleston_Cougars_logo.svg/120px-College_of_Charleston_Cougars_logo.svg.png,#772432,#FFFFFF,#FFFFFF,NCAA
+44,Holy Cross Crusaders,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Holy_Cross_Crusaders_logo.svg/250px-Holy_Cross_Crusaders_logo.svg.png,#602d89,#FFFFFF,#FFFFFF,NCAA
+45,Colorado State Rams,https://upload.wikimedia.org/wikipedia/en/thumb/1/14/Colorado_State_Rams_logo.svg/250px-Colorado_State_Rams_logo.svg.png,#C8C372,#1E4D2B,#1E4D2B,NCAA
+46,Columbia Lions,https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Columbia_Lions_logo.svg/250px-Columbia_Lions_logo.svg.png,#B9D9EB,#FFFFFF,#FFFFFF,NCAA
+47,Coppin State Eagles,https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Coppin_State_Eagles_logo.svg/250px-Coppin_State_Eagles_logo.svg.png,#003056,#FFC915,#FFC915,NCAA
+48,Cornell Big Red,https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Cornell_Big_Red_logo.svg/250px-Cornell_Big_Red_logo.svg.png,#B31B1B,#FFFFFF,#FFFFFF,NCAA
+49,Creighton Bluejays,https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Creighton_Bluejays_logo.svg/250px-Creighton_Bluejays_logo.svg.png,#005CA9,#00235D,#FFFFFF,NCAA
+50,Dartmouth Big Green,https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Dartmouth_College_Big_Green_logo.svg/120px-Dartmouth_College_Big_Green_logo.svg.png,#00693E,#FFFFFF,#FFFFFF,NCAA
+51,Davidson Wildcats,https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Davidson_Wildcats_logo.png/250px-Davidson_Wildcats_logo.png,#D02139,#000000,#000000,NCAA
+52,Delaware State Hornets,https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Delaware_State_Hornets_logo.svg/250px-Delaware_State_Hornets_logo.svg.png,#0099CC,#EE3124,#EE3124,NCAA
+53,DePaul Blue Demons,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/DePaul_Athletics_Logo_NEW2025.png/250px-DePaul_Athletics_Logo_NEW2025.png,#E4002B,#054696,#054696,NCAA
+54,Drake Bulldogs,https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Drake_Bulldogs_logo.svg/250px-Drake_Bulldogs_logo.svg.png,#FFFFFF,#1B4677,#1B4677,NCAA
+55,Drexel Dragons,https://upload.wikimedia.org/wikipedia/en/thumb/1/16/Drexel_Dragons_logo.svg/250px-Drexel_Dragons_logo.svg.png,#07294D,#FFC600,#FFC600,NCAA
+56,Duke Blue Devils,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Duke_Athletics_logo.svg/250px-Duke_Athletics_logo.svg.png,#FFFFFF,#013088,#013088,NCAA
+57,Duquesne Dukes,https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Duquesne_Dukes.svg/120px-Duquesne_Dukes.svg.png,#041E42,#BA0C2F,#BA0C2F,NCAA
+58,East Carolina Pirates,https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/East_Carolina_Pirates_logo.svg/250px-East_Carolina_Pirates_logo.svg.png,#582C83,#FFC72C,#FFC72C,NCAA
+59,Eastern Illinois Panthers,https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Eastern_Illinois_Panthers_logo.svg/250px-Eastern_Illinois_Panthers_logo.svg.png,#004C97,#75787B,#75787B,NCAA
+60,Eastern Kentucky Colonels,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Eastern_Kentucky_Colonels_logo.svg/250px-Eastern_Kentucky_Colonels_logo.svg.png,#861F41,#FFFFFF,#FFFFFF,NCAA
+61,Eastern Michigan Eagles,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Eastern_Michigan_Eagles_logo.svg/120px-Eastern_Michigan_Eagles_logo.svg.png,#046A38,#FFFFFF,#FFFFFF,NCAA
+62,Eastern Washington Eagles,https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Eastern_Washington_Eagles_logo.svg/250px-Eastern_Washington_Eagles_logo.svg.png,#B7142E,#FFFFFF,#FFFFFF,NCAA
+63,East Tennessee State Buccaneers,https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/East_Tennessee_State_Buccaneers_logo.svg/250px-East_Tennessee_State_Buccaneers_logo.svg.png,#00053E,#FFC72C,#FFC72C,NCAA
+64,East Texas A&M Lions,https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/Texas_A%26M%E2%80%93Commerce_Lions_logo.svg/250px-Texas_A%26M%E2%80%93Commerce_Lions_logo.svg.png,#EDAC09,#0A2846,#0A2846,NCAA
+65,Elon Phoenix,https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Elon_Phoenix_logo.svg/250px-Elon_Phoenix_logo.svg.png,#B59A57,#73000A,#73000A,NCAA
+66,Fairfield Stags,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Fairfield_Stags_logo.svg/250px-Fairfield_Stags_logo.svg.png,#E0143E,#FFFFFF,#FFFFFF,NCAA
+67,Fairleigh Dickinson Knights,https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Fdu_knights_main_logo.png/250px-Fdu_knights_main_logo.png,#72293C,#28334A,#28334A,NCAA
+68,Florida A&M Rattlers,https://upload.wikimedia.org/wikipedia/en/thumb/5/54/Florida_A%26M_Rattlers_logo.svg/250px-Florida_A%26M_Rattlers_logo.svg.png,#F4811F,#008344,#008344,NCAA
+69,Florida Atlantic Owls,https://upload.wikimedia.org/wikipedia/en/thumb/4/40/Florida_Atlantic_Owls_logo.svg/250px-Florida_Atlantic_Owls_logo.svg.png,#003366,#CC0000,#CC0000,NCAA
+70,FGCU Eagles,https://upload.wikimedia.org/wikipedia/en/thumb/9/95/Florida_Gulf_Coast_Eagles_logo.svg/250px-Florida_Gulf_Coast_Eagles_logo.svg.png,#004785,#00794C,#00794C,NCAA
+71,FIU Panthers,https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/FIU_Panthers_logo.svg/250px-FIU_Panthers_logo.svg.png,#B6862C,#081E3F,#081E3F,NCAA
+72,Florida State Seminoles,https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Florida_State_Seminoles_logo.svg/250px-Florida_State_Seminoles_logo.svg.png,#CEB888,#782F40,#FFFFFF,NCAA
+73,Fordham Rams,https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Fordham_Rams_logo.svg/250px-Fordham_Rams_logo.svg.png,#72253D,#FFFFFF,#FFFFFF,NCAA
+74,Furman Paladins,https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Furman_Paladins_logo.svg/250px-Furman_Paladins_logo.svg.png,#582C83,#FFFFFF,#FFFFFF,NCAA
+75,Gardner Webb Runnin' Bulldogs,https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Gardner%E2%80%93Webb_Runnin%27_Bulldogs_logo.svg/250px-Gardner%E2%80%93Webb_Runnin%27_Bulldogs_logo.svg.png,#141414,#BB0000,#BB0000,NCAA
+76,George Mason Patriots,https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Georgemason_athletics_logo.png/120px-Georgemason_athletics_logo.png,#215732,#FFC72C,#FFC72C,NCAA
+77,Georgetown Hoyas,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Georgetown_Hoyas_logo.svg/250px-Georgetown_Hoyas_logo.svg.png,#041E42,#AFA9A0,#AFA9A0,NCAA
+78,Georgia Tech Yellow Jackets,https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Georgia_Tech_Yellow_Jackets_logo.svg/250px-Georgia_Tech_Yellow_Jackets_logo.svg.png,#B3A369,#FFFFFF,#FFFFFF,NCAA
+79,Georgia Southern Eagles,https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Georgia_Southern_Eagles_logo.svg/250px-Georgia_Southern_Eagles_logo.svg.png,#041E42,#FFFFFF,#FFFFFF,NCAA
+80,Georgia State Panthers,https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Georgia_State_Athletics_logo.svg/250px-Georgia_State_Athletics_logo.svg.png,#FFFFFF,#0039A6,#0039A6,NCAA
+81,Gonzaga Bulldogs,https://upload.wikimedia.org/wikipedia/en/thumb/b/bd/Gonzaga_Bulldogs_logo.svg/250px-Gonzaga_Bulldogs_logo.svg.png,#C8102E,#041E42,#FFFFFF,NCAA
+82,Grambling State Tigers,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Grambling_State_Tigers_logo.svg/250px-Grambling_State_Tigers_logo.svg.png,#ECAA00,#000000,#DA291C,NCAA
+83,Grand Canyon Antelopes,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Grand_Canyon_University_2023_Logo_Update.svg/250px-Grand_Canyon_University_2023_Logo_Update.svg.png,#522398,#000000,#FFFFFF,NCAA
+84,Hampton Pirates,https://upload.wikimedia.org/wikipedia/en/thumb/7/71/Hampton_pirates_athletics_logo.png/250px-Hampton_pirates_athletics_logo.png,#265198,#FFFFFF,#FFFFFF,NCAA
+85,Harvard Crimson,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Harvard_Crimson_logo_2020.svg/120px-Harvard_Crimson_logo_2020.svg.png,#2C2A29,#A31F36,#FFFFFF,NCAA
+86,High Point Panthers,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/High_Point_Panthers_logo.svg/250px-High_Point_Panthers_logo.svg.png,#330072,#FFFFFF,#FFFFFF,NCAA
+87,Hofstra Pride,https://upload.wikimedia.org/wikipedia/en/thumb/1/14/Hofstra_athletics_logo25.png/250px-Hofstra_athletics_logo25.png,#FDC82F,#FFFFFF,#003591,NCAA
+88,Houston Christian Huskies,https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/Houston_Baptist_Huskies_logo.svg/250px-Houston_Baptist_Huskies_logo.svg.png,#FA4D09,#062F87,#062F87,NCAA
+89,Howard Bison,https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Howard_Bison_logo.svg/250px-Howard_Bison_logo.svg.png,#003A63,#FFFFFF,#FFFFFF,NCAA
+90,Idaho State Bengals,https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Idaho_State_Bengals_logo.png/250px-Idaho_State_Bengals_logo.png,#000000,#F47920,#F47920,NCAA
+91,Illinois State Redbirds,https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/Illinois_State_Athletics_logo.svg/250px-Illinois_State_Athletics_logo.svg.png,#CE142B,#FFFFFF,#FFFFFF,NCAA
+92,Indiana State Sycamores,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Indiana_State_Sycamores_logo.svg/250px-Indiana_State_Sycamores_logo.svg.png,#224E92,#FFFFFF,#FFFFFF,NCAA
+93,Indiana Hoosiers,https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Indiana_Hoosiers_logo.svg/120px-Indiana_Hoosiers_logo.svg.png,#990000,#EDEBEB,#EDEBEB,NCAA
+94,IU Indy Jaguars,https://upload.wikimedia.org/wikipedia/en/thumb/2/27/IU_indy_jaguars_logo.png/250px-IU_indy_jaguars_logo.png,#83786f,#990000,#edebeb,NCAA
+95,Iona Gaels,https://upload.wikimedia.org/wikipedia/en/thumb/1/19/Iona_Gaels_logo.svg/250px-Iona_Gaels_logo.svg.png,#661E2B,#EAAF0F,#EAAF0F,NCAA
+96,Iowa State Cyclones,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Iowa_State_Cyclones_logo.svg/250px-Iowa_State_Cyclones_logo.svg.png,#C8102E,#F1BE48,#F1BE48,NCAA
+97,Jackson State Tigers,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Jackson_State_athletics_logo.svg/250px-Jackson_State_athletics_logo.svg.png,#002147,#FFFFFF,#008ED6,NCAA
+98,Jax State Gamecocks,https://upload.wikimedia.org/wikipedia/en/thumb/2/20/Jacksonville_State_Gamecocks_logo.svg/250px-Jacksonville_State_Gamecocks_logo.svg.png,#CA2026,#FFFFFF,#FFFFFF,NCAA
+99,Jacksonville Dolphins,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Jacksonville_Dolphins_logo_2018.svg/250px-Jacksonville_Dolphins_logo_2018.svg.png,#FFFFFF,#004E42,#004E42,NCAA
+100,James Madison Dukes,https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/James_Madison_University_Athletics_logo.svg/250px-James_Madison_University_Athletics_logo.svg.png,#450084,#B3A369,#B3A369,NCAA
+101,Kansas State Wildcats,https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Kansas_State_Wildcats_logo.svg/250px-Kansas_State_Wildcats_logo.svg.png,#FFFFFF,#330A57,#330A57,NCAA
+102,Kennesaw State Owls,https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Kennesaw_State_Owls_logo.svg/250px-Kennesaw_State_Owls_logo.svg.png,#0B1315,#FDBB30,#FFFFFF,NCAA
+103,Kent State Golden Flashes,https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Kent_State_athletic_logo.svg/250px-Kent_State_athletic_logo.svg.png,#002664,#EFAB00,#EFAB00,NCAA
+104,Lafayette Leopards,https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Lafayette_Leopards_logo.svg/250px-Lafayette_Leopards_logo.svg.png,#FFFFFF,#910029,#910029,NCAA
+105,Lamar Cardinals,https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Lamar_Cardinals_logo.svg/250px-Lamar_Cardinals_logo.svg.png,#E31937,#FFFFFF,#FFFFFF,NCAA
+106,La Salle Explorers,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/La_Salle_Explorers_primary_logo.svg/250px-La_Salle_Explorers_primary_logo.svg.png,#003057,#F1C400,#F1C400,NCAA
+107,Lehigh Mountain Hawks,https://upload.wikimedia.org/wikipedia/en/thumb/6/65/LehighMountainHawks.svg/250px-LehighMountainHawks.svg.png,#653819,#FFFFFF,#FFFFFF,NCAA
+108,Stanford Cardinal,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Stanford_Cardinal_logo.svg/120px-Stanford_Cardinal_logo.svg.png,#8C1515,#FFFFFF,#FFFFFF,NCAA
+109,Le Moyne Dolphins,https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Le_Moyne_Dolphins_logo.svg/250px-Le_Moyne_Dolphins_logo.svg.png,#FFF30D,#00452A,#00452A,NCAA
+110,Liberty Flames,https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Liberty_Flames_logo.svg/250px-Liberty_Flames_logo.svg.png,#0A254E,#9FCBED,#FFFFFF,NCAA
+111,Lindenwood Lions and Lady Lions,https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Lindenwood_Lions_logo.svg/250px-Lindenwood_Lions_logo.svg.png,#000000,#B5A36A,#B5A36A,NCAA
+112,Lipscomb Bisons,https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Lipscomb_Athletics_primary.svg/120px-Lipscomb_Athletics_primary.svg.png,#F4AA00,#331E54,#331E54,NCAA
+113,LIU Sharks,https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/LIU_Sharks_logo.svg/250px-LIU_Sharks_logo.svg.png,#69B3E7,#FFC72C,#FFC72C,NCAA
+114,Longwood Lancers,https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Longwood_Lancers_logo.svg/250px-Longwood_Lancers_logo.svg.png,#002147,#FFFFFF,#FFFFFF,NCAA
+115,LSU Tigers,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/LSU_Athletics_logo.svg/250px-LSU_Athletics_logo.svg.png,#FDD023,#461D7C,#FFFFFF,NCAA
+116,Louisiana Tech Bulldogs,https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Louisiana_Tech_Athletics_logo.svg/250px-Louisiana_Tech_Athletics_logo.svg.png,#003087,#CB333B,#CB333B,NCAA
+117,Loyola Marymount Lions,https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/LMU_Lions_logo.svg/250px-LMU_Lions_logo.svg.png,#AB0C2F,#0076A5,#0076A5,NCAA
+118,Loyola Chicago Ramblers,https://upload.wikimedia.org/wikipedia/en/thumb/6/69/Loyola_Ramblers_logo.svg/250px-Loyola_Ramblers_logo.svg.png,#FDB913,#582931,#582931,NCAA
+119,Loyola Greyhounds,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Loyola_Greyhounds_logo.svg/250px-Loyola_Greyhounds_logo.svg.png,#005A3C,#D2D2D2,#D2D2D2,NCAA
+120,Manhattan Jaspers,https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Manhattan_Jaspers_logo.svg/250px-Manhattan_Jaspers_logo.svg.png,#00703C,#FFFFFF,#FFFFFF,NCAA
+121,Marist Red Foxes,https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Marist_Red_Foxes_logo.svg/250px-Marist_Red_Foxes_logo.svg.png,#C8102E,#FFFFFF,#FFFFFF,NCAA
+122,Marquette Golden Eagles,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Marquette_Golden_Eagles_logo.svg/250px-Marquette_Golden_Eagles_logo.svg.png,#003366,#FFCC00,#FFCC00,NCAA
+123,Marshall Thundering Herd,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Marshall_Thundering_Herd_logo.svg/250px-Marshall_Thundering_Herd_logo.svg.png,#FFFFFF,#00B140,#27251F,NCAA
+124,McNeese Cowboys,https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/McNeese_State_Athletics_logo.svg/250px-McNeese_State_Athletics_logo.svg.png,#FFD204,#00529B,#00529B,NCAA
+125,Mercer Bears,https://upload.wikimedia.org/wikipedia/en/thumb/f/fa/Mercer_Bears_logo.svg/250px-Mercer_Bears_logo.svg.png,#CB5307,#000000,#000000,NCAA
+126,Mercyhurst Lakers,https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Mercyhurst_logo_from_NCAA.svg/250px-Mercyhurst_logo_from_NCAA.svg.png,#0F4F44,#171E3A,#171E3A,NCAA
+127,Merrimack Warriors,https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Merrimack_Warriors.svg/250px-Merrimack_Warriors.svg.png,#003768,#F1C400,#FFFFFF,NCAA
+128,Miami (OH) RedHawks,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Miami_Redhawks_logo.svg/250px-Miami_Redhawks_logo.svg.png,#FFFFFF,#B61E2E,#B61E2E,NCAA
+129,Michigan State Spartans,https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Michigan_State_Athletics_logo.svg/250px-Michigan_State_Athletics_logo.svg.png,#FFFFFF,#173F35,#173F35,NCAA
+130,Middle Tennessee Blue Raiders,https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Mt_blue_raiders_logo.png/250px-Mt_blue_raiders_logo.png,#0066CC,#FFFFFF,#FFFFFF,NCAA
+131,Mississippi State Bulldogs,https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mississippi_State_Bulldogs_script_logo.svg/250px-Mississippi_State_Bulldogs_script_logo.svg.png,#FFFFFF,#5D1725,#5D1725,NCAA
+132,Mississippi Valley State Delta Devils,https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Mississippi_Valley_State_University_athletics_logo.svg/250px-Mississippi_Valley_State_University_athletics_logo.svg.png,#046A38,#FFFFFF,#FFFFFF,NCAA
+133,Missouri State Bears,https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Missouri_State_Athletics_logo.svg/250px-Missouri_State_Athletics_logo.svg.png,#5E0009,#FFFFFF,#FFFFFF,NCAA
+134,Monmouth Hawks,https://upload.wikimedia.org/wikipedia/en/thumb/1/18/Monmouth_Hawks.svg/250px-Monmouth_Hawks.svg.png,#041E42,#FFFFFF,#FFFFFF,NCAA
+135,Montana State Bobcats,https://upload.wikimedia.org/wikipedia/en/thumb/2/2f/Montana_State_Bobcats_logo.svg/250px-Montana_State_Bobcats_logo.svg.png,#BF995B,#00205B,#00205B,NCAA
+136,Morehead State Eagles,https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Morehead_State_Eagles_logo.svg/250px-Morehead_State_Eagles_logo.svg.png,#FFCF00,#005EB8,#005EB8,NCAA
+137,Morgan State Bears,https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Morgan_State_Bears_logo.svg/250px-Morgan_State_Bears_logo.svg.png,#FF4E00,#002D74,#002D74,NCAA
+138,Mount St. Mary's Mountaineers,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mt-st-marys_logo_from_NCAA.svg/250px-Mt-st-marys_logo_from_NCAA.svg.png,#84754E,#ffffff,#002855,NCAA
+139,Murray State Racers,https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/Murray_State_Racers_logo.svg/250px-Murray_State_Racers_logo.svg.png,#ECAC00,#002144,#002144,NCAA
+140,NJIT Highlanders,https://upload.wikimedia.org/wikipedia/en/thumb/3/30/NJIT_Highlanders_logo.svg/250px-NJIT_Highlanders_logo.svg.png,#CC0000,#FFFFFF,#FFFFFF,NCAA
+141,New Mexico State Aggies,https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/New_Mexico_State_Aggies_logo.svg/250px-New_Mexico_State_Aggies_logo.svg.png,#7E141B,#FFFFFF,#FFFFFF,NCAA
+142,Niagara Purple Eagles,https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/Niagara_Purple_Eagles_New_Logo.svg/250px-Niagara_Purple_Eagles_New_Logo.svg.png,#582C83,#FFFFFF,#FFFFFF,NCAA
+143,Nicholls Colonels,https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Nicholls_State_Colonels_logo.svg/250px-Nicholls_State_Colonels_logo.svg.png,#B2B2B2,#C41230,#C41230,NCAA
+144,Norfolk State Spartans,https://upload.wikimedia.org/wikipedia/en/thumb/7/78/Norfork_State_Spartans_logo.svg/250px-Norfork_State_Spartans_logo.svg.png,#007B5E,#FAB80A,#FAB80A,NCAA
+145,North Carolina A&T Aggies,https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/North_Carolina_A%26T_Aggies_logo.svg/250px-North_Carolina_A%26T_Aggies_logo.svg.png,#004684,#FDB927,#FDB927,NCAA
+146,North Carolina Central Eagles,https://upload.wikimedia.org/wikipedia/en/thumb/1/13/NCCU_Eagles_head_mark_logo.svg/250px-NCCU_Eagles_head_mark_logo.svg.png,#862633,#898D8D,#898D8D,NCAA
+147,NC State Wolfpack,https://upload.wikimedia.org/wikipedia/en/thumb/4/41/NC_State_Wolfpack_logo.svg/250px-NC_State_Wolfpack_logo.svg.png,#CC0000,#FFFFFF,#FFFFFF,NCAA
+148,North Dakota State Bison,https://upload.wikimedia.org/wikipedia/en/thumb/7/74/North_Dakota_State_Bison_logo.svg/250px-North_Dakota_State_Bison_logo.svg.png,#FFC82E,#005643,#005643,NCAA
+149,Northeastern Huskies,https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Northeastern_Huskies_primary_logo.svg/250px-Northeastern_Huskies_primary_logo.svg.png,#000000,#D41B2C,#D41B2C,NCAA
+150,Northern Arizona Lumberjacks,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Northern_Arizona_Athletics_logo.svg/250px-Northern_Arizona_Athletics_logo.svg.png,#FFFFFF,#FFFFFF,#FFFFFF,NCAA
+151,Northern Illinois Huskies,https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Northern_Illinois_Huskies_logo.svg/250px-Northern_Illinois_Huskies_logo.svg.png,#BA0C2F,#27251F,#27251F,NCAA
+152,Northern Kentucky Norse,https://upload.wikimedia.org/wikipedia/en/thumb/4/45/Northern_Kentucky_Norse_logo.svg/250px-Northern_Kentucky_Norse_logo.svg.png,#FFC82E,#000000,#FFFFFF,NCAA
+153,Northwestern State Demons,https://upload.wikimedia.org/wikipedia/en/thumb/3/3d/Northwestern_State_Demons_logo.svg/250px-Northwestern_State_Demons_logo.svg.png,#F78426,#FFFFFF,#492F92,NCAA
+154,Northwestern Wildcats,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Northwestern_Wildcats_logo.svg/120px-Northwestern_Wildcats_logo.svg.png,#4E2A84,#FFFFFF,#FFFFFF,NCAA
+155,Oakland Golden Grizzlies,https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Oakland_Golden_Grizzlies_logo.svg/250px-Oakland_Golden_Grizzlies_logo.svg.png,#000000,#B59A57,#B59A57,NCAA
+156,Oklahoma State Cowboys,https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Oklahoma_State_University_system_logo.svg/250px-Oklahoma_State_University_system_logo.svg.png,#FE5C00,#000000,#000000,NCAA
+157,Old Dominion Monarchs,https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Old_Dominion_Athletics_logo_wordmark.svg/250px-Old_Dominion_Athletics_logo_wordmark.svg.png,#A1D0F0,#003767,#95999C,NCAA
+158,Oral Roberts Golden Eagles,https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/Oral_Roberts_Golden_Eagles_logo.svg/250px-Oral_Roberts_Golden_Eagles_logo.svg.png,#DAC792,#002462,#FFFFFF,NCAA
+159,Oregon State Beavers,https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Oregon_State_Beavers_logo.svg/250px-Oregon_State_Beavers_logo.svg.png,#D73F09,#000000,#000000,NCAA
+160,Pepperdine Waves,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Pepperdine_Waves_logo.svg/250px-Pepperdine_Waves_logo.svg.png,#00205C,#FFFFFF,#EE7624,NCAA
+161,Portland State Vikings,https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Portland_State_Vikings_logo.svg/120px-Portland_State_Vikings_logo.svg.png,#A5ACAF,#FFFFFF,#154734,NCAA
+162,Prairie View A&M Panthers,https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Prairie_view_univ_athletics_textlogo.png/250px-Prairie_view_univ_athletics_textlogo.png,#4F2582,#FEC325,#FEC325,NCAA
+163,Presbyterian Blue Hose,https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Presbyterian_College_logo.svg/250px-Presbyterian_College_logo.svg.png,#9D2235,#0060A9,#0060A9,NCAA
+164,Princeton Tigers,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Princeton_Tigers_logo.svg/120px-Princeton_Tigers_logo.svg.png,#000000,#FF6000,#FF6000,NCAA
+165,Providence Friars,https://upload.wikimedia.org/wikipedia/en/thumb/9/9d/Providence_Friars_logo.svg/250px-Providence_Friars_logo.svg.png,#000000,#FFFFFF,#8A8D8F,NCAA
+166,Purdue Boilermakers,https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Purdue_Boilermakers_logo.svg/250px-Purdue_Boilermakers_logo.svg.png,#CFB991,#000000,#000000,NCAA
+167,Fort Wayne Mastodons,,#000000,#C28E0E,#C28E0E,NCAA
+168,Queens (NC) Royals,https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Queens_univ_athletics_logo_2023.png/250px-Queens_univ_athletics_logo_2023.png,#A89968,#FFFFFF,#00205B,NCAA
+169,Quinnipiac Bobcats,https://upload.wikimedia.org/wikipedia/en/thumb/2/2c/Quinnipiac_Bobcats_logo.svg/250px-Quinnipiac_Bobcats_logo.svg.png,#0A2240,#FFB819,#FFFFFF,NCAA
+170,Radford Highlanders,https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Radford_Highlanders_logo.svg/250px-Radford_Highlanders_logo.svg.png,#D1D3D4,#FFFFFF,#C2011B,NCAA
+171,Rider Broncs,https://upload.wikimedia.org/wikipedia/en/thumb/6/62/Rider_Broncs.svg/250px-Rider_Broncs.svg.png,#981E32,#FFFFFF,#6C6F70,NCAA
+172,Robert Morris Colonials,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/RMU_Colonials_logo.svg/250px-RMU_Colonials_logo.svg.png,#001E41,#AA182C,#FFFFFF,NCAA
+173,Rutgers Scarlet Knights,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Rutgers_Scarlet_Knights_logo.svg/250px-Rutgers_Scarlet_Knights_logo.svg.png,#CC0033,#FFFFFF,#FFFFFF,NCAA
+174,Sacred Heart Pioneers,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Sacred_Heart_Pioneers_logo.svg/250px-Sacred_Heart_Pioneers_logo.svg.png,#CD1041,#FFFFFF,#FFFFFF,NCAA
+175,St. Bonaventure Bonnies,https://upload.wikimedia.org/wikipedia/en/thumb/9/96/St_bona_bonnies_logo.png/250px-St_bona_bonnies_logo.png,#4E3227,#FFFFFF,#FFFFFF,NCAA
+176,St. Francis (PA) Red Flash,https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Saint_Francis_Red_Flash_logo.svg/250px-Saint_Francis_Red_Flash_logo.svg.png,#FFFFFF,#BD1F25,#BD1F25,NCAA
+177,St. John's Red Storm,https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/St._John%27s_Red_Storm_logo.svg/120px-St._John%27s_Red_Storm_logo.svg.png,#C3002F,#FFFFFF,#FFFFFF,NCAA
+178,Saint Joseph's Hawks,https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Saint_Joseph%27s_Hawks_logo.svg/250px-Saint_Joseph%27s_Hawks_logo.svg.png,#9E1B32,#6C6F70,#6C6F70,NCAA
+179,Saint Louis Billikens,https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Saint_Louis_Billikens_logo.svg/250px-Saint_Louis_Billikens_logo.svg.png,#FFFFFF,#FFFFFF,#FFFFFF,NCAA
+180,Saint Mary's Gaels,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Saint_Mary%27s_College_Gaels_logo.svg/250px-Saint_Mary%27s_College_Gaels_logo.svg.png,#D80024,#06315B,#8A8D8F,NCAA
+181,Saint Peter's Peacocks,https://upload.wikimedia.org/wikipedia/en/thumb/9/97/Saint_Peter%27s_Peacocks_logo.svg/250px-Saint_Peter%27s_Peacocks_logo.svg.png,#003C71,#FFFFFF,#FFFFFF,NCAA
+182,Sam Houston Bearkats,https://upload.wikimedia.org/wikipedia/en/thumb/d/de/SHSU_athletics_logo.svg/250px-SHSU_athletics_logo.svg.png,#FFFFFF,#F56423,#F56423,NCAA
+183,Samford Bulldogs,https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Samford_Bulldogs_logo.svg/250px-Samford_Bulldogs_logo.svg.png,#BA0C2F,#0C2340,#0C2340,NCAA
+184,San Diego State Aztecs,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/San_Diego_State_Aztecs_logo.svg/250px-San_Diego_State_Aztecs_logo.svg.png,#000000,#C41230,#C41230,NCAA
+185,San Jose State Spartans,https://upload.wikimedia.org/wikipedia/en/thumb/e/ec/San_Jose_State_Spartans_logo.svg/250px-San_Jose_State_Spartans_logo.svg.png,#0038A8,#FFB81A,#FFFFFF,NCAA
+186,Santa Clara Broncos,https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Santa_Clara_Broncos_logo.svg/120px-Santa_Clara_Broncos_logo.svg.png,#862633,#FFFFFF,#FFFFFF,NCAA
+187,Seattle Redhawks,https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Seattle_redhawks_ncaa_logo.png/250px-Seattle_redhawks_ncaa_logo.png,#AA0000,#FFFFFF,#FFFFFF,NCAA
+188,Seton Hall Pirates,https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Seton_Hall_Pirates_logo.svg/250px-Seton_Hall_Pirates_logo.svg.png,#0060A9,#FFFFFF,#FFFFFF,NCAA
+189,Siena Saints,https://upload.wikimedia.org/wikipedia/en/thumb/9/91/Siena_Saints_New_Logo.png/250px-Siena_Saints_New_Logo.png,#FCC917,#006B54,#006B54,NCAA
+190,South Carolina State Bulldogs,https://upload.wikimedia.org/wikipedia/en/thumb/a/ac/South_Carolina_State_Bulldogs_logo.svg/120px-South_Carolina_State_Bulldogs_logo.svg.png,#084897,#900028,#900028,NCAA
+191,South Dakota State Jackrabbits,https://upload.wikimedia.org/wikipedia/en/thumb/2/25/South_Dakota_State_Jackrabbits_logo.svg/250px-South_Dakota_State_Jackrabbits_logo.svg.png,#FFD100,#0032A0,#0032A0,NCAA
+192,SEMO Redhawks,https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Southeast_Missouri_State_Redhawks_logo.svg/250px-Southeast_Missouri_State_Redhawks_logo.svg.png,#CE1126,#000000,#000000,NCAA
+193,Southeastern Louisiana Lions,https://upload.wikimedia.org/wikipedia/en/thumb/3/33/Southeastern_Louisiana_Lions_logo.svg/250px-Southeastern_Louisiana_Lions_logo.svg.png,#215732,#FFC72C,#FFC72C,NCAA
+194,Southern Jaguars,https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Southern-u_logo_from_NCAA.svg/250px-Southern-u_logo_from_NCAA.svg.png,#69B3E7,#FFC72C,#FFC72C,NCAA
+195,Southern Illinois Salukis,https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Southern_Illinois_Salukis_logo.svg/250px-Southern_Illinois_Salukis_logo.svg.png,#72253D,#FFFFFF,#FFFFFF,NCAA
+196,SIUE Cougars,https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/SIU_cougars_logo_2023.png/250px-SIU_cougars_logo_2023.png,#FFFFFF,#D81E05,#D81E05,NCAA
+197,SMU Mustangs,https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/SMU_Mustang_logo.svg/250px-SMU_Mustang_logo.svg.png,#CC0035,#354CA1,#354CA1,NCAA
+198,Southern Utah Thunderbirds,https://upload.wikimedia.org/wikipedia/en/thumb/e/e7/Southern_Utah_Thunderbirds_logo.svg/250px-Southern_Utah_Thunderbirds_logo.svg.png,#E91D2D,#FFFFFF,#FFFFFF,NCAA
+199,Iowa Hawkeyes,https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Iowa_Hawkeyes_logo.svg/250px-Iowa_Hawkeyes_logo.svg.png,#000000,#FCD116,#FCD116,NCAA
+200,Albany Great Danes,https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/UAlbany_Great_Danes_logo.svg/120px-UAlbany_Great_Danes_logo.svg.png,#EEB211,#46166B,#46166B,NCAA
+201,Binghamton Bearcats,https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/Binghamton_Bearcats_logo.svg/250px-Binghamton_Bearcats_logo.svg.png,#005A43,#000000,#FFFFFF,NCAA
+202,Buffalo Bulls,https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Buffalo_Bulls_Athletic_Logo.svg/250px-Buffalo_Bulls_Athletic_Logo.svg.png,#005BBB,#FFFFFF,#FFFFFF,NCAA
+203,Stony Brook Seawolves,https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Stony_Brook_Seawolves_logo.svg/250px-Stony_Brook_Seawolves_logo.svg.png,#990000,#9BA1A6,#16243E,NCAA
+204,Stephen F. Austin Lumberjacks,https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Stephen_austin_athletics_logo_2020.png/250px-Stephen_austin_athletics_logo_2020.png,#5F259F,#FFFFFF,#FFFFFF,NCAA
+205,Stetson Hatters,https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Stetson_Hatters_current_logo.svg/250px-Stetson_Hatters_current_logo.svg.png,#006747,#FFFFFF,#FFFFFF,NCAA
+206,Stonehill Skyhawks,https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Stonehill_Skyhawks_logo.svg/250px-Stonehill_Skyhawks_logo.svg.png,#FFFFFF,#2F2975,#2F2975,NCAA
+207,Syracuse Orange,https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Syracuse_Orange_logo.svg/120px-Syracuse_Orange_logo.svg.png,#FF431B,#FFFFFF,#FFFFFF,NCAA
+208,Tarleton State Texans,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Tarleton_TonTexas.svg/250px-Tarleton_TonTexas.svg.png,#4F2D7F,#FFFFFF,#FFFFFF,NCAA
+209,Temple Owls,https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Temple_T_logo.svg/120px-Temple_T_logo.svg.png,#990033,#FFFFFF,#FFFFFF,NCAA
+210,Tennessee State Tigers,https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Tennessee_State_Athletics_logo.svg/250px-Tennessee_State_Athletics_logo.svg.png,#FFFFFF,#171796,#171796,NCAA
+211,Tennessee Tech Golden Eagles,https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/Tennessee_Tech_Golden_Eagles_logo.svg/250px-Tennessee_Tech_Golden_Eagles_logo.svg.png,#FFDD00,#4F2984,#4F2984,NCAA
+212,Texas A&M Aggies,https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Texas_A%26M_Aggies_Primary_Logo_%282021-Present%29.png/250px-Texas_A%26M_Aggies_Primary_Logo_%282021-Present%29.png,#500000,#FFFFFF,#FFFFFF,NCAA
+213,Texas A&M-CC Islanders,https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Texas_A%26M%E2%80%93Corpus_Christi_Islanders_logo.svg/250px-Texas_A%26M%E2%80%93Corpus_Christi_Islanders_logo.svg.png,#007F3E,#0067C5,#FFFFFF,NCAA
+214,TCU Horned Frogs,https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/TCU_Horned_Frogs_logo.svg/250px-TCU_Horned_Frogs_logo.svg.png,#4D1979,#FFFFFF,#FFFFFF,NCAA
+215,Texas Southern Tigers,https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Texas_Southern_Tigers_logo.svg/250px-Texas_Southern_Tigers_logo.svg.png,#6F263D,#A2AAAD,#A2AAAD,NCAA
+216,Texas State Bobcats,https://upload.wikimedia.org/wikipedia/en/thumb/9/97/Texas_State_Bobcats_logo.svg/250px-Texas_State_Bobcats_logo.svg.png,#501214,#6A5638,#6A5638,NCAA
+217,Texas Tech Red Raiders,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Texas_Tech_Athletics_logo.svg/250px-Texas_Tech_Athletics_logo.svg.png,#E90802,#000000,#000000,NCAA
+218,The Citadel Bulldogs,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Citadel_Bulldogs_logo.svg/250px-Citadel_Bulldogs_logo.svg.png,#7BADD3,#FFFFFF,#FFFFFF,NCAA
+219,William & Mary Tribe,https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/William_%26_Mary_Athletics_logo.svg/250px-William_%26_Mary_Athletics_logo.svg.png,#F0B323,#D0D3D4,#115740,NCAA
+220,George Washington Revolutionaries,https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/George_Washington_Athletics_logo.svg/250px-George_Washington_Athletics_logo.svg.png,#E4CF9F,#002D62,#002D62,NCAA
+221,Ohio State Buckeyes,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Ohio_State_Buckeyes_logo.svg/250px-Ohio_State_Buckeyes_logo.svg.png,#BA0C2F,#A7B1B7,#A7B1B7,NCAA
+222,Ohio Bobcats,https://upload.wikimedia.org/wikipedia/en/thumb/7/78/Ohio_Bobcats_logo.svg/250px-Ohio_Bobcats_logo.svg.png,#FFFFFF,#154734,#154734,NCAA
+223,Penn State Nittany Lions,https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Penn_State_Nittany_Lions_logo.svg/250px-Penn_State_Nittany_Lions_logo.svg.png,#FFFFFF,#001E44,#001E44,NCAA
+224,Akron Zips,https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Akron_Zips_logo_2022.svg/250px-Akron_Zips_logo_2022.svg.png,#041E42,#A89968,#A89968,NCAA
+225,Alabama Crimson Tide,https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Alabama_Athletics_logo.svg/250px-Alabama_Athletics_logo.svg.png,#FFFFFF,#B30838,#B30838,NCAA
+226,Ole Miss Rebels,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Ole-miss_logo_from_NCAA.svg/250px-Ole-miss_logo_from_NCAA.svg.png,#CE1126,#14213D,#14213D,NCAA
+227,New Mexico Lobos,https://upload.wikimedia.org/wikipedia/en/thumb/4/45/New_Mexico_Lobos_logo.svg/250px-New_Mexico_Lobos_logo.svg.png,#A7A8AA,#BA0C2F,#FFFFFF,NCAA
+228,Chattanooga Mocs,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Chattanooga_Mocs_logo.svg/250px-Chattanooga_Mocs_logo.svg.png,#ADAFAA,#E0AA0F,#00386B,NCAA
+229,UT Martin Skyhawks,https://upload.wikimedia.org/wikipedia/en/thumb/2/2c/UT_Martin_Skyhawks_logo.svg/250px-UT_Martin_Skyhawks_logo.svg.png,#F58220,#0D223F,#FFFFFF,NCAA
+230,Tennessee Volunteers,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Tennessee_Volunteers_logo.svg/250px-Tennessee_Volunteers_logo.svg.png,#FF8200,#000000,#FFFFFF,NCAA
+231,UT Arlington Mavericks,https://upload.wikimedia.org/wikipedia/en/thumb/3/35/UT_Arlington_Mavericks_logo.svg/250px-UT_Arlington_Mavericks_logo.svg.png,#F58025,#0064B1,#FFFFFF,NCAA
+232,Texas Longhorns,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Texas_Longhorns_logo.svg/250px-Texas_Longhorns_logo.svg.png,#BF5700,#FFFFFF,#FFFFFF,NCAA
+233,UTEP Miners,https://upload.wikimedia.org/wikipedia/en/thumb/0/06/UTEP_Miners_logo.svg/250px-UTEP_Miners_logo.svg.png,#FF8200,#041E42,#B1B3B3,NCAA
+234,UTRGV Vaqueros,https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/UTRGV_Athletics_logo.svg/250px-UTRGV_Athletics_logo.svg.png,#646469,#F05023,#F05023,NCAA
+235,UTSA Roadrunners,https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/UTSA_Athletics_logo.svg/250px-UTSA_Athletics_logo.svg.png,#0B2240,#FFFFFF,#E14504,NCAA
+236,Tulsa Golden Hurricane,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Tulsa_Golden_Hurricane_logo.svg/250px-Tulsa_Golden_Hurricane_logo.svg.png,#CE0E2D,#D0B787,#003595,NCAA
+237,Vermont Catamounts,https://upload.wikimedia.org/wikipedia/en/thumb/3/34/Vermont_Catamounts_logo.svg/250px-Vermont_Catamounts_logo.svg.png,#FFC20E,#005710,#005710,NCAA
+238,Towson Tigers,https://upload.wikimedia.org/wikipedia/en/thumb/7/72/Towson_Tigers_logo.svg/250px-Towson_Tigers_logo.svg.png,#FFBB00,#000000,#000000,NCAA
+239,Troy Trojans,https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Troy_Trojans_logo.svg/250px-Troy_Trojans_logo.svg.png,#999999,#000000,#98002E,NCAA
+240,Tulane Green Wave,https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Tulane_Green_Wave_logo.svg/250px-Tulane_Green_Wave_logo.svg.png,#3A8DDE,#006548,#006548,NCAA
+241,Air Force Falcons,https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Air_Force_Falcons_logo.svg/120px-Air_Force_Falcons_logo.svg.png,#FFFFFF,#B2B4B2,#003594,NCAA
+242,Army West Point Black Knights,https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Army_West_Point_logo.svg/250px-Army_West_Point_logo.svg.png,#D3BC8D,#B1B3B3,#2C2A29,NCAA
+243,Navy Midshipmen,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Navy_Athletics_logo.svg/250px-Navy_Athletics_logo.svg.png,#00225B,#B5A67C,#B5A67C,NCAA
+244,UAB Blazers,https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/UAB_Logo_transparent_square.png/250px-UAB_Logo_transparent_square.png,#FDB913,#1A5632,#1A5632,NCAA
+245,Arizona Wildcats,https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Arizona_Wildcats_logo.svg/250px-Arizona_Wildcats_logo.svg.png,#AB0520,#0C234B,#0C234B,NCAA
+246,Arkansas Razorbacks,https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Arkansas_razorbacks_logo.png/250px-Arkansas_razorbacks_logo.png,#FFFFFF,#A41F35,#A41F35,NCAA
+247,Little Rock Trojans,https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/Little_Rock_Trojans_logo.svg/250px-Little_Rock_Trojans_logo.svg.png,#6E2639,#A7A9AC,#FFFFFF,NCAA
+248,Arkansas-Pine Bluff Golden Lions,https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Arkansas%E2%80%93Pine_Bluff_Golden_Lions_logo.svg/250px-Arkansas%E2%80%93Pine_Bluff_Golden_Lions_logo.svg.png,#000000,#EEB310,#EEB310,NCAA
+249,California Golden Bears,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/California_Golden_Bears_logo.svg/250px-California_Golden_Bears_logo.svg.png,#041E42,#FFC72C,#FFC72C,NCAA
+250,UC Davis Aggies,https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/UC_Davis_Aggies_logo.svg/250px-UC_Davis_Aggies_logo.svg.png,#B3A369,#002855,#002855,NCAA
+251,UC Irvine Anteaters,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/UC_Irvine_Anteaters_logo.svg/250px-UC_Irvine_Anteaters_logo.svg.png,#0C2340,#FFFFFF,#FFC72C,NCAA
+252,UCLA Bruins,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/UCLA_Bruins_primary_logo.svg/250px-UCLA_Bruins_primary_logo.svg.png,#F2A900,#2774AE,#2774AE,NCAA
+253,UC Riverside Highlanders,https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/UC_Riverside_Highlanders_logo.svg/250px-UC_Riverside_Highlanders_logo.svg.png,#003DA5,#FFB81C,#FFB81C,NCAA
+254,UC San Diego Tritons,https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/UC_San_Diego_Tritons_logo.png/250px-UC_San_Diego_Tritons_logo.png,#182B49,#FFCD00,#FFCD00,NCAA
+255,UC Santa Barbara Gauchos,https://upload.wikimedia.org/wikipedia/en/thumb/a/a8/UC_Santa_Barbara_Gauchos_logo.svg/250px-UC_Santa_Barbara_Gauchos_logo.svg.png,#FEBC11,#003660,#003660,NCAA
+256,Central Arkansas Bears,https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Central_Arkansas_Athletics_logo.svg/250px-Central_Arkansas_Athletics_logo.svg.png,#582C83,#7C878E,#7C878E,NCAA
+257,UCF Knights,https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/UCF_Knights_logo.svg/250px-UCF_Knights_logo.svg.png,#000000,#B7A369,#B7A369,NCAA
+258,Cincinnati Bearcats,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Cincinnati_Bearcats_logo.svg/120px-Cincinnati_Bearcats_logo.svg.png,#E00122,#000000,#000000,NCAA
+259,Colorado Buffaloes,https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Colorado_Buffaloes_logo.svg/330px-Colorado_Buffaloes_logo.svg.png,#A2A4A3,#000000,#CFB87C,NCAA
+260,UConn Huskies,https://upload.wikimedia.org/wikipedia/en/thumb/b/b0/Connecticut_Huskies_logo.svg/250px-Connecticut_Huskies_logo.svg.png,#FFFFFF,#000E2F,#000E2F,NCAA
+261,Dayton Flyers,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Dayton_Flyers_logo.svg/250px-Dayton_Flyers_logo.svg.png,#D70036,#002F87,#002F87,NCAA
+262,Delaware Fightin' Blue Hens,https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Delaware_Fightin%27_Blue_Hens_logo.svg/250px-Delaware_Fightin%27_Blue_Hens_logo.svg.png,#00539F,#FFD200,#FFD200,NCAA
+263,Denver Pioneers,https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Denver_Pioneers_Athletics_logo.svg/250px-Denver_Pioneers_Athletics_logo.svg.png,#BA0C2F,#A89968,#A89968,NCAA
+264,Detroit Mercy Titans,https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Detroit_Titans_logo.svg/250px-Detroit_Titans_logo.svg.png,#002D72,#FFFFFF,#A6093D,NCAA
+265,Evansville Purple Aces,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Evansville_Athletics_logo.svg/250px-Evansville_Athletics_logo.svg.png,#470A68,#ED8B00,#FFFFFF,NCAA
+266,Florida Gators,https://upload.wikimedia.org/wikipedia/en/thumb/1/14/Florida_Gators_gator_logo.svg/250px-Florida_Gators_gator_logo.svg.png,#003087,#FA4616,#FFFFFF,NCAA
+267,Georgia Bulldogs,https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Georgia_Athletics_logo.svg/250px-Georgia_Athletics_logo.svg.png,#BA0C2F,#2C2A29,#2C2A29,NCAA
+268,Hawaii Rainbow Warriors,https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Hawaii_Warriors_logo.svg/250px-Hawaii_Warriors_logo.svg.png,#005838,#BCBEC0,#231F20,NCAA
+269,Houston Cougars,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Houston_Cougars_primary_logo.svg/250px-Houston_Cougars_primary_logo.svg.png,#C92A39,#FFFFFF,#FFFFFF,NCAA
+270,Idaho Vandals,https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Idaho_Vandals_logo.svg/250px-Idaho_Vandals_logo.svg.png,#808080,#000000,#F1B300,NCAA
+271,UIC Flames,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/UIC_Flames_wordmark.svg/250px-UIC_Flames_wordmark.svg.png,#D50032,#001E62,#001E62,NCAA
+272,Illinois Fighting Illini,https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Illinois_Fighting_Illini_logo.svg/120px-Illinois_Fighting_Illini_logo.svg.png,#13294B,#FF5F05,#FFFFFF,NCAA
+273,Kansas Jayhawks,https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Kansas_Jayhawks_1946_logo.svg/250px-Kansas_Jayhawks_1946_logo.svg.png,#E8000D,#0051BA,#0051BA,NCAA
+274,Kentucky Wildcats,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Kentucky_Wildcats_logo.svg/250px-Kentucky_Wildcats_logo.svg.png,#0033A0,#FFFFFF,#FFFFFF,NCAA
+275,Louisiana Ragin' Cajuns,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/La-lafayette_logo_from_NCAA.svg/250px-La-lafayette_logo_from_NCAA.svg.png,#FFFFFF,#CE181E,#CE181E,NCAA
+276,ULM Warhawks,https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/Louisiana-Monroe_Warhawks_logo.svg/250px-Louisiana-Monroe_Warhawks_logo.svg.png,#840029,#FDB913,#FDB913,NCAA
+277,Louisville Cardinals,https://upload.wikimedia.org/wikipedia/en/thumb/5/59/Louisville_Cardinals_logo.svg/250px-Louisville_Cardinals_logo.svg.png,#000000,#C9001F,#C9001F,NCAA
+278,Maine Black Bears,https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Maine_Black_Bears_logo.svg/250px-Maine_Black_Bears_logo.svg.png,#003263,#FFFFFF,#B0D7FF,NCAA
+279,UMBC Retrievers,https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/UMBC_Retrievers_logo.svg/250px-UMBC_Retrievers_logo.svg.png,#FDB515,#000000,#000000,NCAA
+280,Maryland Terrapins,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Maryland_Terrapins_logo.svg/250px-Maryland_Terrapins_logo.svg.png,#E21833,#000000,#FFD200,NCAA
+281,Maryland Eastern Shore Hawks,https://upload.wikimedia.org/wikipedia/en/thumb/6/65/Maryland_Eastern_Shore_Hawks_logo.svg/250px-Maryland_Eastern_Shore_Hawks_logo.svg.png,#888B8D,#651D32,#651D32,NCAA
+282,UMass / Massachusetts Minutemen,https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/UMass_Amherst_athletics_logo.svg/250px-UMass_Amherst_athletics_logo.svg.png,#881C1C,#FFFFFF,#FFFFFF,NCAA
+283,UMass Lowell River Hawks,https://upload.wikimedia.org/wikipedia/en/thumb/4/43/UMass_Lowell_River_Hawks_logo.svg/250px-UMass_Lowell_River_Hawks_logo.svg.png,#0067B1,#FFFFFF,#C8102E,NCAA
+284,Memphis Tigers,https://upload.wikimedia.org/wikipedia/en/thumb/4/45/Memphis_Tigers_logo.svg/250px-Memphis_Tigers_logo.svg.png,#004991,#8E908F,#8E908F,NCAA
+285,Miami (FL) Hurricanes,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Miami_Hurricanes_logo.svg/250px-Miami_Hurricanes_logo.svg.png,#F05A00,#005030,#FFFFFF,NCAA
+286,Michigan Wolverines,https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Michigan_Wolverines_logo.svg/250px-Michigan_Wolverines_logo.svg.png,#FFCB05,#00274C,#00274C,NCAA
+287,Minnesota Golden Gophers,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Minnesota_Golden_Gophers_logo.svg/250px-Minnesota_Golden_Gophers_logo.svg.png,#5B0013,#FFB71E,#FFB71E,NCAA
+288,Missouri Tigers,https://upload.wikimedia.org/wikipedia/en/thumb/2/2c/Missouri_Tigers_logo.svg/250px-Missouri_Tigers_logo.svg.png,#000000,#FDB719,#FDB719,NCAA
+289,Kansas City Roos,https://upload.wikimedia.org/wikipedia/en/thumb/7/75/Kansas_City_Roos_logo.svg/250px-Kansas_City_Roos_logo.svg.png,#004B87,#FFC72C,#FFC72C,NCAA
+290,Montana Grizzlies,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Montana_Griz_logo.svg/250px-Montana_Griz_logo.svg.png,#5E001D,#6B6B6B,#6B6B6B,NCAA
+291,Nebraska Cornhuskers,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Nebraska_Cornhuskers_logo.svg/250px-Nebraska_Cornhuskers_logo.svg.png,#D00000,#F5F1E7,#F5F1E7,NCAA
+292,Omaha Mavericks,https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Omaha_Mavericks_logo.svg/250px-Omaha_Mavericks_logo.svg.png,#000000,#D71920,#FFFFFF,NCAA
+293,UNLV Rebels,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/UNLV_Rebels_wordmark.svg/250px-UNLV_Rebels_wordmark.svg.png,#CF0A2C,#CAC8C8,#CAC8C8,NCAA
+294,Nevada Wolf Pack,https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Nevada_Wolf_Pack_logo.svg/250px-Nevada_Wolf_Pack_logo.svg.png,#041E42,#74767B,#74767B,NCAA
+295,New Hampshire Wildcats,https://upload.wikimedia.org/wikipedia/en/thumb/6/62/New_Hampshire_Wildcats_logo.svg/250px-New_Hampshire_Wildcats_logo.svg.png,#041E42,#BBBCBC,#FFFFFF,NCAA
+296,New Haven Chargers,https://upload.wikimedia.org/wikipedia/en/thumb/7/7d/New_Haven_Chargers_secondary_logo.svg/250px-New_Haven_Chargers_secondary_logo.svg.png,#ffc425,#041e42,#041e42,NCAA
+297,New Orleans Privateers,https://upload.wikimedia.org/wikipedia/en/thumb/2/27/New_Orleans_Privateers_logo.svg/250px-New_Orleans_Privateers_logo.svg.png,#A3A9AD,#005CA6,#002F56,NCAA
+298,North Alabama Lions,https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/North_Alabama_Lions_logo.svg/250px-North_Alabama_Lions_logo.svg.png,#FFB92A,#FFFFFF,#592B8A,NCAA
+299,UNC Asheville Bulldogs,https://upload.wikimedia.org/wikipedia/en/thumb/7/73/UNC_asheville_bulldog_head.png/250px-UNC_asheville_bulldog_head.png,#003DA5,#FFFFFF,#FFFFFF,NCAA
+300,North Carolina Tar Heels,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/North_Carolina_Tar_Heels_logo.svg/250px-North_Carolina_Tar_Heels_logo.svg.png,#7BAFD4,#FFFFFF,#FFFFFF,NCAA
+301,Charlotte 49ers,https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Charlotte_49ers_logo.svg/120px-Charlotte_49ers_logo.svg.png,#FFFFFF,#005035,#005035,NCAA
+302,UNC Greensboro Spartans,https://upload.wikimedia.org/wikipedia/en/thumb/7/70/UNCG_Spartans_logo.svg/250px-UNCG_Spartans_logo.svg.png,#FFFFFF,#FFFFFF,#FFFFFF,NCAA
+303,UNCW Seahawks,https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/UNC_Wilmington_Seahawks_logo.svg/250px-UNC_Wilmington_Seahawks_logo.svg.png,#FFD600,#003366,#006666,NCAA
+304,North Dakota Fighting Hawks,https://upload.wikimedia.org/wikipedia/en/thumb/9/92/North_Dakota_Fighting_Hawks_logo.svg/250px-North_Dakota_Fighting_Hawks_logo.svg.png,#000000,#009A44,#FFFFFF,NCAA
+305,Northern Colorado Bears,https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Northern_Colorado_Bears_logo.svg/250px-Northern_Colorado_Bears_logo.svg.png,#F6B000,#013C65,#013C65,NCAA
+306,Northern Iowa Panthers,https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Northern_Iowa_Panters_logo.svg/250px-Northern_Iowa_Panters_logo.svg.png,#FFB500,#500778,#500778,NCAA
+307,North Florida Ospreys,https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Northflorida_ospreys_wmark_2014.svg/250px-Northflorida_ospreys_wmark_2014.svg.png,#D9D9D9,#00246B,#FFFFFF,NCAA
+308,North Texas Mean Green,https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/North_Texas_Mean_Green_logo.svg/250px-North_Texas_Mean_Green_logo.svg.png,#00853E,#FFFFFF,#FFFFFF,NCAA
+309,Notre Dame Fighting Irish,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Nd_athletics_gold_logo_2015.svg/250px-Nd_athletics_gold_logo_2015.svg.png,#0C2340,#C99700,#C99700,NCAA
+310,Oklahoma Sooners,https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Oklahoma_Sooners_logo.svg/120px-Oklahoma_Sooners_logo.svg.png,#841617,#DDCBA4,#DDCBA4,NCAA
+311,Oregon Ducks,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Oregon_Ducks_logo.svg/250px-Oregon_Ducks_logo.svg.png,#007030,#FEE11A,#FEE11A,NCAA
+312,Penn Quakers,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Penn_Quakers_logo.svg/250px-Penn_Quakers_logo.svg.png,#011F5B,#990000,#990000,NCAA
+313,Pittsburgh Panthers,https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Pitt_Panthers_wordmark.svg/250px-Pitt_Panthers_wordmark.svg.png,#FFB81C,#003594,#003594,NCAA
+314,Portland Pilots,https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Portland_pilots_anchor_logo.png/250px-Portland_pilots_anchor_logo.png,#330072,#FFFFFF,#FFFFFF,NCAA
+315,Rhode Island Rams,https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Rhode_Island_Rams_logo.svg/120px-Rhode_Island_Rams_logo.svg.png,#041E42,#FFFFFF,#68ABE8,NCAA
+316,Richmond Spiders,https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Richmond_Spiders_logo.svg/250px-Richmond_Spiders_logo.svg.png,#000066,#990000,#990000,NCAA
+317,St. Thomas Tommies,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/St-thomas-mn_logo_from_NCAA.svg/250px-St-thomas-mn_logo_from_NCAA.svg.png,#FFFFFF,#FFFFFF,#FFFFFF,NCAA
+318,San Diego Toreros,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/San_Diego_Toreros_logo.svg/250px-San_Diego_Toreros_logo.svg.png,#75BEE9,#003B70,#FFFFFF,NCAA
+319,San Francisco Dons,https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/San_Francisco_Dons_logo.svg/250px-San_Francisco_Dons_logo.svg.png,#FDBB30,#00543C,#00543C,NCAA
+320,South Alabama Jaguars,https://upload.wikimedia.org/wikipedia/en/thumb/6/62/South_alabama_jaguars_prim_logo.png/250px-South_alabama_jaguars_prim_logo.png,#BF0D3E,#FFFFFF,#00205B,NCAA
+321,South Carolina Gamecocks,https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/South_Carolina_Gamecocks_logo.svg/250px-South_Carolina_Gamecocks_logo.svg.png,#000000,#73000A,#73000A,NCAA
+322,USC Upstate Spartans,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/USC_Upstate_Spartans_logo.svg/250px-USC_Upstate_Spartans_logo.svg.png,#00833e,#000000,#000000,NCAA
+323,South Dakota Coyotes,https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/South_Dakota_Coyotes_logo.svg/250px-South_Dakota_Coyotes_logo.svg.png,#AD0000,#FFFFFF,#FFFFFF,NCAA
+324,USC Trojans,https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/USC_Trojans_logo.svg/250px-USC_Trojans_logo.svg.png,#9D2235,#FFC72C,#FFC72C,NCAA
+325,Southern Indiana Screaming Eagles,https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Southern_Indiana_Screaming_Eagles_logo.svg/250px-Southern_Indiana_Screaming_Eagles_logo.svg.png,#002856,#FFFFFF,#CF102D,NCAA
+326,Southern Miss Golden Eagles,https://upload.wikimedia.org/wikipedia/en/thumb/5/5d/Southern_Miss_Athletics_logo.svg/250px-Southern_Miss_Athletics_logo.svg.png,#FFD046,#000000,#000000,NCAA
+327,South Florida Bulls,https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Official_USF_Bulls_Athletic_Logo.png/250px-Official_USF_Bulls_Athletic_Logo.png,#006747,#CFC493,#FFFFFF,NCAA
+328,Incarnate Word Cardinals,https://upload.wikimedia.org/wikipedia/en/thumb/e/ea/Incarnate_Word_Cardinals_logo.svg/250px-Incarnate_Word_Cardinals_logo.svg.png,#000000,#FFFFFF,#CB333B,NCAA
+329,Pacific Tigers,https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Pacific_Tigers_logo.svg/250px-Pacific_Tigers_logo.svg.png,#000000,#F47920,#F47920,NCAA
+330,Toledo Rockets,https://upload.wikimedia.org/wikipedia/en/thumb/f/fa/Toledo_Rockets_logo.svg/250px-Toledo_Rockets_logo.svg.png,#0B2240,#FFCD00,#FFCD00,NCAA
+331,Utah Utes,https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Utah_Utes_primary_logo.svg/250px-Utah_Utes_primary_logo.svg.png,#BE0000,#FFFFFF,#FFFFFF,NCAA
+332,Virginia Cavaliers,https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/Virginia_Cavaliers_logo.svg/250px-Virginia_Cavaliers_logo.svg.png,#F84C1E,#232D4B,#232D4B,NCAA
+333,Washington Huskies,https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Washington_Huskies_logo.svg/250px-Washington_Huskies_logo.svg.png,#33006F,#E8D3A2,#E8D3A2,NCAA
+334,West Florida Argonauts,https://upload.wikimedia.org/wikipedia/en/thumb/6/67/West_Florida_Argonauts_primary_logo.svg/250px-West_Florida_Argonauts_primary_logo.svg.png,#0072CE,#00AF66,#FFFFFF,NCAA
+335,West Georgia Wolves,https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/West_Georgia_Wolves_logo.svg/250px-West_Georgia_Wolves_logo.svg.png,#DB1A21,#0033A1,#0033A1,NCAA
+336,Green Bay Phoenix,https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gb_phoenix_main_logo_2022.png/250px-Gb_phoenix_main_logo_2022.png,#FFFFFF,#006A4D,#006A4D,NCAA
+337,Wisconsin Badgers,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Wisconsin_Badgers_logo.svg/250px-Wisconsin_Badgers_logo.svg.png,#C5050C,#FFFFFF,#FFFFFF,NCAA
+338,Milwaukee Panthers,https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Milwaukee_panthers_main_logo.png/250px-Milwaukee_panthers_main_logo.png,#222222,#FFB81C,#FFB81C,NCAA
+339,Wyoming Cowboys,https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wyoming_Athletics_logo.svg/120px-Wyoming_Athletics_logo.svg.png,#FFC425,#FFFFFF,#492F24,NCAA
+340,Utah State Aggies,https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Utah_State_Aggies_logo.svg/250px-Utah_State_Aggies_logo.svg.png,#0F2439,#FFFFFF,#FFFFFF,NCAA
+341,Utah Tech Trailblazers,https://upload.wikimedia.org/wikipedia/en/thumb/e/ec/Utah_Tech_Trailblazers_logo_2022.svg/250px-Utah_Tech_Trailblazers_logo_2022.svg.png,#003058,#FFFFFF,#BA1C21,NCAA
+342,Utah Valley Wolverines,https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Utah_Valley_Wolverines_logo.svg/250px-Utah_Valley_Wolverines_logo.svg.png,#275D38,#FFFFFF,#FFFFFF,NCAA
+343,Valparaiso Beacons,https://upload.wikimedia.org/wikipedia/en/thumb/4/42/Valparaiso_Beacons_logo.svg/250px-Valparaiso_Beacons_logo.svg.png,#FFE300,#5C3000,#5C3000,NCAA
+344,Vanderbilt Commodores,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Vanderbilt_Athletics_logo.svg/250px-Vanderbilt_Athletics_logo.svg.png,#CFAE70,#000000,#000000,NCAA
+345,Villanova Wildcats,https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Villanova_Wildcats_logo.svg/250px-Villanova_Wildcats_logo.svg.png,#FFFFFF,#00205B,#00205B,NCAA
+346,VCU Rams,https://upload.wikimedia.org/wikipedia/en/thumb/1/18/VCU_Athletics_Logo.svg/250px-VCU_Athletics_Logo.svg.png,#FFB300,#000000,#000000,NCAA
+347,VMI Keydets,https://upload.wikimedia.org/wikipedia/en/thumb/1/10/Vmi_keydets_primary.png/250px-Vmi_keydets_primary.png,#FFD619,#AE122A,#FFFFFF,NCAA
+348,Virginia Tech Hokies,https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Virginia_Tech_Hokies_logo.svg/250px-Virginia_Tech_Hokies_logo.svg.png,#861F41,#E87722,#E87722,NCAA
+349,Wagner Seahawks,https://upload.wikimedia.org/wikipedia/en/thumb/6/63/Wagner_Seahawks_logo.svg/250px-Wagner_Seahawks_logo.svg.png,#004331,#FFFFFF,#FFFFFF,NCAA
+350,Wake Forest Demon Deacons,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Wake_Forest_University_Athletic_logo.svg/250px-Wake_Forest_University_Athletic_logo.svg.png,#CEB888,#2C2A29,#2C2A29,NCAA
+351,Washington State Cougars,https://upload.wikimedia.org/wikipedia/en/thumb/0/07/Washington_State_Cougars_logo.svg/250px-Washington_State_Cougars_logo.svg.png,#981E32,#53565A,#53565A,NCAA
+352,Weber State Wildcats,https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Weber_State_Wildcats_logo.svg/250px-Weber_State_Wildcats_logo.svg.png,#FFFFFF,#492365,#492365,NCAA
+353,Western Carolina Catamounts,https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Western_Carolina_Catamounts_logo.svg/250px-Western_Carolina_Catamounts_logo.svg.png,#B9975B,#592C88,#592C88,NCAA
+354,Western Illinois Leathernecks,https://upload.wikimedia.org/wikipedia/en/thumb/1/16/Western_Illinois_Leathernecks_logo.svg/250px-Western_Illinois_Leathernecks_logo.svg.png,#663399,#FFCC00,#FFCC00,NCAA
+355,Western Kentucky Hilltoppers,https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/WKU_Athletics_logo.svg/250px-WKU_Athletics_logo.svg.png,#FFFFFF,#B01E24,#B01E24,NCAA
+356,Western Michigan Broncos,https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Western_michigan_bronco_logo.png/250px-Western_michigan_bronco_logo.png,#F1C500,#532E1F,#532E1F,NCAA
+357,West Virginia Mountaineers,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/West_Virginia_Mountaineers_logo.svg/250px-West_Virginia_Mountaineers_logo.svg.png,#EAAA00,#FFFFFF,#002855,NCAA
+358,Wichita State Shockers,https://upload.wikimedia.org/wikipedia/en/thumb/9/90/Wichita_State_Shockers_logo.svg/250px-Wichita_State_Shockers_logo.svg.png,#FFFFFF,#FFCD00,#27251F,NCAA
+359,Rice Owls,https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Rice_Owls_logo.svg/250px-Rice_Owls_logo.svg.png,#C1C6C8,#00205B,#00205B,NCAA
+360,Winthrop Eagles,https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Winthrop_Eagles_logo.svg/250px-Winthrop_Eagles_logo.svg.png,#F0B323,#660000,#660000,NCAA
+361,Wofford Terriers,https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Wofford_Terriers_logo.svg/250px-Wofford_Terriers_logo.svg.png,#282829,#8A6E4B,#8A6E4B,NCAA
+362,Wright State Raiders,https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/Wright_State_Raiders_logo.svg/250px-Wright_State_Raiders_logo.svg.png,#046A38,#CBA052,#CBA052,NCAA
+363,Xavier Musketeers,https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Xavier_Musketeers_logo.svg/250px-Xavier_Musketeers_logo.svg.png,#0C2340,#9EA2A2,#FFFFFF,NCAA
+364,Yale Bulldogs,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Yale_Bulldogs_script.svg/250px-Yale_Bulldogs_script.svg.png,#0A2240,#FFFFFF,#FFFFFF,NCAA

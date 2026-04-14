@@ -1,0 +1,35 @@
+id,name,sport,stadium_id,primary_color,created_at,text_color,logo_url,card_color
+1d35d4ff-357f-483a-ade5-a938c9c9f0fc,Houston Dash,NWSL,,#101820,2026-04-11 21:26:25.560467+00,#FF6900,https://images.nwslsoccer.com/image/private/t_q-best/v1710436093/prd/assets/teams/houston-dash.svg,#8AB7E9
+2254b4e6-7359-4832-bb2c-86c43cc66162,USC Trojans,NCAA,,#FFCC00,2026-04-12 00:36:53.713859+00,#9D2235,https://a.espncdn.com/i/teamlogos/ncaa/500/30.png,#9D2235
+2c9f58dd-9191-4462-8d91-596f4e706211,Purdue Boilermakers,NCAA,,#ceb888,2026-04-12 00:36:53.713859+00,#000000,https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png,#000000
+3421b52f-7c62-481e-a8dc-5d72d4d9a026,Racing Louisville FC,NWSL,,#14002F,2026-04-11 21:26:25.560467+00,#BDE9C9,https://images.nwslsoccer.com/image/private/t_q-best/v1710436103/prd/assets/teams/racing-louisville-fc.svg,#C5B5F2
+362be658-4659-4347-b0c0-eeea50c2e703,UCLA Bruins,NCAA,,#F2A900,2026-04-12 00:36:53.713859+00,#FFFFFF,https://a.espncdn.com/i/teamlogos/ncaa/500/26.png,#2D68C4
+48c5b53e-16ec-42ef-b5ad-0f6b1da5321f,Washington Huskies,NCAA,,#4B2E83,2026-04-12 00:36:53.713859+00,#FFFFFF,https://a.espncdn.com/i/teamlogos/ncaa/500/264.png,#FFFFFF
+4e252c03-4ecd-4b97-aedf-5cd39cc67101,Iowa Hawkeyes,NCAA,,#FFCD00,2026-04-12 00:36:53.713859+00,#000000,https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png,#000000
+51dfe74b-e762-4653-9c19-dc537e02de27,Bay FC,NWSL,,#FF5049,2026-04-11 21:26:25.560467+00,#DFDEDE,https://images.nwslsoccer.com/image/private/t_q-best/v1710436090/prd/assets/teams/bay-fc.svg,#0D2032
+6a7a0faf-3990-4865-aa17-f6e0e7ec2efa,Angel City FC,NWSL,,#202121,2026-04-11 21:26:25.560467+00,#F1B1A5,https://images.nwslsoccer.com/image/private/t_q-best/v1710436088/prd/assets/teams/angel-city-fc.svg,#898C8F
+6cfc319a-a912-4fa2-8d32-8676b05d5f90,Oregon Ducks,NCAA,,#154733,2026-04-12 00:36:53.713859+00,#FFFFFF,https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png,#FFFFFF
+72fc1428-a2e8-44b5-8fe7-db6ad32f2cf1,Michigan Wolverines,NCAA,,#00274c,2026-04-12 00:36:53.713859+00,#ffcb05,https://a.espncdn.com/i/teamlogos/ncaa/500/130.png,#ffcb05
+73329bb6-a4b1-42c7-87be-bf38f9c501fc,Maryland Terrapins,NCAA,,#000000,2026-04-12 00:36:53.713859+00,#ffd520,https://a.espncdn.com/i/teamlogos/ncaa/500/120.png,#E03a3e
+73453873-8d10-48ad-9a5a-e7bd2783753f,Indiana Hoosiers,NCAA,,#EEEDEB,2026-04-12 00:36:53.713859+00,#990000,https://a.espncdn.com/i/teamlogos/ncaa/500/84.png,#990000
+81b38461-eede-467e-b177-63124ba6b54a,Northwestern Wildcats,NCAA,,#FFFFFF,2026-04-12 00:36:53.713859+00,#4E2A84,https://a.espncdn.com/i/teamlogos/ncaa/500/77.png,#4E2A84
+9233853c-1a94-43c7-b60e-3a0ea7baff1d,Kansas City Current,NWSL,,#CF3339,2026-04-11 21:26:25.560467+00,#FFFFFF,https://images.nwslsoccer.com/image/private/t_q-best/v1710436094/prd/assets/teams/kansas-city-current.svg,#62CBC9
+9616441d-ee84-44d2-961c-1e0011658752,Wisconsin Badgers,NCAA,,#ffffff,2026-04-12 00:36:53.713859+00,#c5050c,https://a.espncdn.com/i/teamlogos/ncaa/500/275.png,#c5050c
+9cb2d2c3-a899-4e42-bccf-99d17b385968,San Diego Wave FC,NWSL,,#032E62,2026-04-11 21:26:25.560467+00,#FC1896,https://images.nwslsoccer.com/image/private/t_q-best/v1710436105/prd/assets/teams/san-diego-wave-fc.svg,#21C6D9
+9f21bd33-cd24-4194-bd5e-e5746021c471,Gotham FC,NWSL,," #000000",2026-04-11 21:26:25.560467+00,#FFFFFF,https://www.nwslsoccer.com/_next/image?url=https%3A%2F%2Fimages.nwslsoccer.com%2Fimage%2Fprivate%2Ft_q-best%2Fv1768567024%2Fprd%2Fassets%2Fteams%2Fnj-ny-gotham-fc.png&w=128&q=75,#A9F1FD
+b7890722-82d3-4878-b220-6812d053fba4,Rutgers Scarlet Knights,NCAA,,#000000,2026-04-12 00:36:53.713859+00,#5F6A72,https://a.espncdn.com/i/teamlogos/ncaa/500/164.png,#CC0033
+b84ce279-d845-4ca9-8b5a-cf098c403cf7,North Carolina Courage,NWSL,,#00416B,2026-04-11 21:26:25.560467+00,#B4A269,https://images.nwslsoccer.com/image/private/t_q-best/v1712866345/prd/assets/teams/north-carolina-courage.svg,#AB0033
+bf673b98-9e6d-4578-907b-c4d97c307496,Washington Spirit,NWSL,,#000000,2026-04-11 21:26:25.560467+00,#F8EB85,https://images.nwslsoccer.com/image/private/t_q-best/v1712866158/prd/assets/teams/washington-spirit.svg,#BBBBBB
+c55f11a0-bfb1-4ca4-bc4f-b1429888afb5,Ohio State Buckeyes,NCAA,,#a7b1b7,2026-04-12 00:36:53.713859+00,#FFFFFF,https://a.espncdn.com/i/teamlogos/ncaa/500/194.png,#ba0c2f
+c8ef57b8-ed60-4662-a2c0-45d4074addae,Utah Royals,NWSL,,#0E1735,2026-04-11 21:26:25.560467+00,#FDB71A,https://images.nwslsoccer.com/image/private/t_q-best/v1710436109/prd/assets/teams/utah-royals-fc.svg,#FDB71A
+d8ebde40-ee5f-41c9-8cd4-fe3a70b7093c,Penn State Nittany Lions,NCAA,,#FFFFFF,2026-04-12 00:36:53.713859+00,#041E42,https://a.espncdn.com/i/teamlogos/ncaa/500/213.png,#041E42
+da0e8fde-ff38-4ae0-b078-480ae7251ea5,Seattle Reign FC,NWSL,,#2E407A,2026-04-11 21:26:25.560467+00,#D0A66B,https://images.nwslsoccer.com/image/private/t_q-best/v1710436107/prd/assets/teams/seattle-reign.svg,#5D7BA8
+dc0f1e1e-6e0f-4a47-8b62-9d354dffea31,Portland Thorns FC,NWSL,,#99242B,2026-04-11 21:26:25.560467+00,#FFFFFF,https://images.nwslsoccer.com/image/private/t_q-best/v1710436101/prd/assets/teams/portland-thorns-fc.svg,#FFFFFF
+dda09cd8-bd06-437d-a8f4-6c8ad82731dd,Illinois Fighting Illini,NCAA,,#13294b,2026-04-12 00:36:53.713859+00,#E84A27,https://a.espncdn.com/i/teamlogos/ncaa/500/356.png,#E84A27
+df486e68-4564-42ec-8dd8-932bcce7f4cd,Orlando Pride,NWSL,,#61259E,2026-04-11 21:26:25.560467+00,#FFFFFF,https://images.nwslsoccer.com/image/private/t_q-best/v1710436099/prd/assets/teams/orlando-pride.svg,#00ABFF
+dfa6cec8-3c20-432f-a7b4-92df6fc8c79b,Nebraska Cornhuskers,NCAA,,#e41c38,2026-04-12 00:36:53.713859+00,#fdf2d9,https://a.espncdn.com/i/teamlogos/ncaa/500/158.png,#fdf2d9
+e1cf35e7-f87f-4337-a334-4bc4649717e3,Chicago Stars FC,NWSL,,#3AB5E8,2026-04-11 21:26:25.560467+00,#FFFFFF,https://www.nwslsoccer.com/_next/image?url=https%3A%2F%2Fimages.nwslsoccer.com%2Fimage%2Fprivate%2Ft_q-best%2Fv1774457661%2Fprd%2Fassets%2Fteams%2Fchicago-stars.png&w=128&q=75,#102B45
+eb5eab26-bceb-4c45-b0b2-72299a5129e5,Minnesota Golden Gophers,NCAA,,#7A0019,2026-04-12 00:36:53.713859+00,#FFCC33,https://a.espncdn.com/i/teamlogos/ncaa/500/135.png,#FFCC33
+f032379f-e6e7-48cb-8db5-4cfa321c41f2,Denver Summit FC,NWSL,,#216150,2026-04-11 21:26:25.560467+00,#FFFFFF,https://upload.wikimedia.org/wikipedia/en/thumb/b/bd/Denver_Summit_FC.svg/960px-Denver_Summit_FC.svg.png,#6d86db
+f41d3e59-899e-4c2f-8deb-486470379685,Michigan State Spartans,NCAA,,#FFFFFF,2026-04-12 00:36:53.713859+00,#18453B,https://a.espncdn.com/i/teamlogos/ncaa/500/127.png,#18453B
+fb7d17d2-eb03-4ff0-b759-dcc039fbca59,Boston Legacy FC,NWSL,,#000000,2026-04-11 21:26:25.560467+00,#FFFFFF,https://upload.wikimedia.org/wikipedia/en/thumb/a/ab/Boston_Legacy_FC.svg/330px-Boston_Legacy_FC.svg.png,#33e883
